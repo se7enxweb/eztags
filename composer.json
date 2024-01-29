@@ -1,16 +1,23 @@
 {
-    "name": "se7enxweb/eztags-ls",
+    "name": "se7enxweb/eztags",
     "description": "eZ Tags is an extension for eZ Publish, providing more functionality for tagging content objects than ezkeyword datatype included in eZ Publish kernel.",
     "type": "ezpublish-legacy-extension",
-    "license": "GPL-2.0-only",
+    "license": "GPL-2.0-or-later",
     "authors": [
         {
+            "name" : "7x",
+            "homepage": "https://se7enx.com",
+            "email": "info@se7enx.com",
+            "role": "Developer"
+        },
+        {
             "name": "Netgen",
-            "homepage": "https://netgen.io"
+            "homepage": "https://netgen.io",
+            "role": "Developer"
         },
         {
             "name": "eZ Publish dev-team & eZ Community",
-            "homepage": "https://github.com/ezsystems/eztags/contributors"
+            "homepage": "https://github.com/se7enxweb/eztags/contributors"
         }
     ],
     "require": {
