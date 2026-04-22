@@ -252,11 +252,11 @@ class eZTags
                                    FROM eztags_attribute_link, eztags, eztags_keyword
                                    WHERE eztags_attribute_link.keyword_id = eztags.id AND
                                        eztags.id = eztags_keyword.keyword_id AND
-                                       eztags.main_language_id + MOD( eztags.language_mask, 2 ) = eztags_keyword.language_id AND
+                                       eztags.main_language_id + (eztags.language_mask % 2) = eztags_keyword.language_id AND
                                        eztags_keyword.status = " . eZTagsKeyword::STATUS_PUBLISHED . " AND $dbString
                                        eztags_attribute_link.objectattribute_id = " . (int) $attribute->attribute( 'id' ) . " AND
                                        eztags_attribute_link.objectattribute_version = " . (int) $attribute->attribute( 'version' ) . "
-                                    ORDER BY priority ASC, id ASC" );
+                                    ORDER BY 5 ASC, 1 ASC" );
 
         foreach ( $words as $word )
         {

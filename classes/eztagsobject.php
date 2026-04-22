@@ -726,7 +726,7 @@ class eZTagsObject extends eZPersistentObject
 
         if ( $mainTranslation !== false )
         {
-            $customConds .= " AND eztags.main_language_id + MOD( eztags.language_mask, 2 ) = eztags_keyword.language_id ";
+            $customConds .= " AND eztags.main_language_id + (eztags.language_mask % 2) = eztags_keyword.language_id ";
         }
         else if ( is_string( $locale ) )
         {
