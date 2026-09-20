@@ -208,6 +208,15 @@ class eZTags
 
         // First fetch IDs of tags translated to defined locale
         $db = eZDB::instance();
+
+        if ( $db->databaseName() === 'mongo' )
+        {
+            list( $idArray, $keywordArray, $parentArray, $localeArray ) =
+                self::fetchTagsForAttributeOnMongo( $db, $attribute, $locale );
+
+            return new self( $attribute, $idArray, $keywordArray, $parentArray, $localeArray );
+        }
+
         $words = $db->arrayQuery( "SELECT
                                        eztags.id
                                    FROM eztags_attribute_link, eztags, eztags_keyword
@@ -267,6 +276,108 @@ class eZTags
         }
 
         return new self( $attribute, $idArray, $keywordArray, $parentArray, $localeArray );
+    }
+
+    /**
+     * The MongoDB reading of the two statements above.
+     *
+     * Those join eztags_attribute_link, eztags and eztags_keyword in one
+     * statement. MongoDB has no join, and the driver returns an empty result
+     * for SQL it will not translate rather than guessing, so every tagged
+     * object rendered no tags at all while the rows sat in the collections
+     * untouched. The three are read separately here and matched in PHP.
+     *
+     * The original's rules are kept: only published keywords count, the
+     * translation into the requested locale wins, a tag with no such
+     * translation falls back to the keyword in its main language, and the
+     * result is ordered by link priority and then tag id.
+     *
+     * @param eZContentObjectAttribute $attribute
+     * @param string $locale
+     * @return array ( $idArray, $keywordArray, $parentArray, $localeArray )
+     */
+    static private function fetchTagsForAttributeOnMongo( $db, eZContentObjectAttribute $attribute, $locale )
+    {
+        $empty = array( array(), array(), array(), array() );
+
+        $links = $db->arrayQuery( 'SELECT keyword_id, priority FROM eztags_attribute_link'
+            . ' WHERE objectattribute_id = ' . (int) $attribute->attribute( 'id' )
+            . ' AND objectattribute_version = ' . (int) $attribute->attribute( 'version' ) );
+
+        $priorities = array();
+        foreach ( (array) $links as $link )
+        {
+            $keywordId = (int) $link['keyword_id'];
+            // The statements select DISTINCT, so a repeated link contributes
+            // one tag and the first priority seen.
+            if ( !isset( $priorities[$keywordId] ) )
+                $priorities[$keywordId] = isset( $link['priority'] ) ? (int) $link['priority'] : 0;
+        }
+
+        if ( !$priorities )
+            return $empty;
+
+        $keywordIds = implode( ', ', array_keys( $priorities ) );
+
+        $tags = array();
+        foreach ( (array) $db->arrayQuery( 'SELECT id, parent_id, main_language_id, language_mask'
+            . ' FROM eztags WHERE id IN ( ' . $keywordIds . ' )' ) as $tag )
+        {
+            $tags[(int) $tag['id']] = $tag;
+        }
+
+        if ( !$tags )
+            return $empty;
+
+        $keywords = (array) $db->arrayQuery( 'SELECT keyword_id, language_id, keyword, locale'
+            . ' FROM eztags_keyword WHERE status = ' . eZTagsKeyword::STATUS_PUBLISHED
+            . ' AND keyword_id IN ( ' . $keywordIds . ' )' );
+
+        // The requested locale first: these are the ids the second statement
+        // excludes from its fallback half.
+        $chosen = array();
+        foreach ( $keywords as $keywordRow )
+        {
+            $keywordId = (int) $keywordRow['keyword_id'];
+            if ( isset( $tags[$keywordId] ) && (string) $keywordRow['locale'] === (string) $locale )
+                $chosen[$keywordId] = $keywordRow;
+        }
+
+        // Then the tag's own main language, for the ones not translated.
+        foreach ( $keywords as $keywordRow )
+        {
+            $keywordId = (int) $keywordRow['keyword_id'];
+            if ( isset( $chosen[$keywordId] ) || !isset( $tags[$keywordId] ) )
+                continue;
+
+            $tag = $tags[$keywordId];
+            $mainLanguageId = (int) $tag['main_language_id'] + ( (int) $tag['language_mask'] % 2 );
+            if ( (int) $keywordRow['language_id'] === $mainLanguageId )
+                $chosen[$keywordId] = $keywordRow;
+        }
+
+        // ORDER BY priority ASC, id ASC
+        $ordered = array_keys( $chosen );
+        usort( $ordered, function ( $first, $second ) use ( $priorities )
+        {
+            if ( $priorities[$first] !== $priorities[$second] )
+                return $priorities[$first] - $priorities[$second];
+            return $first - $second;
+        } );
+
+        $idArray = array();
+        $keywordArray = array();
+        $parentArray = array();
+        $localeArray = array();
+        foreach ( $ordered as $keywordId )
+        {
+            $idArray[] = $tags[$keywordId]['id'];
+            $keywordArray[] = $chosen[$keywordId]['keyword'];
+            $parentArray[] = $tags[$keywordId]['parent_id'];
+            $localeArray[] = $chosen[$keywordId]['locale'];
+        }
+
+        return array( $idArray, $keywordArray, $parentArray, $localeArray );
     }
 
     /**

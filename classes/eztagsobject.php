@@ -625,6 +625,9 @@ class eZTagsObject extends eZPersistentObject
      */
     static public function fetchList( $params, $limits = null, $sorts = null, $mainTranslation = false, $locale = false )
     {
+        if ( eZDB::instance()->databaseName() === 'mongo' )
+            return self::fetchListOnMongo( $params, $limits, $sorts, $mainTranslation, $locale );
+
         $customConds = self::fetchCustomCondsSQL( $params, $mainTranslation, $locale );
 
         if ( is_array( $params ) )
@@ -671,6 +674,202 @@ class eZTagsObject extends eZPersistentObject
     }
 
     /**
+     * fetchList() on MongoDB.
+     *
+     * The SQL form selects from eztags and eztags_keyword together, matching
+     * eztags.id to eztags_keyword.keyword_id, because the keyword and its
+     * locale live in the second table. MongoDB has no join and the driver
+     * returns an empty result for SQL it will not translate, so every read
+     * through here - fetch(), getPath(), and so the whole of getUrl() - came
+     * back empty or keywordless. Tags rendered with no text and links pointed
+     * at /tags/view with no path.
+     *
+     * The two collections are read separately and matched here, keeping the
+     * translation rules: the main language when asked for, otherwise an
+     * explicit locale, otherwise the site's language priority with the tag's
+     * own main language as the last resort.
+     *
+     * @param mixed $params
+     * @param array|null $limits offset and length
+     * @param array|null $sorts column => asc|desc
+     * @param bool $mainTranslation
+     * @param mixed $locale
+     * @return eZTagsObject[]
+     */
+    static private function fetchListOnMongo( $params, $limits, $sorts, $mainTranslation, $locale )
+    {
+        $db = eZDB::instance();
+
+        // The keyword lives in the other collection, so it cannot narrow the
+        // first read; it is applied once the keywords are known.
+        $keywordFilter = null;
+        $conditions = array();
+        if ( is_array( $params ) )
+        {
+            foreach ( $params as $column => $value )
+            {
+                if ( $column === 'keyword' )
+                {
+                    $keywordFilter = $value;
+                    continue;
+                }
+                $conditions[$column] = $value;
+            }
+        }
+
+        $where = self::mongoConditionsToSQL( $db, $conditions );
+        $tagRows = $db->arrayQuery( 'SELECT * FROM eztags' . ( $where !== '' ? ' WHERE ' . $where : '' ) );
+        if ( !is_array( $tagRows ) || !$tagRows )
+            return array();
+
+        $ids = array();
+        foreach ( $tagRows as $row )
+            $ids[] = (int)$row['id'];
+
+        $keywordRows = $db->arrayQuery( 'SELECT keyword_id, language_id, keyword, locale FROM eztags_keyword'
+            . ' WHERE status = ' . eZTagsKeyword::STATUS_PUBLISHED
+            . ' AND keyword_id IN ( ' . implode( ', ', $ids ) . ' )' );
+
+        $byTag = array();
+        foreach ( (array)$keywordRows as $row )
+            $byTag[(int)$row['keyword_id']][] = $row;
+
+        // Site language priority, best first, for the default case.
+        $priority = array();
+        foreach ( (array)eZContentLanguage::prioritizedLanguages() as $language )
+            $priority[] = (string)$language->attribute( 'locale' );
+
+        $objects = array();
+        foreach ( $tagRows as $row )
+        {
+            $tagId = (int)$row['id'];
+            if ( !isset( $byTag[$tagId] ) )
+                continue;
+
+            $chosen = self::pickMongoKeywordRow( $byTag[$tagId], $row, $mainTranslation, $locale, $priority );
+            if ( $chosen === null )
+                continue;
+
+            if ( $keywordFilter !== null && !self::mongoValueMatches( $chosen['keyword'], $keywordFilter ) )
+                continue;
+
+            unset( $row['_id'] );
+            $row['keyword'] = $chosen['keyword'];
+            $row['locale'] = $chosen['locale'];
+            $objects[] = new eZTagsObject( $row );
+        }
+
+        // The SQL form sorts on eztags_keyword.keyword by default.
+        $sorts = is_array( $sorts ) ? $sorts : array( 'keyword' => 'asc' );
+        $column = key( $sorts );
+        $direction = strtolower( (string)current( $sorts ) ) === 'desc' ? -1 : 1;
+        usort( $objects, function ( $first, $second ) use ( $column, $direction )
+        {
+            $a = $first->attribute( $column );
+            $b = $second->attribute( $column );
+            if ( is_numeric( $a ) && is_numeric( $b ) )
+                return ( $a < $b ? -1 : ( $a > $b ? 1 : 0 ) ) * $direction;
+            return strcmp( (string)$a, (string)$b ) * $direction;
+        } );
+
+        if ( is_array( $limits ) && isset( $limits['length'] ) )
+        {
+            $offset = isset( $limits['offset'] ) ? (int)$limits['offset'] : 0;
+            $objects = array_slice( $objects, $offset, (int)$limits['length'] );
+        }
+
+        return $objects;
+    }
+
+    /**
+     * Choose the keyword row a join would have produced for one tag.
+     *
+     * @return array|null
+     */
+    static private function pickMongoKeywordRow( array $rows, array $tagRow, $mainTranslation, $locale, array $priority )
+    {
+        $mainLanguageId = (int)$tagRow['main_language_id'] + ( (int)$tagRow['language_mask'] % 2 );
+
+        if ( $mainTranslation !== false )
+        {
+            foreach ( $rows as $row )
+            {
+                if ( (int)$row['language_id'] === $mainLanguageId )
+                    return $row;
+            }
+            return null;
+        }
+
+        if ( is_string( $locale ) )
+        {
+            foreach ( $rows as $row )
+            {
+                if ( (string)$row['locale'] === $locale )
+                    return $row;
+            }
+            return null;
+        }
+
+        foreach ( $priority as $wanted )
+        {
+            foreach ( $rows as $row )
+            {
+                if ( (string)$row['locale'] === $wanted )
+                    return $row;
+            }
+        }
+
+        foreach ( $rows as $row )
+        {
+            if ( (int)$row['language_id'] === $mainLanguageId )
+                return $row;
+        }
+
+        return isset( $rows[0] ) ? $rows[0] : null;
+    }
+
+    /**
+     * Render eZPersistentObject-style conditions as SQL the driver can read.
+     * Only the forms this class passes are handled: a plain value, and
+     * array( array( ... ) ) meaning IN.
+     */
+    static private function mongoConditionsToSQL( $db, array $conditions )
+    {
+        $parts = array();
+        foreach ( $conditions as $column => $value )
+        {
+            if ( is_array( $value ) && count( $value ) === 1 && is_array( reset( $value ) ) )
+            {
+                $list = array();
+                foreach ( reset( $value ) as $item )
+                    $list[] = is_numeric( $item ) ? (int)$item : "'" . $db->escapeString( $item ) . "'";
+                if ( !$list )
+                    continue;
+                $parts[] = $column . ' IN ( ' . implode( ', ', $list ) . ' )';
+                continue;
+            }
+
+            if ( is_array( $value ) )
+                continue;
+
+            $parts[] = $column . ' = ' . ( is_numeric( $value ) ? (int)$value : "'" . $db->escapeString( $value ) . "'" );
+        }
+
+        return implode( ' AND ', $parts );
+    }
+
+    /**
+     * Whether a keyword satisfies a condition given in the params.
+     */
+    static private function mongoValueMatches( $keyword, $condition )
+    {
+        if ( is_array( $condition ) && count( $condition ) === 1 && is_array( reset( $condition ) ) )
+            return in_array( $keyword, reset( $condition ) );
+
+        return (string)$keyword === (string)$condition;
+    }
+
+    /**
      * Returns count of eZTagsObject objects for given params
      *
      * @static
@@ -683,6 +882,11 @@ class eZTagsObject extends eZPersistentObject
      */
     static public function fetchListCount( $params, $mainTranslation = false, $locale = false )
     {
+        // Counted through the same join, so it answered zero on MongoDB for
+        // the same reason fetchList() answered empty.
+        if ( eZDB::instance()->databaseName() === 'mongo' )
+            return count( self::fetchListOnMongo( $params, null, null, $mainTranslation, $locale ) );
+
         $customConds = self::fetchCustomCondsSQL( $params, $mainTranslation, $locale );
 
         if ( is_array( $params ) )
