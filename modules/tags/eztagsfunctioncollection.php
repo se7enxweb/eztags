@@ -1,5 +1,7 @@
 <?php
 
+
+if ( !class_exists( 'eZTagsFunctionCollection', false ) ) {
 /**
  * eZTagsFunctionCollection class implements fetch functions for eztags
  *
@@ -285,3 +287,5 @@ class eZTagsFunctionCollection
         return array( 'result' => false );
     }
 }
+}
+
