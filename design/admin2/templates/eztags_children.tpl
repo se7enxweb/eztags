@@ -59,7 +59,7 @@
                             <td>{$child_tag.id}</td>
                             <td><a href={concat( '/tags/id/', $child_tag.id )|ezurl}>{$child_tag.keyword|wash}{cond( $child_tag.synonyms_count|gt(0), concat( ' (+', $child_tag.synonyms_count, ')' ), '' )}</a></td>
                             <td>{$child_tag.modified|datetime( 'custom', '%d.%m.%Y %H:%i' )}</td>
-                            <td><a href={concat( '/tags/edit/', $child_tag.id )|ezurl}><img src={'edit.gif'|ezimage} alt="Edit" /></a></td>
+                            <td><a href={concat( '/tags/edit/', $child_tag.id )|ezurl}><img src={'edit.gif'|ezimage} alt="{'Edit'|i18n( 'extension/eztags/tags/view' )}" /></a></td>
                         </tr>
                     {/foreach}
                 </tbody>

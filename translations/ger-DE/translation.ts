@@ -2,6 +2,33 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="de_DE" sourcelanguage="en">
 <context>
+    <name>design/admin/parts/user/menu</name>
+    <message>
+        <source>Change the left menu width to small size.</source>
+        <translation>Inhalts-Struktur schmal anzeigen.</translation>
+    </message>
+    <message>
+        <source>Small</source>
+        <translation>Schmal</translation>
+    </message>
+    <message>
+        <source>Medium</source>
+        <translation>Mittel</translation>
+    </message>
+    <message>
+        <source>Change the left menu width to large size.</source>
+        <translation>Inhalts-Struktur breit anzeigen.</translation>
+    </message>
+    <message>
+        <source>Large</source>
+        <translation>Breit</translation>
+    </message>
+    <message>
+        <source>Change the left menu width to medium size.</source>
+        <translation>Inhalts-Struktur mittelbreit anzeigen.</translation>
+    </message>
+</context>
+<context>
     <name>extension/eztags/datatypes</name>
     <message>
         <source>Tags</source>
@@ -65,7 +92,7 @@
     </message>
     <message>
         <source>Edit view</source>
-        <translation type="unfinished"></translation>
+        <translation>Bearbeitungsansicht</translation>
     </message>
     <message>
         <source>Default view</source>
@@ -164,6 +191,14 @@
     <message>
         <source>No tags</source>
         <translation>Keine Schlagwörter</translation>
+    </message>
+    <message>
+        <source>Tags</source>
+        <translation>Tags</translation>
+    </message>
+    <message>
+        <source>Show Tags attributes overview.</source>
+        <translation>Übersicht der Tags-Attribute anzeigen.</translation>
     </message>
 </context>
 <context>
@@ -733,6 +768,34 @@
         <source>No tags found.</source>
         <translation>Keine Schlagwörter gefunden.</translation>
     </message>
+    <message>
+        <source>Edit</source>
+        <translation>Bearbeiten</translation>
+    </message>
+    <message>
+        <source>Show all content related to tag</source>
+        <translation>Alle Inhalte zu diesem Tag anzeigen</translation>
+    </message>
+    <message>
+        <source>List of content related to tag %tag (%count):</source>
+        <translation>Liste der Inhalte zum Tag %tag (%count):</translation>
+    </message>
+    <message>
+        <source>Visibility</source>
+        <translation>Sichtbarkeit</translation>
+    </message>
+    <message>
+        <source>Hidden</source>
+        <translation>Versteckt</translation>
+    </message>
+    <message>
+        <source>Hidden by superior</source>
+        <translation>Vom übergeordneten Element versteckt</translation>
+    </message>
+    <message>
+        <source>Visible</source>
+        <translation>Sichtbar</translation>
+    </message>
 </context>
 <context>
     <name>extension/eztags/warnings</name>
@@ -750,6 +813,10 @@
     <message>
         <source>objects tagged with '%keyword'</source>
         <translation>Objekte mit '%keyword' verschlagwortet</translation>
+    </message>
+    <message>
+        <source>%count objects tagged with &apos;%keyword&apos;</source>
+        <translation>%count Objekte mit &apos;%keyword&apos; verschlagwortet</translation>
     </message>
 </context>
 </TS>

@@ -14,7 +14,7 @@
                                           'main_node_only', true(),
                                           'sort_by', array( 'modified', false() ) ) )}
 
-<h2>List of content related to tag <a href={concat( 'tags/id/', $tag.id )|ezurl()}>{$tag.keyword|wash()}</a> ({$nodes_count}):</h2>
+<h2>{'List of content related to tag %tag (%count):'|i18n( 'extension/eztags/tags/view',, hash( '%tag', concat( '<a href=', concat( 'tags/id/', $tag.id )|ezurl(), '>', $tag.keyword|wash(), '</a>' ), '%count', $nodes_count ) )}</h2>
 {if $nodes|count()}
     <table class="list" cellpadding="0">
         <tbody>
@@ -34,12 +34,12 @@
                     <td>
                         {if $node.is_invisible}
                             {if $node.is_hidden}
-                                Hidden
+                                {'Hidden'|i18n( 'extension/eztags/tags/view' )}
                             {else}
-                                Hidden by superior
+                                {'Hidden by superior'|i18n( 'extension/eztags/tags/view' )}
                             {/if}
                         {else}
-                            Visible
+                            {'Visible'|i18n( 'extension/eztags/tags/view' )}
                         {/if}
                     </td>
                 </tr>

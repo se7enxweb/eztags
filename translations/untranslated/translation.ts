@@ -2,6 +2,33 @@
 <!DOCTYPE TS>
 <TS version="2.0">
 <context>
+    <name>design/admin/parts/user/menu</name>
+    <message>
+        <source>Change the left menu width to small size.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Small</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Medium</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Change the left menu width to large size.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Large</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Change the left menu width to medium size.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>extension/eztags/datatypes</name>
     <message>
         <source>Tags</source>
@@ -733,6 +760,34 @@
         <source>No tags found.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Edit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show all content related to tag</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>List of content related to tag %tag (%count):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Visibility</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hidden</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hidden by superior</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Visible</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>extension/eztags/warnings</name>
@@ -749,6 +804,10 @@
     <name>extension/eztags/tagcloud</name>
     <message>
         <source>objects tagged with '%keyword'</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%count objects tagged with &apos;%keyword&apos;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
