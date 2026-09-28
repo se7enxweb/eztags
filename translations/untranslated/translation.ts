@@ -154,11 +154,11 @@
 <context>
     <name>extension/eztags/node/view</name>
     <message>
-        <source>eZ Tags</source>
+        <source>Tags</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Show eZ Tags attributes overview.</source>
+        <source>Show Tags attributes overview.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
