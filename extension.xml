@@ -2,10 +2,10 @@
 <software>
     <metadata>
         <name>eZ Tags LS</name>
-        <version>//autogentag//</version>
+        <version>2.4.1</version>
         <copyright>Copyright (C) 2010-2014 Netgen d.o.o., eZ Systems AS. All rights reserved.</copyright>
-        <license>//EZP_LICENSE//</license>
-        <info_url>http://projects.ez.no/eztags</info_url>
+        <license>GNU General Public License v2.0 (or any later version)</license>
+        <info_url>https://github.com/se7enxweb/eztags</info_url>
     </metadata>
 
     <dependencies>
