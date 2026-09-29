@@ -261,7 +261,7 @@ class eZTags
                                    FROM eztags_attribute_link, eztags, eztags_keyword
                                    WHERE eztags_attribute_link.keyword_id = eztags.id AND
                                        eztags.id = eztags_keyword.keyword_id AND
-                                       eztags.main_language_id + (eztags.language_mask % 2) = eztags_keyword.language_id AND
+                                       eztags.main_language_id + " . $db->bitAnd( 'eztags.language_mask', 1 ) . " = eztags_keyword.language_id AND
                                        eztags_keyword.status = " . eZTagsKeyword::STATUS_PUBLISHED . " AND $dbString
                                        eztags_attribute_link.objectattribute_id = " . (int) $attribute->attribute( 'id' ) . " AND
                                        eztags_attribute_link.objectattribute_version = " . (int) $attribute->attribute( 'version' ) . "

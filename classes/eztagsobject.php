@@ -930,7 +930,8 @@ class eZTagsObject extends eZPersistentObject
 
         if ( $mainTranslation !== false )
         {
-            $customConds .= " AND eztags.main_language_id + (eztags.language_mask % 2) = eztags_keyword.language_id ";
+            // the always-available bit of the mask; % is MySQL, PostgreSQL and SQLite only
+            $customConds .= " AND eztags.main_language_id + " . eZDB::instance()->bitAnd( 'eztags.language_mask', 1 ) . " = eztags_keyword.language_id ";
         }
         else if ( is_string( $locale ) )
         {
