@@ -1,6 +1,6 @@
 {
     "name": "se7enxweb/eztags",
-    "description": "eZ Tags is an extension for eZ Publish, providing more functionality for tagging content objects than ezkeyword datatype included in eZ Publish kernel.",
+    "description": "eZ Tags is an extension for Exponential, providing more functionality for tagging content objects than ezkeyword datatype included in Exponential kernel.",
     "type": "ezpublish-legacy-extension",
     "license": "GPL-2.0-or-later",
     "authors": [
