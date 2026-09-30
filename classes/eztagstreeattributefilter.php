@@ -57,7 +57,7 @@ class eZTagsTreeAttributeFilter
                         eztags_attribute_link j1,
                         ezcontentobject j2,
                         eztags j3
-                    WHERE j3.path_string LIKE \"%/" . $db->escapeString( $parentTagID . $suffix ) . "
+                    WHERE j3.path_string LIKE '%/" . $db->escapeString( $parentTagID . $suffix ) . "'
                     AND j1.object_id = j2.id
                     AND j2.id = ezcontentobject.id
                     AND j1.objectattribute_version = j2.current_version
@@ -71,7 +71,7 @@ class eZTagsTreeAttributeFilter
         {
             foreach ( $parentTagIDsArray as $parentTagID )
             {
-                $dbStrings[] = ' i2.path_string LIKE "%/' . $db->escapeString( $parentTagID . $suffix ) . '"';
+                $dbStrings[] = " i2.path_string LIKE '%/" . $db->escapeString( $parentTagID . $suffix ) . "'";
             }
 
             $dbString = implode( ' OR ', $dbStrings );

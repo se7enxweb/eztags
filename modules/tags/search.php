@@ -27,7 +27,7 @@ if ( !empty( $tagsSearchText ) )
     if ( $tagsSearchSubTree > 0 )
     {
         if ( $tagsIncludeSynonyms )
-            $customConds .= ' AND ( path_string LIKE "%/' . $tagsSearchSubTree . '/%" OR main_tag_id = ' . $tagsSearchSubTree . ' ) ';
+            $customConds .= " AND ( path_string LIKE '%/" . $tagsSearchSubTree . "/%' OR main_tag_id = " . $tagsSearchSubTree . ' ) ';
         else
             $params['path_string'] = array( 'like', '%/' . $tagsSearchSubTree . '/%' );
     }
