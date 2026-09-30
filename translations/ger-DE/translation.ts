@@ -819,4 +819,22 @@
         <translation>%count Objekte mit &apos;%keyword&apos; verschlagwortet</translation>
     </message>
 </context>
+<context>
+    <name>design/admin/pagelayout</name>
+    <message>
+        <source>Tags</source>
+        <translation>Schlagwörter</translation>
+    </message>
+    <message>
+        <source>Tags dashboard</source>
+        <translation>Schlagwort Dashboard</translation>
+    </message>
+</context>
+<context>
+    <name>kernel/navigationpart</name>
+    <message>
+        <source>eZ Tags</source>
+        <translation>eZ Tags</translation>
+    </message>
+</context>
 </TS>
