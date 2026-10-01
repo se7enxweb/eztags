@@ -82,15 +82,26 @@
             *}{rdelim};
 
             jQuery(document).ready(function($) {ldelim}
-                $('#eztags-tag-children-table').eZTagsChildren({ldelim}
+                var settings = {ldelim}
                     rowsPerPage: {$number_of_items},
                     languages: languages,
                     permissions: permissions,
                     urls: urls,
                     i18n: i18n
-                {rdelim});
+                {rdelim};
+                {* Exponential UI's table (exp::datatable) when it is there, else the YUI 2 one *}
+                if ( window.Exp && Exp.$ && Exp.$.fn.expDataTable && $.fn.eZTagsChildrenExp )
+                    $('#eztags-tag-children-table').eZTagsChildrenExp( settings );
+                else
+                    $('#eztags-tag-children-table').eZTagsChildren( settings );
             {rdelim});
         </script>
+        {if ezini( 'ExtensionSettings', 'ActiveExtensions' )|contains( 'expui' )}
+            {* the texts Exponential UI's table shows itself (page links, sorting, the filter), translated *}
+            {exp_config( hash( 'strings', array( 'Loading...', 'No records found.', 'Data error.', 'Click to sort ascending', 'Click to sort descending',
+                                                 'Pages', 'Page %page', 'Page %page of %pages', 'First page', 'Previous page', 'Next page', 'Last page',
+                                                 'Table actions', 'Select %name', 'Filter', 'Sorted by %column, ascending', 'Sorted by %column, descending' ) ) )}
+        {/if}
     </div>
 </div>
 
