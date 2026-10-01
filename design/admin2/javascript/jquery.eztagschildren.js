@@ -154,7 +154,7 @@
         /* Create new tag button */
 
         var createNewButtonAction = function( type, args ) {
-            $('form[id=eztags-children-actions]').prop( 'action', settings.urls.add + '/' + args[1].value ).submit();
+            $('form[id=eztags-children-actions]').prop( 'action', settings.urls.add + '/' + args[1].value ).trigger( 'submit' );
         };
 
         var createNewButtonOptions = [];
@@ -189,10 +189,10 @@
                 return;
 
             if ( item.value == 0 && settings.permissions.remove ) {
-                $( 'form[id=eztags-children-actions]' ).prop( 'action', settings.urls.deletetags ).submit();
+                $( 'form[id=eztags-children-actions]' ).prop( 'action', settings.urls.deletetags ).trigger( 'submit' );
             }
             else if ( item.value == 1 && settings.permissions.edit ) {
-                $( 'form[id=eztags-children-actions]' ).prop( 'action', settings.urls.movetags ).submit();
+                $( 'form[id=eztags-children-actions]' ).prop( 'action', settings.urls.movetags ).trigger( 'submit' );
             }
         };
 
@@ -336,7 +336,7 @@
         var eventToBind = navigator.userAgent.match( /MSIE/ ) ? 'keydown' : 'input';
         var filterTimeoutHandler;
 
-        $( '#action-filter-input' ).bind(eventToBind, function(){
+        $( '#action-filter-input' ).on(eventToBind, function(){
             if ( filterTimeoutHandler )
                 clearTimeout( filterTimeoutHandler );
 

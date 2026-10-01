@@ -203,7 +203,7 @@
 				this[key].push(jqm.ID);
 				
 				// register trigger click event for this modal
-				$(this).click(function(){
+				$(this).on('click', function(){
 					var trigger = this;
 					
 					e[key](this);
@@ -249,9 +249,9 @@
 			e.data('jqmv',v);
 
 			// close modal if the esc key is pressed and closeOnEsc is set to true
-			e.unbind("keydown",$.jqm.closeOnEscFunc);
+			e.off("keydown",$.jqm.closeOnEscFunc);
 			if(o.closeOnEsc) {
-				e.attr("tabindex", 0).bind("keydown",$.jqm.closeOnEscFunc).focus();
+				e.attr("tabindex", 0).on("keydown",$.jqm.closeOnEscFunc).trigger("focus");
 			}
 		}
 		
@@ -344,7 +344,7 @@
 		  
 		  // if the event occurs outside the activeModal, focus on first element
 		  if(event) { 
-		    $(':input:visible:first',activeModal).focus();
+		    $(':input:visible:first',activeModal).trigger('focus');
 		  } 
 		  
 		  // lock interactions to the activeModal

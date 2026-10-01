@@ -13,7 +13,7 @@
   $.EzTags.Default.prototype.fetch_suggestions = function(){
     if(!this.tags.length){return;}
 
-    $.get('fixtures/tags.json', $.proxy(this.after_fetch_suggestions, this));
+    $.get('fixtures/tags.json', this.after_fetch_suggestions.bind(this));
   };
 
   $.EzTags.Default.prototype.fetch_autocomplete = function(e) {
@@ -28,7 +28,7 @@
     }
     this.last_search_string = search_string;
 
-    $.get('fixtures/tags.json', $.proxy(this.after_fetch_autocomplete, this));
+    $.get('fixtures/tags.json', this.after_fetch_autocomplete.bind(this));
   };
 
 })();

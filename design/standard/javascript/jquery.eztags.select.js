@@ -32,7 +32,7 @@
         }
       });
       this.$selects = this.$('.selects');
-      this.on('change', '.js-tag-select', $.proxy(this.on_select, this));
+      this.on('change', '.js-tag-select', this.on_select.bind(this));
     },
 
     /**

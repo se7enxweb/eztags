@@ -58,7 +58,7 @@
                     <script type="text/javascript">
                     {literal}
                     (function( $ ) {
-                        $('input.main-translation-radio').change(function() {
+                        $('input.main-translation-radio').on('change', function() {
                             if ( this.className === 'main-translation-radio' )
                                 $('#tab-translations-list-set-main').removeClass('button').addClass('defaultbutton');
                             else
@@ -86,7 +86,7 @@
                 <script type="text/javascript">
                 {literal}
                 (function( $ ) {
-                    $('#tab-translations-alwaysavailable-checkbox').change(function() {
+                    $('#tab-translations-alwaysavailable-checkbox').on('change', function() {
                         $('#tab-translations-alwaysavailable-btn').removeClass('button').addClass('defaultbutton');
                     });
                 })( jQuery );

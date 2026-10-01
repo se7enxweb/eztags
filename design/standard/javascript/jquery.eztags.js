@@ -45,7 +45,7 @@
       var to;
       return function(){
         to && clearTimeout(to);
-        to = setTimeout($.proxy.apply($, [fn, context].concat(Array.prototype.slice.apply(arguments))), delay);
+        to = setTimeout(Function.prototype.bind.apply(fn, [context].concat(Array.prototype.slice.apply(arguments))), delay);
       };
     },
 
@@ -62,7 +62,7 @@
 
     is_key: function(e, keys){
       var self = this;
-      !$.isArray(keys) && (keys = [keys]);
+      !Array.isArray(keys) && (keys = [keys]);
       keys = $.map(keys, function(name){ return self.key[name]; });
       return $.inArray(e.which, keys) > -1;
     }
@@ -355,9 +355,9 @@
          subtree_limit: this.opts.subtreeLimit,
          hide_root_tag: this.hideRootTag,
          locale: this.opts.locale
-       }, $.proxy(this.after_fetch_suggestions, this));
+       }, this.after_fetch_suggestions.bind(this));
 
-    //$.get('suggest.json', $.proxy(this.after_fetch_suggestions, this));
+    //$.get('suggest.json', this.after_fetch_suggestions.bind(this));
   };
 
   /**
@@ -382,10 +382,10 @@
       subtree_limit: this.opts.subtreeLimit,
       hide_root_tag: this.opts.hideRootTag,
       locale: this.opts.locale
-    }, $.proxy(this.after_fetch_autocomplete, this));
+    }, this.after_fetch_autocomplete.bind(this));
 
 
-    //$.get('autocomplete.json', $.proxy(this.after_fetch_autocomplete, this));
+    //$.get('autocomplete.json', this.after_fetch_autocomplete.bind(this));
   };
 
   /**
@@ -512,7 +512,7 @@
   };
 
   Base.prototype.disable_add_button = function() {
-    this.$add_button.addClass('button-disabled').removeClass('button').attr('disabled', true);
+    this.$add_button.addClass('button-disabled').removeClass('button').prop('disabled', true);
   };
 
   Base.prototype.input_focus = function(e) {
@@ -523,16 +523,16 @@
    * Map events on event listeners.
    */
   Base.prototype.setup_events = function() {
-    this.$add_button.on('click', $.proxy(this.handler_add_buton, this));
-    this.$el.on('click', '.js-tags-remove', $.proxy(this.handler_remove_buton, this));
-    this.$el.on('click', '.js-suggested-item', $.proxy(this.handler_suggested_tag, this));
-    this.$el.on('click', '.js-autocomplete-item', $.proxy(this.handler_autocomplete_tag, this));
-    this.$input.on('keyup', $.proxy(this.enable_or_disable_add_button, this));
+    this.$add_button.on('click', this.handler_add_buton.bind(this));
+    this.$el.on('click', '.js-tags-remove', this.handler_remove_buton.bind(this));
+    this.$el.on('click', '.js-suggested-item', this.handler_suggested_tag.bind(this));
+    this.$el.on('click', '.js-autocomplete-item', this.handler_autocomplete_tag.bind(this));
+    this.$input.on('keyup', this.enable_or_disable_add_button.bind(this));
     this.$input.on('keyup', EzTags.debouncer(this.fetch_autocomplete, this.opts.suggestTimeout, this));
-    this.$input.on('keydown', $.proxy(this.navigate_autocomplete_dropdown, this));
-    this.$input.on('focus', $.proxy(this.input_focus, this));
-    this.$autocomplete_tags.on('keydown', $.proxy(this.navigate_autocomplete_dropdown, this));
-    this.on('add:after', $.proxy(this.close_autocomplete, this) );
+    this.$input.on('keydown', this.navigate_autocomplete_dropdown.bind(this));
+    this.$input.on('focus', this.input_focus.bind(this));
+    this.$autocomplete_tags.on('keydown', this.navigate_autocomplete_dropdown.bind(this));
+    this.on('add:after', this.close_autocomplete.bind(this) );
 
     this.setup_tree_picker_events();
     this.opts.sortable && this.setup_sortable();
@@ -733,7 +733,7 @@
    * Check if maximum tags limit is reached and disable/enable input field accordingly.
    */
   Base.prototype.max_tags_handler = function() {
-    this.$input.attr('disabled', this.max_tags_limit_reached());
+    this.$input.prop('disabled', this.max_tags_limit_reached());
   };
 
   /**
@@ -878,7 +878,7 @@
    * @return {array}      Values from hidden input or empty array if there was none.
    */
   Base.prototype.parse_hidden_input = function(name) {
-    var val = $.trim(this.$hidden_inputs[name].val());
+    var raw = this.$hidden_inputs[name].val(), val = (raw == null ? '' : String(raw)).trim();
     return val ? val.split('|#') : [];
   };
 
@@ -897,7 +897,8 @@
 
 
   Base.prototype.get_tag_name_from_input = function() {
-    return $.trim(this.$input.val());
+    var raw = this.$input.val();
+    return (raw == null ? '' : String(raw)).trim();
   };
 
   Base.prototype.clear_input = function() {
