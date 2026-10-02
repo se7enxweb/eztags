@@ -16,9 +16,9 @@ class Convertezkeyword extends \Exponential\Runnable\Command
             ${$__name} = &$GLOBALS[$__name];
         unset( $__name );
 
-        $cli = \eZCLI::instance();
+        $cli = $this->cli();
 
-        $script = \eZScript::instance( array( 'description'    => ( "Converts ezkeyword datatype content to eztags datatype content.\n" .
+        $script = $this->script( array( 'description'    => ( "Converts ezkeyword datatype content to eztags datatype content.\n" .
                                                                    "Since the script would require as many publish operations as there are translations\n" .
                                                                    "per each object, the script will not republish the objects, but rather update\n" .
                                                                    "the current version of currently published objects. Because of that, you will\n" .
@@ -28,9 +28,7 @@ class Convertezkeyword extends \Exponential\Runnable\Command
                                              'use-modules'    => false,
                                              'use-extensions' => true ) );
 
-        $script->startup();
-
-        $options = $script->getOptions( "[from-attr-id:][to-attr-id:][parent-tag-id:]",
+        $options = $this->startup( "[from-attr-id:][to-attr-id:][parent-tag-id:]",
                                         "",
                                         array(
                                             'from-attr-id'  => ( "Specifies source class attribute ID.\n" .
@@ -40,7 +38,6 @@ class Convertezkeyword extends \Exponential\Runnable\Command
                                             'parent-tag-id' => ( "Specifies where in tags tree will new tags be located.\n" .
                                                                  "Cannot be a synonym." )
                                         ) );
-        $script->initialize();
 
         if ( !isset( $options['from-attr-id'] ) || !isset( $options['to-attr-id'] ) || !isset( $options['parent-tag-id'] ) )
         {
