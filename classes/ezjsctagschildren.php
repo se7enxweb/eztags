@@ -7,7 +7,7 @@ class ezjscTagsChildren extends ezjscServerFunctions
 {
     /**
      * Returns the JSON encoded string of children tags for supplied GET params
-     * Used in YUI version of children tags list in admin interface
+     * Used by the children tags table in the admin interface
      *
      * @static
      *

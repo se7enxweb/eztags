@@ -39,5 +39,5 @@
 {if ezini( 'GeneralSettings', 'ShowOldStyleChildrenList', 'eztags.ini' )|eq( 'enabled' )}
     {include uri='design:eztags_children.tpl'}
 {else}
-    {include uri='design:eztags_children_yui.tpl'}
+    {include uri='design:eztags_children_table.tpl'}
 {/if}

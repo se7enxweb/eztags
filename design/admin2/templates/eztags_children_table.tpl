@@ -72,7 +72,6 @@
             *}{rdelim};
 
             var urls = {ldelim}{*
-                *}yui2: {ezini( 'eZJSCore', 'LocalScriptBasePath', 'ezjscore.ini' )['yui2']|ezdesign},{*
                 *}data: {concat( '/ezjscore/call/ezjsctagschildren::tagsChildren::', $parent_tag_id, '?ContentType=json&' )|ezurl},{*
                 *}view: {'/tags/id/'|ezurl},{*
                 *}add: {concat( '/tags/add/', $parent_tag_id )|ezurl},{*
@@ -89,11 +88,9 @@
                     urls: urls,
                     i18n: i18n
                 {rdelim};
-                {* Exponential UI's table (exp::datatable) when it is there, else the YUI 2 one *}
+                {* The table: Exponential UI's exp::datatable *}
                 if ( window.Exp && Exp.$ && Exp.$.fn.expDataTable && $.fn.eZTagsChildrenExp )
                     $('#eztags-tag-children-table').eZTagsChildrenExp( settings );
-                else
-                    $('#eztags-tag-children-table').eZTagsChildren( settings );
             {rdelim});
         </script>
         {if ezini( 'ExtensionSettings', 'ActiveExtensions' )|contains( 'expui' )}

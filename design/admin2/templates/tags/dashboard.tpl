@@ -35,7 +35,7 @@
 {if $show_legacy_children_list}
     {include uri='design:eztags_children.tpl'}
 {else}
-    {include uri='design:eztags_children_yui.tpl'}
+    {include uri='design:eztags_children_table.tpl'}
 {/if}
 
 {undef $show_legacy_children_list}
