@@ -3,6 +3,11 @@
  * The code of extension/eztags/modules/tags/editsynonym.php, moved into a class (#207 stage 1). The file extension/eztags/modules/tags/editsynonym.php is one call to it.
  * Guide: doc/bc/6.0/cli_cronjob_view_abstractions.md
  */
+/*
+ * The original header of extension/eztags/modules/tags/editsynonym.php:
+ *
+ *  @var eZModule $Module
+ */
 
 namespace Exponential\View\Extension\Eztags\Tags
 {
