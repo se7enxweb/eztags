@@ -1,3 +1,8 @@
+{* The scripts and styles the field needs, required here so that it also works in a design that loads only what
+   templates ask for (eztags' FrontendJavaScriptList is not loaded there); the packer drops what the page has already. *}
+{ezscript_require( array( 'ezjsc::jquery', 'ezjsc::jqueryio', 'ezjsc::jqueryUI', 'jqmodal.js', 'jstree.min.js', 'jquery.eztags.js',
+                          'jquery.eztags.select.js', 'jquery.eztags.tree.js', 'tagsstructuremenu.js' ) )}
+{ezcss_require( array( 'jqmodal.css', 'tagssuggest.css', 'contentstructure-tree.css', 'jstree/eztags/style.css' ) )}
 {def $permission_array = $attribute.content.permission_array}
 {def $builder = 'Default'}
 {if $attribute.contentclass_attribute.data_text1}
