@@ -22,16 +22,15 @@ extension to 1.2, or downgrade your jQuery to 1.4.2.
 
 Bug fix commit is located [here](https://github.com/ezsystems/ezie/commit/6f29d071b8b100d62651ce8b696b97bf0f8f8b98)
 
-### Enable admin2 design in your eZ Publish Legacy installation
+### Admin designs
 
-Since eZ Publish 5.0 and merging and renaming of `admin2` design into `admin`, `admin2` is no longer turned on in clean installs of
-eZ Publish. For backwards compatibility with eZ Publish 4.x, `admin2` design in eZ Tags cannot be renamed to `admin`.
-To use eZ Tags in eZ Publish 5.x, please make sure to set the `admin2` design as the main design for your administration
-siteaccess by setting the following configuration in `site.ini.append.php`
+eZ Tags' administration templates live in `design/admin2`. They work in every admin design without any design
+setting: `admin2` and the designs built on it use them directly, and the `admin` design gets them through
+`design/admin`, whose templates each include the `admin2` template of the same path (so there is one copy to
+maintain). The children table's script is in `design/standard`, where every design finds it.
 
-    [DesignSettings]
-    SiteDesign=admin2
-    AdditionalSiteDesignList[]=admin
+Older instructions asked to make `admin2` the main design of the administration siteaccess
+(`SiteDesign=admin2`, `AdditionalSiteDesignList[]=admin`). That still works, but it is no longer needed.
 
 ### Unpack/unzip
 
