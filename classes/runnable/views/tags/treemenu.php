@@ -22,8 +22,6 @@ class Treemenu extends \Exponential\Runnable\ModuleView
                 ${$__name} = &$scope[$__name];
         unset( $__name );
 
-        \eZExpiryHandler::registerShutdownFunction();
-
         if ( !defined( 'MAX_AGE' ) )
         {
             define( 'MAX_AGE', 86400 );
