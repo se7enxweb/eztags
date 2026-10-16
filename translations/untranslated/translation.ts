@@ -150,6 +150,14 @@
         <source>OK</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Find a tag to add</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Choose a tag</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>extension/eztags/errors</name>

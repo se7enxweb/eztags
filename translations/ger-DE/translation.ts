@@ -150,6 +150,14 @@
         <source>OK</source>
         <translation>OK</translation>
     </message>
+    <message>
+        <source>Find a tag to add</source>
+        <translation>Schlagwort zum Hinzufügen suchen</translation>
+    </message>
+    <message>
+        <source>Choose a tag</source>
+        <translation>Schlagwort auswählen</translation>
+    </message>
 </context>
 <context>
     <name>extension/eztags/errors</name>

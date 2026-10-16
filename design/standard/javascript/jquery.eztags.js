@@ -257,7 +257,9 @@
       noExistingTranslations: 'NOEXISTINGTRANSLATIONS',
       addTranslation: 'ADDTRANSLATION',
       cancel: 'CANCEL',
-      ok: 'OK'
+      ok: 'OK',
+      findTag: 'FINDTAG',
+      chooseTag: 'CHOOSETAG'
     },
 
     templates: {
@@ -279,7 +281,7 @@
                       '<ul class="float-break clearfix js-tags-suggested">',
                   '</div>',
                   '<div class="tagssuggestfieldwrap">',
-                      '<input class="tagssuggestfield tags-input-field" type="text" size="70" value="" autocomplete="off" />',
+                      '<input class="tagssuggestfield tags-input-field" type="text" size="70" value="" autocomplete="off" aria-label="<%=tr.findTag%>" />',
                       '<div class="tagssuggestresults jsonSuggestResults"><div class="results-wrap" /></div>',
                   '</div>',
                   '<input type="button" value="<%=tr.addNew%>" class="button-add-tag button-disabled" disabled="disabled" />',

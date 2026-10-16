@@ -48,6 +48,8 @@ $.EzTags.Base.defaults.translations = {ldelim}{*
     *}"addTranslation":"{'Add translation'|i18n( 'extension/eztags/datatypes' )}",{*
     *}"cancel":"{'Cancel'|i18n( 'extension/eztags/datatypes' )}",{*
     *}"ok":"{'OK'|i18n( 'extension/eztags/datatypes' )}",{*
+    *}"findTag":"{'Find a tag to add'|i18n( 'extension/eztags/datatypes' )}",{*
+    *}"chooseTag":"{'Choose a tag'|i18n( 'extension/eztags/datatypes' )}",{*
 *}{rdelim};
 {/run-once}
 </script>

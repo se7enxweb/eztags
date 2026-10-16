@@ -373,6 +373,14 @@
         <source>OK</source>
         <translation>OK</translation>
     </message>
+    <message>
+        <source>Find a tag to add</source>
+        <translation>Find a tag to add</translation>
+    </message>
+    <message>
+        <source>Choose a tag</source>
+        <translation>Choose a tag</translation>
+    </message>
 </context>
 <context>
     <name>extension/eztags/tags/view</name>

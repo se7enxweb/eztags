@@ -6,7 +6,7 @@
   $.EzTags.Select = $.EzTags.Base.extend({
     templates: {
       option: ['<option value="<%= tag.id %>" <%= selected %> ><%= tag.name %></option>'],
-      select: ['<select class="js-tag-select form-control"></select>'],
+      select: ['<select class="js-tag-select form-control" aria-label="<%=tr.chooseTag%>"></select>'],
       skeleton: [
       '<div class="selects"></div>'
       ]
