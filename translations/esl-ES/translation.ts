@@ -2,10 +2,37 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="es_ES">
 <context>
+    <name>design/admin/parts/user/menu</name>
+    <message>
+        <source>Change the left menu width to small size.</source>
+        <translation>Cambiar el ancho del menú de la izquierda a tamaño pequeño.</translation>
+    </message>
+    <message>
+        <source>Small</source>
+        <translation>Pequeño</translation>
+    </message>
+    <message>
+        <source>Medium</source>
+        <translation>Mediano</translation>
+    </message>
+    <message>
+        <source>Change the left menu width to large size.</source>
+        <translation>Cambiar el ancho del menú de la izquierda a tamaño grande.</translation>
+    </message>
+    <message>
+        <source>Large</source>
+        <translation>Grande</translation>
+    </message>
+    <message>
+        <source>Change the left menu width to medium size.</source>
+        <translation>Cambiar el ancho del menú de la izquierda a tamaño mediano.</translation>
+    </message>
+</context>
+<context>
     <name>extension/eztags/datatypes</name>
     <message>
         <source>Tags</source>
-        <translation>Tags</translation>
+        <translation>Etiquetas</translation>
     </message>
     <message>
         <source>Loading</source>
@@ -33,23 +60,23 @@
     </message>
     <message>
         <source>Click to add this tag</source>
-        <translation type="unfinished"></translation>
+        <translation>Haz clic para añadir esta etiqueta</translation>
     </message>
     <message>
         <source>Remove tag</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminar etiqueta</translation>
     </message>
     <message>
         <source>At least one tag is required to be added.</source>
-        <translation type="unfinished"></translation>
+        <translation>Es obligatorio añadir al menos una etiqueta.</translation>
     </message>
     <message>
         <source>Attribute contains invalid data.</source>
-        <translation type="unfinished"></translation>
+        <translation>El atributo contiene datos no válidos.</translation>
     </message>
     <message>
         <source>Up to %1 tags are allowed to be added.</source>
-        <translation type="unfinished"></translation>
+        <translation>Se pueden añadir como máximo %1 etiquetas.</translation>
     </message>
     <message>
         <source>Limit by tags subtree</source>
@@ -61,27 +88,27 @@
     </message>
     <message>
         <source>Hide root subtree limit tag when editing object</source>
-        <translation type="unfinished"></translation>
+        <translation>Ocultar la etiqueta raíz de la limitación de subárbol al editar el objeto</translation>
     </message>
     <message>
         <source>Edit view</source>
-        <translation type="unfinished"></translation>
+        <translation>Vista de edición</translation>
     </message>
     <message>
         <source>Default view</source>
-        <translation type="unfinished"></translation>
+        <translation>Vista predeterminada</translation>
     </message>
     <message>
         <source>Select view</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar vista</translation>
     </message>
     <message>
         <source>Maximum number of allowed tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Número máximo de etiquetas permitidas</translation>
     </message>
     <message>
         <source>(0 = unlimited)</source>
-        <translation type="unfinished"></translation>
+        <translation>(0 = ilimitado)</translation>
     </message>
     <message>
         <source>No limit</source>
@@ -97,54 +124,62 @@
     </message>
     <message>
         <source>Unlimited</source>
-        <translation type="unfinished"></translation>
+        <translation>Ilimitado</translation>
     </message>
     <message>
         <source>Translate tag</source>
-        <translation type="unfinished"></translation>
+        <translation>Traducir etiqueta</translation>
     </message>
     <message>
         <source>Existing translations</source>
-        <translation type="unfinished"></translation>
+        <translation>Traducciones existentes</translation>
     </message>
     <message>
         <source>No existing translations</source>
-        <translation type="unfinished"></translation>
+        <translation>No hay traducciones</translation>
     </message>
     <message>
         <source>Add translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Añadir traducción</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancelar</translation>
     </message>
     <message>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>De acuerdo</translation>
+    </message>
+    <message>
+        <source>Find a tag to add</source>
+        <translation>Buscar una etiqueta para añadir</translation>
+    </message>
+    <message>
+        <source>Choose a tag</source>
+        <translation>Elegir una etiqueta</translation>
     </message>
 </context>
 <context>
     <name>extension/eztags/errors</name>
     <message>
         <source>Tag cannot be modified because it is being used as subtree limitation in one or more class attributes.</source>
-        <translation type="unfinished"></translation>
+        <translation>No se puede modificar la etiqueta porque se usa como limitación de subárbol en uno o más atributos de clase.</translation>
     </message>
     <message>
         <source>Selected target tag is invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>La etiqueta de destino seleccionada no es válida.</translation>
     </message>
     <message>
         <source>Name cannot be empty.</source>
-        <translation type="unfinished"></translation>
+        <translation>El nombre no puede estar vacío.</translation>
     </message>
     <message>
         <source>Tag/synonym with that translation already exists in selected location.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ya existe una etiqueta o un sinónimo con esa traducción en la ubicación seleccionada.</translation>
     </message>
     <message>
         <source>The following tags could not be moved because they contain translations that already exist in one of the tags in selected location.</source>
-        <translation type="unfinished"></translation>
+        <translation>No se han podido mover las siguientes etiquetas porque contienen traducciones que ya existen en alguna de las etiquetas de la ubicación seleccionada.</translation>
     </message>
     <message>
         <source>Go back</source>
@@ -154,15 +189,23 @@
 <context>
     <name>extension/eztags/node/view</name>
     <message>
+        <source>Tags</source>
+        <translation>Etiquetas</translation>
+    </message>
+    <message>
+        <source>Show Tags attributes overview.</source>
+        <translation>Mostrar la vista general de los atributos de etiquetas.</translation>
+    </message>
+    <message>
+        <source>No tags</source>
+        <translation>No hay etiquetas</translation>
+    </message>
+    <message>
         <source>eZ Tags</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Show eZ Tags attributes overview.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>No tags</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -214,7 +257,7 @@
     </message>
     <message>
         <source>Move tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Mover etiquetas</translation>
     </message>
     <message>
         <source>Edit synonym</source>
@@ -226,7 +269,7 @@
     </message>
     <message>
         <source>Delete tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Borrar etiquetas</translation>
     </message>
     <message>
         <source>Merge tag</source>
@@ -262,23 +305,23 @@
     </message>
     <message>
         <source>Are you sure you want to delete selected tags? All children tags and synonyms will also be deleted and removed from existing objects.</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Estás seguro de que quieres borrar las etiquetas seleccionadas? También se borrarán todas las etiquetas hijas y los sinónimos, y se quitarán de los objetos existentes.</translation>
     </message>
     <message>
         <source>Are you sure you want to move selected tags?</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Estás seguro de que quieres mover las etiquetas seleccionadas?</translation>
     </message>
     <message>
         <source>Tag</source>
-        <translation type="unfinished"></translation>
+        <translation>Etiqueta</translation>
     </message>
     <message>
         <source>Related objects count</source>
-        <translation type="unfinished"></translation>
+        <translation>Número de objetos relacionados</translation>
     </message>
     <message>
         <source>Children count</source>
-        <translation type="unfinished"></translation>
+        <translation>Número de hijos</translation>
     </message>
     <message>
         <source>Are you sure you want to delete the &quot;%keyword&quot; synonym?</source>
@@ -326,39 +369,39 @@
     </message>
     <message>
         <source>Set as main translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Fijar como traducción principal</translation>
     </message>
     <message>
         <source>Add translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Añadir traducción</translation>
     </message>
     <message>
         <source>Select the translation you want to add</source>
-        <translation type="unfinished"></translation>
+        <translation>Elige la traducción que quieres añadir</translation>
     </message>
     <message>
         <source>Edit translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Editar traducción</translation>
     </message>
     <message>
         <source>Select the translation you want to edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Elige la traducción que quieres editar</translation>
     </message>
     <message>
         <source>Main translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Traducción principal</translation>
     </message>
     <message>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Editar</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancelar</translation>
     </message>
     <message>
         <source>Use the main language if there is no prioritized translation.</source>
-        <translation type="unfinished"></translation>
+        <translation>Usar el idioma principal si no hay ninguna traducción prioritaria.</translation>
     </message>
 </context>
 <context>
@@ -456,7 +499,7 @@
     </message>
     <message>
         <source>New translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Nueva traducción</translation>
     </message>
     <message>
         <source>Top level tags</source>
@@ -495,7 +538,7 @@
     </message>
     <message>
         <source>Tag</source>
-        <translation>Tag</translation>
+        <translation>Etiqueta</translation>
     </message>
     <message>
         <source>Synonym</source>
@@ -535,59 +578,59 @@
     </message>
     <message>
         <source>Invert selection.</source>
-        <translation type="unfinished"></translation>
+        <translation>Invertir la selección.</translation>
     </message>
     <message>
         <source>Language</source>
-        <translation type="unfinished"></translation>
+        <translation>Idioma</translation>
     </message>
     <message>
         <source>Translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Traducción</translation>
     </message>
     <message>
         <source>Locale</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Locale&quot;</translation>
     </message>
     <message>
         <source>Main</source>
-        <translation type="unfinished"></translation>
+        <translation>Principal</translation>
     </message>
     <message>
         <source>Edit in &lt;%language_name&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Editar en &lt;%language_name&gt;.</translation>
     </message>
     <message>
         <source>Remove selected</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminar la selección</translation>
     </message>
     <message>
         <source>Set main</source>
-        <translation type="unfinished"></translation>
+        <translation>Fijar principal</translation>
     </message>
     <message>
         <source>Update</source>
-        <translation type="unfinished"></translation>
+        <translation>Actualizar</translation>
     </message>
     <message>
         <source>Tag translations</source>
-        <translation type="unfinished"></translation>
+        <translation>Traducciones de la etiqueta</translation>
     </message>
     <message>
         <source>Up one level.</source>
-        <translation type="unfinished"></translation>
+        <translation>Subir un nivel.</translation>
     </message>
     <message>
         <source>Children tags (%children_count)</source>
-        <translation type="unfinished"></translation>
+        <translation>Etiquetas hijas (%children_count)</translation>
     </message>
     <message>
         <source>Children tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Etiquetas hijas</translation>
     </message>
     <message>
         <source>Show %1 tags per page.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar %1 etiquetas por página.</translation>
     </message>
     <message>
         <source>Tag name</source>
@@ -595,7 +638,7 @@
     </message>
     <message>
         <source>The current tag does not contain any children.</source>
-        <translation type="unfinished"></translation>
+        <translation>La etiqueta actual no tiene ninguna etiqueta hija.</translation>
     </message>
     <message>
         <source>Parent tag name</source>
@@ -647,15 +690,15 @@
     </message>
     <message>
         <source>No tags</source>
-        <translation type="unfinished"></translation>
+        <translation>No hay etiquetas</translation>
     </message>
     <message>
         <source>Use the main language if there is no prioritized translation.</source>
-        <translation type="unfinished"></translation>
+        <translation>Usar el idioma principal si no hay ninguna traducción prioritaria.</translation>
     </message>
     <message>
         <source>Last modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Última modificación</translation>
     </message>
     <message>
         <source>Tag ID</source>
@@ -663,93 +706,143 @@
     </message>
     <message>
         <source>first</source>
-        <translation type="unfinished"></translation>
+        <translation>primero</translation>
     </message>
     <message>
         <source>last</source>
-        <translation type="unfinished"></translation>
+        <translation>último</translation>
     </message>
     <message>
         <source>next</source>
-        <translation type="unfinished"></translation>
+        <translation>siguiente</translation>
     </message>
     <message>
         <source>prev</source>
-        <translation type="unfinished"></translation>
+        <translation>anterior</translation>
     </message>
     <message>
         <source>Select all visible</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar todos los visibles</translation>
     </message>
     <message>
         <source>Select none</source>
-        <translation type="unfinished"></translation>
+        <translation>No seleccionar ninguno</translation>
     </message>
     <message>
         <source>Invert selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Invertir la selección</translation>
     </message>
     <message>
         <source>Select</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar</translation>
     </message>
     <message>
         <source>Remove selected tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminar las etiquetas seleccionadas</translation>
     </message>
     <message>
         <source>Move selected tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Mover las etiquetas seleccionadas</translation>
     </message>
     <message>
         <source>More actions</source>
-        <translation type="unfinished"></translation>
+        <translation>Más acciones</translation>
     </message>
     <message>
         <source>You do not have permissions for any of available actions</source>
-        <translation type="unfinished"></translation>
+        <translation>No tienes permisos para ninguna de las acciones disponibles</translation>
     </message>
     <message>
         <source>Use the checkboxes to select one or more tags.</source>
-        <translation type="unfinished"></translation>
+        <translation>Usa las casillas de verificación para seleccionar una o más etiquetas.</translation>
     </message>
     <message>
         <source>Table options</source>
-        <translation type="unfinished"></translation>
+        <translation>Tabla de opciones</translation>
     </message>
     <message>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Cerrar</translation>
     </message>
     <message>
         <source>Number of tags per page</source>
-        <translation type="unfinished"></translation>
+        <translation>Número de etiquetas por página</translation>
     </message>
     <message>
         <source>Loading...</source>
-        <translation type="unfinished"></translation>
+        <translation>Cargando...</translation>
     </message>
     <message>
         <source>No tags found.</source>
-        <translation type="unfinished"></translation>
+        <translation>No se han encontrado etiquetas.</translation>
+    </message>
+    <message>
+        <source>Edit</source>
+        <translation>Editar</translation>
+    </message>
+    <message>
+        <source>Show all content related to tag</source>
+        <translation>Mostrar todo el contenido relacionado con la etiqueta</translation>
+    </message>
+    <message>
+        <source>List of content related to tag %tag (%count):</source>
+        <translation>Lista de contenido relacionado con la etiqueta %tag (%count):</translation>
+    </message>
+    <message>
+        <source>Visibility</source>
+        <translation>Visibilidad</translation>
+    </message>
+    <message>
+        <source>Hidden</source>
+        <translation>Oculto</translation>
+    </message>
+    <message>
+        <source>Hidden by superior</source>
+        <translation>Oculto por superior</translation>
+    </message>
+    <message>
+        <source>Visible</source>
+        <translation>Visible</translation>
     </message>
 </context>
 <context>
     <name>extension/eztags/warnings</name>
     <message>
         <source>TAKE CARE: Tag is inside class attribute subtree limit(s). If moved outside those limits, it could lead to inconsistency as objects could end up with tags that they are not supposed to have.</source>
-        <translation type="unfinished"></translation>
+        <translation>ATENCIÓN: la etiqueta está dentro de una o varias limitaciones de subárbol de atributos de clase. Si se mueve fuera de esos límites, puede provocar incoherencias, ya que los objetos podrían acabar con etiquetas que no deberían tener.</translation>
     </message>
     <message>
         <source>Manual search index regeneration is required for changes to be seen in search. Enable DelayedIndexing in site.ini to reindex automatically.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hay que regenerar manualmente el índice de búsqueda para que los cambios se vean en las búsquedas. Activa DelayedIndexing en site.ini para reindexar automáticamente.</translation>
     </message>
 </context>
 <context>
     <name>extension/eztags/tagcloud</name>
     <message>
         <source>objects tagged with '%keyword'</source>
-        <translation type="unfinished"></translation>
+        <translation>objetos etiquetados con &apos;%keyword&apos;</translation>
+    </message>
+    <message>
+        <source>%count objects tagged with &apos;%keyword&apos;</source>
+        <translation>%count objetos etiquetados con &apos;%keyword&apos;</translation>
+    </message>
+</context>
+<context>
+    <name>design/admin/pagelayout</name>
+    <message>
+        <source>Tags</source>
+        <translation>Etiquetas</translation>
+    </message>
+    <message>
+        <source>Tags dashboard</source>
+        <translation>Escritorio de tags</translation>
+    </message>
+</context>
+<context>
+    <name>kernel/navigationpart</name>
+    <message>
+        <source>eZ Tags</source>
+        <translation>eZ Tags</translation>
     </message>
 </context>
 </TS>
