@@ -169,4 +169,11 @@ div#contentstructure ul#content_tree_menu ul a[class^="openclose"][data-eztags-t
     margin: -4px;
     background-origin: content-box;
     background-clip: content-box;
+    box-sizing: content-box;   /* 16px plus the padding, also under an admin design's border-box reset */
+}
+/* A line of the tags tree is at least 24px high, so the fold link's 24px and the tag links of the lines around it do not
+   overlap or crowd each other where a design sets the lines closer (the classic admin's 17px). Its rows are li#n-<attribute>-<tag id>. */
+div#contentstructure ul#content_tree_menu li[id^="n-"]
+{
+    line-height: max(24px, 1.25em);
 }
