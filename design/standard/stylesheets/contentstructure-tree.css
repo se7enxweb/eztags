@@ -158,3 +158,15 @@ div.contentstructure ul.content_tree_menu div.hidden
 {
     display: none;
 }
+
+/* The fold link of the tags tree is a target of 24 x 24px (WCAG 2.5.8): 4px of padding around its 16px icon, which
+   is drawn and clipped in the content box, and a negative margin of the same size, so the icon stays where it was.
+   The ids are the admin designs' tree (div#contentstructure ul#content_tree_menu), whose rules give it 16 x 16px. */
+div.contentstructure ul.content_tree_menu ul a[class^="openclose"][data-eztags-tree-fold],
+div#contentstructure ul#content_tree_menu ul a[class^="openclose"][data-eztags-tree-fold]
+{
+    padding: 4px;
+    margin: -4px;
+    background-origin: content-box;
+    background-clip: content-box;
+}
