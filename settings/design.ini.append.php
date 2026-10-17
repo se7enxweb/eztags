@@ -30,9 +30,12 @@ BackendCSSFileList[]=jqmodal.css
 BackendCSSFileList[]=tagssuggest.css
 BackendCSSFileList[]=contentstructure-tree.css
 BackendCSSFileList[]=jstree/eztags/style.css
+# The templates' own styles (no inline CSS in the templates)
+BackendCSSFileList[]=eztags.css
 
 FrontendCSSFileList[]=jqmodal.css
 FrontendCSSFileList[]=tagssuggest.css
 FrontendCSSFileList[]=contentstructure-tree.css
 FrontendCSSFileList[]=jstree/eztags/style.css
+FrontendCSSFileList[]=eztags.css
 */

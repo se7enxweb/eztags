@@ -1,0 +1,29 @@
+/* The styles of the eztags templates (admin and site), loaded through design.ini [StylesheetSettings]
+   BackendCSSFileList and FrontendCSSFileList so the ezjscore packer bundles them. The templates carry no style=""
+   attribute: a Content-Security-Policy without 'unsafe-inline' for style-src-attr drops those. Spacing comes from
+   the admin's --a4-* tokens where a design has them. */
+
+/* Tag and synonym views, tags dashboard: the action buttons, each in a form of its own, side by side */
+form.eztags-inline-form { float: left; margin-right: var(--a4-space-2, 10px); }
+form.eztags-inline-form-last { margin-right: 0; }
+
+/* Language flag next to the translation name (the same as the shared .a4-flag, for designs without it) */
+img.eztags-flag { vertical-align: middle; }
+
+/* Site tag view: the tag icon before the keyword, and before each related tag */
+img.eztags-view-icon { margin-right: 10px; }
+img.eztags-related-icon { margin-right: 5px; }
+
+/* Tag cloud: each tag is sized from 100 to 200 percent by how often it is used, in steps of 10 percent */
+a.eztags-cloud-item { padding-right: 5px; }
+a.eztags-cloud-size-0 { font-size: 100%; }
+a.eztags-cloud-size-1 { font-size: 110%; }
+a.eztags-cloud-size-2 { font-size: 120%; }
+a.eztags-cloud-size-3 { font-size: 130%; }
+a.eztags-cloud-size-4 { font-size: 140%; }
+a.eztags-cloud-size-5 { font-size: 150%; }
+a.eztags-cloud-size-6 { font-size: 160%; }
+a.eztags-cloud-size-7 { font-size: 170%; }
+a.eztags-cloud-size-8 { font-size: 180%; }
+a.eztags-cloud-size-9 { font-size: 190%; }
+a.eztags-cloud-size-10 { font-size: 200%; }

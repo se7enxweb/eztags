@@ -5,7 +5,7 @@
         <div class="row">
             <div class="span8">
                 <div class="attribute-header">
-                    <h1><img class="transparent-png-icon" src="{$tag.icon|tag_icon( 'normal' )}" title="{$tag.keyword|wash}" alt="{$tag.keyword|wash}" style="margin-right:10px" />{$tag.keyword|wash}</h1>
+                    <h1><img class="transparent-png-icon eztags-view-icon" src="{$tag.icon|tag_icon( 'normal' )}" title="{$tag.keyword|wash}" alt="{$tag.keyword|wash}" />{$tag.keyword|wash}</h1>
                 </div>
 
                 {def $nodes = fetch( content, tree,
@@ -83,7 +83,7 @@
                                             {foreach $related_tags as $related_tag}
                                                 {if $related_tag.id|ne( $tag.id )}
                                                     <li>
-                                                        <img class="transparent-png-icon" src="{$related_tag.icon|tag_icon}" title="{$related_tag.keyword|wash}" alt="{$related_tag.keyword|wash}" style="margin-right:5px" />
+                                                        <img class="transparent-png-icon eztags-related-icon" src="{$related_tag.icon|tag_icon}" title="{$related_tag.keyword|wash}" alt="{$related_tag.keyword|wash}" />
                                                         <a href={$related_tag.url|ezurl}>{$related_tag.keyword|wash} ({$related_nodes.SearchExtras.facet_fields.0.countList[$related_tag.id]})</a>
                                                     </li>
                                                 {/if}

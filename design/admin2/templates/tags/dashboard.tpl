@@ -21,7 +21,7 @@
             <div class="controlbar">
                 <div class="button-left">
                     <div class="block">
-                        <form name="tagadd" id="tagadd" style="float:left;" enctype="multipart/form-data" method="post" action={'tags/add/0'|ezurl}>
+                        <form name="tagadd" id="tagadd" class="eztags-inline-form eztags-inline-form-last" enctype="multipart/form-data" method="post" action={'tags/add/0'|ezurl}>
                             <input class="defaultbutton" type="submit" name="SubmitButton" value="{"Add child tag"|i18n( "extension/eztags/tags/view" )}" />
                         </form>
                     </div>
