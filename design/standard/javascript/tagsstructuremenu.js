@@ -88,9 +88,11 @@ function TagsStructureMenu( params, attribute_id )
         var html = '<li id="n-' + this.attribute_id + '-' + item.id + '"' + ( ( liclass ) ? ' class="' + liclass + '"': '' ) + '>';
         if ( item.has_children && !isRootTag )
         {
+            // The fold link has no text: it is named by its title for screen readers (WCAG 2.4.4).
+            var foldName = String( params.fold_string || 'Fold/Unfold' ).replace( /&/g, '&amp;' ).replace( /"/g, '&quot;' ).replace( /</g, '&lt;' );
             html += '<a class="openclose-open" id="a-' + this.attribute_id + '-'
                 + item.id
-                + '" href="#" onclick="this.blur(); return treeMenu_' + this.attribute_id + '.load( this, '
+                + '" href="#" title="' + foldName + '" aria-label="' + foldName + '" onclick="this.blur(); return treeMenu_' + this.attribute_id + '.load( this, '
                 + item.id
                 + ', '
                 + item.modified

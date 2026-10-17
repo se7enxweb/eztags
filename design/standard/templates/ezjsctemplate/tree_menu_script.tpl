@@ -14,6 +14,7 @@
         *}"autoOpen":false,{*
         *}"tag_id_string":"{'Tag ID'|i18n( 'extension/eztags/tags/treemenu' )|wash( javascript )}",{*
         *}"parent_tag_id_string":"{'Parent tag ID'|i18n( 'extension/eztags/tags/treemenu' )|wash( javascript )}",{*
+        *}"fold_string":"{'Fold/Unfold'|i18n( 'design/admin/contentstructuremenu' )|wash( javascript )}",{*
         *}"treemenu_base_url":"{'tags/treemenu'|ezurl( no )}",{*
         *}"not_allowed_string":"{'Dynamic tree not allowed for this siteaccess'|i18n( 'extension/eztags/tags/treemenu' )|wash( javascript )}",{*
         *}"no_tag_string":"{'Tag does not exist'|i18n( 'extension/eztags/tags/treemenu' )|wash( javascript )}",{*
