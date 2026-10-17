@@ -27,9 +27,18 @@ class Treemenu extends \Exponential\Runnable\ModuleView
             define( 'MAX_AGE', 86400 );
         }
 
-        for ( $i = 0, $obLevel = ob_get_level(); $i < $obLevel; ++$i )
+        // A persistent worker (Velocity) keeps a buffer that cannot be removed under the script; ending it raised a
+        // notice on every tree request. eZExecution::discardOutputBuffers() empties such a buffer instead.
+        if ( method_exists( '\eZExecution', 'discardOutputBuffers' ) )
         {
-            ob_end_clean();
+            \eZExecution::discardOutputBuffers();
+        }
+        else
+        {
+            for ( $i = 0, $obLevel = ob_get_level(); $i < $obLevel; ++$i )
+            {
+                ob_end_clean();
+            }
         }
 
         if ( isset( $_SERVER['HTTP_IF_MODIFIED_SINCE'] ) )
