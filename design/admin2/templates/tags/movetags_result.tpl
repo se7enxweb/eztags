@@ -31,11 +31,13 @@
         <div class="controlbar">
             <div class="block">
                 {if $parent_tag_id|gt( 0 )}
-                    <input class="defaultbutton" type="button" name="OkButton" value="OK"  onclick="window.location = '{concat( '/tags/id/', $parent_tag_id )|ezurl(no)}';" />
+                    <input class="defaultbutton" type="button" name="OkButton" value="OK"  data-eztags-location="{concat( '/tags/id/', $parent_tag_id )|ezurl( no )|wash}" />
                 {else}
-                    <input class="defaultbutton" type="button" name="OkButton" value="OK"  onclick="window.location = '{'/tags/dashboard'|ezurl(no)}';" />
+                    <input class="defaultbutton" type="button" name="OkButton" value="OK"  data-eztags-location="{'/tags/dashboard'|ezurl( no )|wash}" />
                 {/if}
             </div>
         </div>
     </div>
 </div>
+
+{ezscript( array( 'eztags_admin.js' ) )}

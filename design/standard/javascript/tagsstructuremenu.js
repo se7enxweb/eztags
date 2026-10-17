@@ -92,37 +92,31 @@ function TagsStructureMenu( params, attribute_id )
             var foldName = String( params.fold_string || 'Fold/Unfold' ).replace( /&/g, '&amp;' ).replace( /"/g, '&quot;' ).replace( /</g, '&lt;' );
             html += '<a class="openclose-open" id="a-' + this.attribute_id + '-'
                 + item.id
-                + '" href="#" title="' + foldName + '" aria-label="' + foldName + '" onclick="this.blur(); return treeMenu_' + this.attribute_id + '.load( this, '
-                + item.id
-                + ', '
-                + item.modified
-                +' )"><\/a>';
+                + '" href="#" title="' + foldName + '" aria-label="' + foldName + '"'
+                // opened and closed by the click listener at the end of this file (no onclick attribute: Content
+                // Security Policy)
+                + ' data-eztags-tree-fold="' + this.attribute_id + '" data-eztags-tag-id="' + item.id
+                + '" data-eztags-modified="' + item.modified + '"><\/a>';
         }
 
         if ( !this.modal )
         {
             if ( this.context != 'browse' && item.id >= 0 )
             {
-                var languagesString = [];
-                for (var locale in item.language_name_array)
-                    languagesString.push('{locale:"' + locale + '", name:"' + item.language_name_array[locale] + '"}');
+                var languages = [];
+                for ( var locale in item.language_name_array )
+                    languages.push( { locale: locale, name: item.language_name_array[locale] } );
 
-                languagesString = '[' + languagesString.join(',') + ']';
-                languagesString = languagesString.replace(/&/g,'&amp;').replace(/'/g,"\\'").replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+                // The menu is opened with these values by the click listener at the end of this file (no onclick
+                // attribute: Content Security Policy)
+                var menuValues = JSON.stringify( { '%tagID%': item.id, '%languages%': languages } )
+                    .replace( /&/g, '&amp;' ).replace( /'/g, '&#39;' ).replace( /</g, '&lt;' ).replace( />/g, '&gt;' ).replace( /"/g, '&quot;' );
 
-                html += '<a class="nodeicon" href="#" onclick="ezpopmenu_showTopLevel( event, '
-                    + ((isRootTag) ? '\'TagMenuSimple\'' : '\'TagMenu\'')
-                    + ', {\'%tagID%\':'
-                    + item.id
-                    + ', \'%languages%\':'
-                    + languagesString
-                    + ' }, \''
-                    + item.keyword
-                    + '\', '
-                    + -1
-                    + ', '
-                    + -1
-                    + ' ); return false"><img src="'
+                html += '<a class="nodeicon" href="#" data-eztags-menu-open="'
+                    + ( isRootTag ? 'TagMenuSimple' : 'TagMenu' )
+                    + '" data-eztags-menu-values="' + menuValues
+                    + '" data-eztags-menu-title="' + item.keyword
+                    + '"><img src="'
                     + item.icon
                     + '" title="' + item.keyword + '" /><\/a>';
             }
@@ -311,7 +305,7 @@ function TagsStructureMenu( params, attribute_id )
                     var aElement = document.getElementById( 'a-' + this.attribute_id + '-' + tagID );
                     if ( aElement )
                     {
-                        aElement.onclick();
+                        this.load( aElement, tagID, aElement.getAttribute( 'data-eztags-modified' ) );
                     }
                 }
             }
@@ -352,3 +346,64 @@ function TagsStructureMenu( params, attribute_id )
         }
     };
 }
+
+/*
+  The tree's links work through one click listener on the document instead of onclick attributes, so the tree runs
+  under a Content Security Policy without 'unsafe-inline'. Set up once, also when this file is loaded twice.
+    a[data-eztags-tree-fold="<attribute id>"][data-eztags-tag-id][data-eztags-modified]   opens or closes a tag:
+        window['treeMenu_' + attribute id].load( link, tag id, modified )
+    a[data-eztags-menu-open="TagMenu"][data-eztags-menu-values='{"%tagID%":..}'][data-eztags-menu-title]   opens the
+        context menu: ezpopmenu_showTopLevel( event, menu, values, title, -1, -1 )
+*/
+( function()
+{
+    if ( window.TagsStructureMenuListening || !document.addEventListener )
+        return;
+    window.TagsStructureMenuListening = true;
+
+    function escapeHTML( text )
+    {
+        return String( text ).replace( /&/g, '&amp;' ).replace( /</g, '&lt;' ).replace( />/g, '&gt;' ).replace( /"/g, '&quot;' ).replace( /'/g, '&#39;' );
+    }
+
+    function closestLink( target, attribute )
+    {
+        for ( var el = target; el && el.nodeType === 1; el = el.parentNode )
+        {
+            if ( el.tagName === 'A' && el.hasAttribute( attribute ) )
+                return el;
+        }
+        return null;
+    }
+
+    document.addEventListener( 'click', function( e )
+    {
+        var fold = closestLink( e.target, 'data-eztags-tree-fold' );
+        if ( fold )
+        {
+            e.preventDefault();
+            fold.blur();
+            var menu = window['treeMenu_' + fold.getAttribute( 'data-eztags-tree-fold' )];
+            if ( menu && fold.className !== 'openclose-error' )
+                menu.load( fold, fold.getAttribute( 'data-eztags-tag-id' ), fold.getAttribute( 'data-eztags-modified' ) );
+            return;
+        }
+
+        var opener = closestLink( e.target, 'data-eztags-menu-open' );
+        if ( opener && typeof window.ezpopmenu_showTopLevel === 'function' )
+        {
+            e.preventDefault();
+            var values = {};
+            try { values = JSON.parse( opener.getAttribute( 'data-eztags-menu-values' ) || '{}' ) || {}; } catch ( err ) { values = {}; }
+            // the names are put into the menu as HTML
+            var languages = values['%languages%'] || [];
+            for ( var i = 0; i < languages.length; i++ )
+                languages[i].name = escapeHTML( languages[i].name );
+            // the position of the click, and the link as the element that opened the menu
+            var position = { type: e.type, detail: e.detail, pageX: e.pageX, pageY: e.pageY, clientX: e.clientX,
+                             clientY: e.clientY, target: opener, currentTarget: opener };
+            window.ezpopmenu_showTopLevel( position, opener.getAttribute( 'data-eztags-menu-open' ), values,
+                                           escapeHTML( opener.getAttribute( 'data-eztags-menu-title' ) || '' ), -1, -1 );
+        }
+    } );
+} )();

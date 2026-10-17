@@ -51,7 +51,7 @@
             <div class="controlbar">
                 <div class="block">
                     <input class="defaultbutton" type="submit" name="SaveButton" value="{'Save'|i18n( 'extension/eztags/tags/edit' )}" />
-                    <input class="button" type="submit" name="DiscardButton" value="{'Discard'|i18n( 'extension/eztags/tags/edit' )}" onclick="return confirmDiscard( '{'Are you sure you want to discard changes?'|i18n( 'extension/eztags/tags/edit' )|wash( javascript )}' );" />
+                    <input class="button" type="submit" name="DiscardButton" value="{'Discard'|i18n( 'extension/eztags/tags/edit' )}" data-eztags-discard-confirm="{'Are you sure you want to discard changes?'|i18n( 'extension/eztags/tags/edit' )|wash}" />
                     <input type="hidden" name="DiscardConfirm" value="1" />
                 </div>
             </div>
@@ -63,17 +63,6 @@
     {include uri='design:ezjsctemplate/modal_dialog.tpl'}
 {/if}
 
-{literal}
-<script language="JavaScript" type="text/javascript">
-function confirmDiscard( question )
-{
-    // Disable/bypass the reload-based (plain HTML) confirmation interface.
-    document.tageditform.DiscardConfirm.value = "0";
-
-    // Ask user if she really wants do it, return this to the handler.
-    return confirm( question );
-}
-</script>
-{/literal}
+{ezscript( array( 'eztags_admin.js' ) )}
 
 {undef $is_main_translation $parent_tag_id}

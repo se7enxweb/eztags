@@ -19,80 +19,59 @@
             <div id="action-filter"></div>
             <div id="tpg"></div>
         </div>
+        {* The table's settings, read by eztags_admin.js, which starts the table (jquery.eztagschildren.js): no inline
+           script (Content Security Policy) *}
+        {def $languages = fetch( content, prioritized_languages )
+             $children_languages = hash()}
+        {foreach $languages as $language}
+            {set $children_languages = $children_languages|merge( hash( $language.locale, hash( 'name', $language.locale_object.intl_language_name, 'flag', $language.locale|flag_icon ) ) )}
+        {/foreach}
         <form id="eztags-children-actions" method="post" enctype="multipart/form-data">
-            <div id="eztags-tag-children-table"></div>
+            <div id="eztags-tag-children-table" data-eztags-children="{json_encode( hash(
+                'rowsPerPage', $number_of_items,
+                'languages', $children_languages,
+                'permissions', hash(
+                    'add', cond( fetch( user, has_access_to, hash( module, tags, function, add ) ), true(), false() ),
+                    'edit', cond( fetch( user, has_access_to, hash( module, tags, function, edit ) ), true(), false() ),
+                    'remove', cond( fetch( user, has_access_to, hash( module, tags, function, delete ) ), true(), false() ) ),
+                'urls', hash(
+                    'data', concat( '/ezjscore/call/ezjsctagschildren::tagsChildren::', $parent_tag_id, '?ContentType=json&' )|ezurl( no ),
+                    'view', '/tags/id/'|ezurl( no ),
+                    'add', concat( '/tags/add/', $parent_tag_id )|ezurl( no ),
+                    'edit', '/tags/edit/'|ezurl( no ),
+                    'deletetags', '/tags/deletetags'|ezurl( no ),
+                    'movetags', '/tags/movetags'|ezurl( no ) ),
+                'i18n', hash(
+                    'id', 'ID'|i18n( 'extension/eztags/tags/view' ),
+                    'tag_name', 'Tag name'|i18n( 'extension/eztags/tags/view' ),
+                    'translations', 'Tag translations'|i18n( 'extension/eztags/tags/view' ),
+                    'modified', 'Modified'|i18n( 'extension/eztags/tags/view' ),
+                    'first_page', '&laquo;',
+                    'last_page', '&raquo;',
+                    'previous_page', '&lsaquo;',
+                    'next_page', '&rsaquo;',
+                    'select_visible', 'Select all visible'|i18n( 'extension/eztags/tags/view' ),
+                    'select_none', 'Select none'|i18n( 'extension/eztags/tags/view' ),
+                    'select_toggle', 'Invert selection'|i18n( 'extension/eztags/tags/view' ),
+                    'select', 'Select'|i18n( 'extension/eztags/tags/view' ),
+                    'add_child', 'Add tag'|i18n( 'extension/eztags/tags/view' ),
+                    'add_child_group', 'Translation'|i18n( 'extension/eztags/tags/view' ),
+                    'more_actions', 'More actions'|i18n( 'extension/eztags/tags/view' ),
+                    'more_actions_denied', 'You do not have permissions for any of available actions'|i18n( 'extension/eztags/tags/view' ),
+                    'remove_selected', 'Remove selected tags'|i18n( 'extension/eztags/tags/view' ),
+                    'move_selected', 'Move selected tags'|i18n( 'extension/eztags/tags/view' ),
+                    'no_actions', 'Use the checkboxes to select one or more tags.'|i18n( 'extension/eztags/tags/view' ),
+                    'table_options', 'Table options'|i18n( 'extension/eztags/tags/view' ),
+                    'close_table_options', 'Close'|i18n( 'extension/eztags/tags/view' ),
+                    'number_of_items', 'Number of tags per page'|i18n( 'extension/eztags/tags/view' ),
+                    'loading', 'Loading...'|i18n( 'extension/eztags/tags/view' ),
+                    'no_tags', 'No tags found.'|i18n( 'extension/eztags/tags/view' ) ) ) )|wash}"></div>
         </form>
         <div id="bpg"></div>
 
         <div id="to-dialog-container"></div>
 
-        {def $languages = fetch( content, prioritized_languages )}
-        <script type="text/javascript">
-            var languages = {ldelim}{*
-                *}{foreach $languages as $language}{*
-                    *}'{$language.locale|wash( javascript )}': {ldelim}{*
-                        *}name: '{$language.locale_object.intl_language_name|wash( javascript )}',{*
-                        *}flag: '{$language.locale|flag_icon}'{*
-                    *}{rdelim}{*
-                    *}{delimiter}, {/delimiter}{*
-                *}{/foreach}{*
-            *}{rdelim};
-
-            var i18n = {ldelim}{*
-                *}id: "{'ID'|i18n( 'extension/eztags/tags/view' )|wash( javascript )}",{*
-                *}tag_name: "{'Tag name'|i18n( 'extension/eztags/tags/view' )|wash( javascript )}",{*
-                *}translations: "{'Tag translations'|i18n( 'extension/eztags/tags/view' )|wash( javascript )}",{*
-                *}modified: "{'Modified'|i18n( 'extension/eztags/tags/view' )|wash( javascript )}",{*
-                *}first_page: "&laquo;",{*
-                *}last_page: "&raquo;",{*
-                *}previous_page: "&lsaquo;",{*
-                *}next_page: "&rsaquo;",{*
-                *}select_visible: "{'Select all visible'|i18n( 'extension/eztags/tags/view' )|wash( javascript )}",{*
-                *}select_none: "{'Select none'|i18n( 'extension/eztags/tags/view' )|wash( javascript )}",{*
-                *}select_toggle: "{'Invert selection'|i18n( 'extension/eztags/tags/view' )|wash( javascript )}",{*
-                *}select: "{'Select'|i18n( 'extension/eztags/tags/view' )|wash( javascript )}",{*
-                *}add_child: "{'Add tag'|i18n( 'extension/eztags/tags/view' )|wash( javascript )}",{*
-                *}add_child_group: "{'Translation'|i18n( 'extension/eztags/tags/view' )|wash( javascript )}",{*
-                *}more_actions: "{'More actions'|i18n( 'extension/eztags/tags/view' )|wash( javascript )}",{*
-                *}more_actions_denied: "{'You do not have permissions for any of available actions'|i18n( 'extension/eztags/tags/view' )|wash( javascript )}",{*
-                *}remove_selected: "{'Remove selected tags'|i18n( 'extension/eztags/tags/view' )|wash( javascript )}",{*
-                *}move_selected: "{'Move selected tags'|i18n( 'extension/eztags/tags/view' )|wash( javascript )}",{*
-                *}no_actions: "{'Use the checkboxes to select one or more tags.'|i18n( 'extension/eztags/tags/view' )|wash( javascript )}",{*
-                *}table_options: "{'Table options'|i18n( 'extension/eztags/tags/view' )|wash( javascript )}",{*
-                *}close_table_options: "{'Close'|i18n( 'extension/eztags/tags/view' )|wash( javascript )}",{*
-                *}number_of_items: "{'Number of tags per page'|i18n( 'extension/eztags/tags/view' )|wash( javascript )}",{*
-                *}loading: "{'Loading...'|i18n( 'extension/eztags/tags/view' )|wash( javascript )}",{*
-                *}no_tags: "{'No tags found.'|i18n( 'extension/eztags/tags/view' )|wash( javascript )}"{*
-            *}{rdelim};
-
-            var permissions = {ldelim}{*
-                *}add: {if fetch( user, has_access_to, hash( module, tags, function, add ) )}true{else}false{/if},{*
-                *}edit: {if fetch( user, has_access_to, hash( module, tags, function, edit ) )}true{else}false{/if},{*
-                *}remove: {if fetch( user, has_access_to, hash( module, tags, function, delete ) )}true{else}false{/if}{*
-            *}{rdelim};
-
-            var urls = {ldelim}{*
-                *}data: {concat( '/ezjscore/call/ezjsctagschildren::tagsChildren::', $parent_tag_id, '?ContentType=json&' )|ezurl},{*
-                *}view: {'/tags/id/'|ezurl},{*
-                *}add: {concat( '/tags/add/', $parent_tag_id )|ezurl},{*
-                *}edit: {'/tags/edit/'|ezurl},{*
-                *}deletetags: {'/tags/deletetags'|ezurl},{*
-                *}movetags: {'/tags/movetags'|ezurl}{*
-            *}{rdelim};
-
-            jQuery(document).ready(function($) {ldelim}
-                var settings = {ldelim}
-                    rowsPerPage: {$number_of_items},
-                    languages: languages,
-                    permissions: permissions,
-                    urls: urls,
-                    i18n: i18n
-                {rdelim};
-                {* The table: Exponential UI's exp::datatable *}
-                if ( window.Exp && Exp.$ && Exp.$.fn.expDataTable && $.fn.eZTagsChildrenExp )
-                    $('#eztags-tag-children-table').eZTagsChildrenExp( settings );
-            {rdelim});
-        </script>
+        {ezscript( array( 'eztags_admin.js' ) )}
         {if ezini( 'ExtensionSettings', 'ActiveExtensions' )|contains( 'expui' )}
             {* the texts Exponential UI's table shows itself (page links, sorting, the filter), translated *}
             {exp_config( hash( 'strings', array( 'Loading...', 'No records found.', 'Data error.', 'Click to sort ascending', 'Click to sort descending',
