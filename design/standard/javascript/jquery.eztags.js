@@ -197,6 +197,84 @@
 
 
 
+  // Templates =========================================================
+  // The templates are rendered without eval() or new Function(), so the tags field works under a Content Security
+  // Policy without 'unsafe-eval'. A template is HTML with <%= expression %> tags, where the expression is
+  // - a dotted path into the data: <%= tag.name %>, <%= tr.addNew %> (null and undefined print nothing), or
+  // - a comparison choosing one of two strings: <%= tag.main_tag_id !== "0" ? " itemSynonym" : "" %>
+  //   (===, !==, == or != against a quoted string, a number, null, true or false).
+  // Anything else (other expressions, <% code %> blocks) prints nothing and is reported on the console.
+  var TPL_PATH = '([A-Za-z_$][\\w$]*(?:\\.[A-Za-z_$][\\w$]*)*)';
+  var TPL_STRING = '(?:"([^"]*)"|\'([^\']*)\')';
+  var TPL_PATH_RE = new RegExp('^' + TPL_PATH + '$');
+  var TPL_CHOICE_RE = new RegExp('^' + TPL_PATH + '\\s*(===|!==|==|!=)\\s*("[^"]*"|\'[^\']*\'|-?\\d+(?:\\.\\d+)?|null|true|false)' +
+                                 '\\s*\\?\\s*' + TPL_STRING + '\\s*:\\s*' + TPL_STRING + '$');
+
+  var tplLookup = function(data, path){
+    var value = data, keys = path.split('.');
+    for (var i = 0; i < keys.length; i++) {
+      if (value === null || value === undefined) { return undefined; }
+      value = value[keys[i]];
+    }
+    return value;
+  };
+
+  var tplLiteral = function(match){
+    if (match.charAt(0) === '"' || match.charAt(0) === '\'') { return match.slice(1, -1); }
+    if (match === 'null') { return null; }
+    if (match === 'true' || match === 'false') { return match === 'true'; }
+    return parseFloat(match);
+  };
+
+  var tplWarn = function(message){
+    if (window.console && window.console.warn) { window.console.warn('eZ Tags: ' + message); }
+  };
+
+  var tplCompileExpression = function(expression){
+    var m = TPL_PATH_RE.exec(expression);
+    if (m) {
+      var key = m[1];
+      return function(data){ return tplLookup(data, key); };
+    }
+    m = TPL_CHOICE_RE.exec(expression);
+    if (m) {
+      var path = m[1], operator = m[2], literal = tplLiteral(m[3]),
+          whenTrue = m[4] !== undefined ? m[4] : m[5],
+          whenFalse = m[6] !== undefined ? m[6] : m[7];
+      return function(data){
+        var value = tplLookup(data, path),
+            same = operator.length === 3 ? value === literal : value == literal; /*jshint ignore:line*/
+        return (operator.charAt(0) === '!' ? !same : same) ? whenTrue : whenFalse;
+      };
+    }
+    tplWarn('unsupported template expression: ' + expression);
+    return function(){ return undefined; };
+  };
+
+  var tplCompile = function(str){
+    var parts = [], re = /<%(=?)([\s\S]*?)%>/g, last = 0, m;
+    str = str.replace(/[\r\t\n]/g, ' ');
+    while ((m = re.exec(str)) !== null) {
+      parts.push(str.slice(last, m.index));
+      if (m[1] === '=') {
+        parts.push(tplCompileExpression(m[2].trim()));
+      } else {
+        tplWarn('template code blocks are not supported: <%' + m[2] + '%>');
+      }
+      last = re.lastIndex;
+    }
+    parts.push(str.slice(last));
+    return function(data){
+      var out = '', value;
+      for (var i = 0; i < parts.length; i++) {
+        if (typeof parts[i] === 'string') { out += parts[i]; continue; }
+        value = parts[i](data || {});
+        out += value === null || value === undefined ? '' : String(value);
+      }
+      return out;
+    };
+  };
+
   // TagSuggest ========================================================
   var Base = function(el, opts) {
     opts || (opts = {});
@@ -295,7 +373,7 @@
   };
 
   Base.prototype.tpl = function(str, data){
-    var fn = this.tplCache[str] || ( this.tplCache[str] = new Function("obj", "var p=[];with(obj){p.push('" + str.replace(/[\r\t\n]/g, " ").split("<%").join("\t").replace(/((^|%>)[^\t]*)'/g, "$1\r").replace(/\t=(.*?)%>/g, "',$1,'").split("\t").join("');").split("%>").join("p.push('").split("\r").join("\\'") + "');}return p.join('');") ); /*jshint ignore:line*/
+    var fn = this.tplCache[str] || ( this.tplCache[str] = tplCompile(str) );
     return data ? fn(data) : fn;
   };
 

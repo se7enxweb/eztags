@@ -45,6 +45,10 @@
         this.$el.jstree({
             'core': {
                 'multiple': false,
+                // jsTree would parse the data in a worker built from a blob: URL of its own code, which a Content
+                // Security Policy without worker-src blob: blocks (and reports on every tree). The trees are small:
+                // parse on the page.
+                'worker': false,
                 'data': this.getTreeData.bind(this)
             }
         });
