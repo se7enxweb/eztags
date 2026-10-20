@@ -2,10 +2,37 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="it_IT">
 <context>
+    <name>design/admin/parts/user/menu</name>
+    <message>
+        <source>Change the left menu width to small size.</source>
+        <translation>Scegli la larghezza piccola per il menù a sinistra.</translation>
+    </message>
+    <message>
+        <source>Small</source>
+        <translation>Piccola</translation>
+    </message>
+    <message>
+        <source>Medium</source>
+        <translation>Media</translation>
+    </message>
+    <message>
+        <source>Change the left menu width to large size.</source>
+        <translation>Scegli la larghezza grande per il menù a sinistra.</translation>
+    </message>
+    <message>
+        <source>Large</source>
+        <translation>Grande</translation>
+    </message>
+    <message>
+        <source>Change the left menu width to medium size.</source>
+        <translation>Scegli la larghezza media per il menù a sinistra.</translation>
+    </message>
+</context>
+<context>
     <name>extension/eztags/datatypes</name>
     <message>
         <source>Tags</source>
-        <translation>Tags</translation>
+        <translation>Parole chiave</translation>
     </message>
     <message>
         <source>Loading</source>
@@ -33,23 +60,23 @@
     </message>
     <message>
         <source>Click to add this tag</source>
-        <translation type="unfinished"></translation>
+        <translation>Fai clic per aggiungere questo tag</translation>
     </message>
     <message>
         <source>Remove tag</source>
-        <translation type="unfinished"></translation>
+        <translation>Rimuovi tag</translation>
     </message>
     <message>
         <source>At least one tag is required to be added.</source>
-        <translation type="unfinished"></translation>
+        <translation>È necessario aggiungere almeno un tag.</translation>
     </message>
     <message>
         <source>Attribute contains invalid data.</source>
-        <translation type="unfinished"></translation>
+        <translation>L'attributo contiene dati non validi.</translation>
     </message>
     <message>
         <source>Up to %1 tags are allowed to be added.</source>
-        <translation type="unfinished"></translation>
+        <translation>È possibile aggiungere al massimo %1 tag.</translation>
     </message>
     <message>
         <source>Limit by tags subtree</source>
@@ -65,15 +92,15 @@
     </message>
     <message>
         <source>Edit view</source>
-        <translation type="unfinished"></translation>
+        <translation>Vista di modifica</translation>
     </message>
     <message>
         <source>Default view</source>
-        <translation type="unfinished"></translation>
+        <translation>Vista predefinita</translation>
     </message>
     <message>
         <source>Select view</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona vista</translation>
     </message>
     <message>
         <source>Maximum number of allowed tags</source>
@@ -101,27 +128,35 @@
     </message>
     <message>
         <source>Translate tag</source>
-        <translation type="unfinished"></translation>
+        <translation>Traduci tag</translation>
     </message>
     <message>
         <source>Existing translations</source>
-        <translation type="unfinished"></translation>
+        <translation>Traduzioni esistenti</translation>
     </message>
     <message>
         <source>No existing translations</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessuna traduzione esistente</translation>
     </message>
     <message>
         <source>Add translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiungi traduzione</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Annulla</translation>
     </message>
     <message>
         <source>OK</source>
         <translation>OK</translation>
+    </message>
+    <message>
+        <source>Find a tag to add</source>
+        <translation>Trova un tag da aggiungere</translation>
+    </message>
+    <message>
+        <source>Choose a tag</source>
+        <translation>Scegli un tag</translation>
     </message>
 </context>
 <context>
@@ -140,11 +175,11 @@
     </message>
     <message>
         <source>Tag/synonym with that translation already exists in selected location.</source>
-        <translation type="unfinished"></translation>
+        <translation>Esiste già un tag/sinonimo con questa traduzione nella posizione selezionata.</translation>
     </message>
     <message>
         <source>The following tags could not be moved because they contain translations that already exist in one of the tags in selected location.</source>
-        <translation type="unfinished"></translation>
+        <translation>I seguenti tag non possono essere spostati perché contengono traduzioni già presenti in uno dei tag nella posizione selezionata.</translation>
     </message>
     <message>
         <source>Go back</source>
@@ -154,16 +189,20 @@
 <context>
     <name>extension/eztags/node/view</name>
     <message>
-        <source>eZ Tags</source>
-        <translation type="unfinished"></translation>
+        <source>Tags</source>
+        <translation>Parole chiave</translation>
     </message>
     <message>
-        <source>Show eZ Tags attributes overview.</source>
-        <translation type="unfinished"></translation>
+        <source>Show Tags attributes overview.</source>
+        <translation>Mostra la panoramica degli attributi dei tag.</translation>
     </message>
     <message>
         <source>No tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessun tag</translation>
+    </message>
+    <message>
+        <source>eZ Tags</source>
+        <translation>eZ Tags</translation>
     </message>
 </context>
 <context>
@@ -214,7 +253,7 @@
     </message>
     <message>
         <source>Move tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Sposta tag</translation>
     </message>
     <message>
         <source>Edit synonym</source>
@@ -226,7 +265,7 @@
     </message>
     <message>
         <source>Delete tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Elimina tag</translation>
     </message>
     <message>
         <source>Merge tag</source>
@@ -257,40 +296,40 @@
         <translation>Seleziona tag principale</translation>
     </message>
     <message>
-        <source>Are you sure you want to delete the &quot;%keyword&quot; tag? All children tags and synonyms will also be deleted and removed from existing objects.</source>
-        <translation>Sei sicuro di voler cancellare la tag &quot;%keyword&quot;? Tutti i tags figli ed i sinonimi verranno anch&apos;essi cancellati ed eliminati dagli oggetti esistenti.</translation>
+        <source>Are you sure you want to delete the "%keyword" tag? All children tags and synonyms will also be deleted and removed from existing objects.</source>
+        <translation>Sei sicuro di voler cancellare la tag "%keyword"? Tutti i tags figli ed i sinonimi verranno anch'essi cancellati ed eliminati dagli oggetti esistenti.</translation>
     </message>
     <message>
         <source>Are you sure you want to delete selected tags? All children tags and synonyms will also be deleted and removed from existing objects.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vuoi davvero eliminare i tag selezionati? Anche tutti i tag figli e i sinonimi verranno eliminati e rimossi dagli oggetti esistenti.</translation>
     </message>
     <message>
         <source>Are you sure you want to move selected tags?</source>
-        <translation type="unfinished"></translation>
+        <translation>Vuoi davvero spostare i tag selezionati?</translation>
     </message>
     <message>
         <source>Tag</source>
-        <translation type="unfinished"></translation>
+        <translation>Tag</translation>
     </message>
     <message>
         <source>Related objects count</source>
-        <translation type="unfinished"></translation>
+        <translation>Numero di oggetti correlati</translation>
     </message>
     <message>
         <source>Children count</source>
-        <translation type="unfinished"></translation>
+        <translation>Numero di figli</translation>
     </message>
     <message>
-        <source>Are you sure you want to delete the &quot;%keyword&quot; synonym?</source>
-        <translation>Sei sicuro di voler cancellare il sinonimo &quot;%keyword&quot;?</translation>
+        <source>Are you sure you want to delete the "%keyword" synonym?</source>
+        <translation>Sei sicuro di voler cancellare il sinonimo "%keyword"?</translation>
     </message>
     <message>
         <source>Transfer all related objects to the main tag</source>
         <translation>Trasferisci tutti gli oggetti correlati al tag principale</translation>
     </message>
     <message>
-        <source>Merging this tag with another tag will delete the tag and it&apos;s synonyms and transfer all related objects to the main tag. Also, all children tags will become main tag children.</source>
-        <translation>La fusione di questa tag con un&apos;altra tag cancellerà la tag ed i suoi sinonimi e trasferirà tutti gli oggetti correlati alla tag principale. Inoltre, tutti i figli della tag diventeranno figli della tag principale.</translation>
+        <source>Merging this tag with another tag will delete the tag and it's synonyms and transfer all related objects to the main tag. Also, all children tags will become main tag children.</source>
+        <translation>La fusione di questa tag con un'altra tag cancellerà la tag ed i suoi sinonimi e trasferirà tutti gli oggetti correlati alla tag principale. Inoltre, tutti i figli della tag diventeranno figli della tag principale.</translation>
     </message>
     <message>
         <source>Yes</source>
@@ -301,11 +340,11 @@
         <translation>No</translation>
     </message>
     <message>
-        <source>The tag you&apos;re about to delete has</source>
+        <source>The tag you're about to delete has</source>
         <translation>La tag che stai per cancellare ha</translation>
     </message>
     <message>
-        <source>The tag you&apos;re about to merge has</source>
+        <source>The tag you're about to merge has</source>
         <translation>La tag che stai per fondere ha</translation>
     </message>
     <message>
@@ -326,39 +365,39 @@
     </message>
     <message>
         <source>Set as main translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Imposta come traduzione principale</translation>
     </message>
     <message>
         <source>Add translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiungi traduzione</translation>
     </message>
     <message>
         <source>Select the translation you want to add</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona la traduzione da aggiungere</translation>
     </message>
     <message>
         <source>Edit translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifica traduzione</translation>
     </message>
     <message>
         <source>Select the translation you want to edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona la traduzione da modificare</translation>
     </message>
     <message>
         <source>Main translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Traduzione principale</translation>
     </message>
     <message>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifica</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Annulla</translation>
     </message>
     <message>
         <source>Use the main language if there is no prioritized translation.</source>
-        <translation type="unfinished"></translation>
+        <translation>Usa la lingua principale se non ci sono traduzioni prioritarie.</translation>
     </message>
 </context>
 <context>
@@ -380,12 +419,12 @@
         <translation>La ricerca vuota non è permessa. Inserisci la tua chiave di ricerca in alto.</translation>
     </message>
     <message>
-        <source>No tags were found while searching for &quot;%1&quot;.</source>
-        <translation>Nessuna tag trovata cercando &quot;%1&quot;.</translation>
+        <source>No tags were found while searching for "%1".</source>
+        <translation>Nessuna tag trovata cercando "%1".</translation>
     </message>
     <message>
-        <source>Search for &quot;%1&quot; returned %2 matches.</source>
-        <translation>La ricerca di &quot;%1&quot; ha restituito %2 risultati.</translation>
+        <source>Search for "%1" returned %2 matches.</source>
+        <translation>La ricerca di "%1" ha restituito %2 risultati.</translation>
     </message>
     <message>
         <source>Tag name</source>
@@ -456,7 +495,7 @@
     </message>
     <message>
         <source>New translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuova traduzione</translation>
     </message>
     <message>
         <source>Top level tags</source>
@@ -535,43 +574,43 @@
     </message>
     <message>
         <source>Invert selection.</source>
-        <translation type="unfinished"></translation>
+        <translation>Inverti selezione.</translation>
     </message>
     <message>
         <source>Language</source>
-        <translation type="unfinished"></translation>
+        <translation>Lingua</translation>
     </message>
     <message>
         <source>Translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Traduzione</translation>
     </message>
     <message>
         <source>Locale</source>
-        <translation type="unfinished"></translation>
+        <translation>Localizzazione</translation>
     </message>
     <message>
         <source>Main</source>
-        <translation type="unfinished"></translation>
+        <translation>Principale</translation>
     </message>
     <message>
         <source>Edit in &lt;%language_name&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifica in &lt;%language_name&gt;.</translation>
     </message>
     <message>
         <source>Remove selected</source>
-        <translation type="unfinished"></translation>
+        <translation>Elimina selezionati</translation>
     </message>
     <message>
         <source>Set main</source>
-        <translation type="unfinished"></translation>
+        <translation>Imposta principale</translation>
     </message>
     <message>
         <source>Update</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiorna</translation>
     </message>
     <message>
         <source>Tag translations</source>
-        <translation type="unfinished"></translation>
+        <translation>Traduzioni del tag</translation>
     </message>
     <message>
         <source>Up one level.</source>
@@ -647,15 +686,15 @@
     </message>
     <message>
         <source>No tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessun tag</translation>
     </message>
     <message>
         <source>Use the main language if there is no prioritized translation.</source>
-        <translation type="unfinished"></translation>
+        <translation>Usa la lingua principale se non ci sono traduzioni prioritarie.</translation>
     </message>
     <message>
         <source>Last modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Ultima modifica</translation>
     </message>
     <message>
         <source>Tag ID</source>
@@ -663,82 +702,110 @@
     </message>
     <message>
         <source>first</source>
-        <translation type="unfinished"></translation>
+        <translation>primo</translation>
     </message>
     <message>
         <source>last</source>
-        <translation type="unfinished"></translation>
+        <translation>ultimo</translation>
     </message>
     <message>
         <source>next</source>
-        <translation type="unfinished"></translation>
+        <translation>succ</translation>
     </message>
     <message>
         <source>prev</source>
-        <translation type="unfinished"></translation>
+        <translation>prec</translation>
     </message>
     <message>
         <source>Select all visible</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona visibili</translation>
     </message>
     <message>
         <source>Select none</source>
-        <translation type="unfinished"></translation>
+        <translation>Deseleziona</translation>
     </message>
     <message>
         <source>Invert selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Inverti selezione</translation>
     </message>
     <message>
         <source>Select</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleziona</translation>
     </message>
     <message>
         <source>Remove selected tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Rimuovi i tag selezionati</translation>
     </message>
     <message>
         <source>Move selected tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Sposta i tag selezionati</translation>
     </message>
     <message>
         <source>More actions</source>
-        <translation type="unfinished"></translation>
+        <translation>Altre azioni</translation>
     </message>
     <message>
         <source>You do not have permissions for any of available actions</source>
-        <translation type="unfinished"></translation>
+        <translation>Non hai i permessi per nessuna delle azioni disponibili</translation>
     </message>
     <message>
         <source>Use the checkboxes to select one or more tags.</source>
-        <translation type="unfinished"></translation>
+        <translation>Usa le caselle di controllo per selezionare uno o più tag.</translation>
     </message>
     <message>
         <source>Table options</source>
-        <translation type="unfinished"></translation>
+        <translation>Opzioni tabella</translation>
     </message>
     <message>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiudi</translation>
     </message>
     <message>
         <source>Number of tags per page</source>
-        <translation type="unfinished"></translation>
+        <translation>Numero di tag per pagina</translation>
     </message>
     <message>
         <source>Loading...</source>
-        <translation type="unfinished"></translation>
+        <translation>Caricamento...</translation>
     </message>
     <message>
         <source>No tags found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nessun tag trovato.</translation>
+    </message>
+    <message>
+        <source>Edit</source>
+        <translation>Modifica</translation>
+    </message>
+    <message>
+        <source>Show all content related to tag</source>
+        <translation>Mostra tutti i contenuti correlati al tag</translation>
+    </message>
+    <message>
+        <source>List of content related to tag %tag (%count):</source>
+        <translation>Elenco dei contenuti correlati al tag %tag (%count):</translation>
+    </message>
+    <message>
+        <source>Visibility</source>
+        <translation>Visibilità</translation>
+    </message>
+    <message>
+        <source>Hidden</source>
+        <translation>Nascosto</translation>
+    </message>
+    <message>
+        <source>Hidden by superior</source>
+        <translation>Nascosto dal superiore</translation>
+    </message>
+    <message>
+        <source>Visible</source>
+        <translation>Visibile</translation>
     </message>
 </context>
 <context>
     <name>extension/eztags/warnings</name>
     <message>
         <source>TAKE CARE: Tag is inside class attribute subtree limit(s). If moved outside those limits, it could lead to inconsistency as objects could end up with tags that they are not supposed to have.</source>
-        <translation>ATTENZIONE: La tag è dentro i limiti del sotto-albero. Se viene spostata fuori da questi limiti, può generare un&apos;inconsistenza perchè gli oggetti possono terminare con delle tags che non dovrebbero avere.</translation>
+        <translation>ATTENZIONE: La tag è dentro i limiti del sotto-albero. Se viene spostata fuori da questi limiti, può generare un'inconsistenza perchè gli oggetti possono terminare con delle tags che non dovrebbero avere.</translation>
     </message>
     <message>
         <source>Manual search index regeneration is required for changes to be seen in search. Enable DelayedIndexing in site.ini to reindex automatically.</source>
@@ -749,7 +816,29 @@
     <name>extension/eztags/tagcloud</name>
     <message>
         <source>objects tagged with '%keyword'</source>
-        <translation type="unfinished"></translation>
+        <translation>oggetti con il tag '%keyword'</translation>
+    </message>
+    <message>
+        <source>%count objects tagged with '%keyword'</source>
+        <translation>%count oggetti con il tag '%keyword'</translation>
+    </message>
+</context>
+<context>
+    <name>design/admin/pagelayout</name>
+    <message>
+        <source>Tags</source>
+        <translation>Parole chiave</translation>
+    </message>
+    <message>
+        <source>Tags dashboard</source>
+        <translation>Pannello di controllo delle tags</translation>
+    </message>
+</context>
+<context>
+    <name>kernel/navigationpart</name>
+    <message>
+        <source>eZ Tags</source>
+        <translation>eZ Tags</translation>
     </message>
 </context>
 </TS>

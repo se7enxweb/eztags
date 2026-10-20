@@ -2,6 +2,33 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="nl_NL">
 <context>
+    <name>design/admin/parts/user/menu</name>
+    <message>
+        <source>Change the left menu width to small size.</source>
+        <translation>De breedte van het linkermenu op klein zetten.</translation>
+    </message>
+    <message>
+        <source>Small</source>
+        <translation>Klein</translation>
+    </message>
+    <message>
+        <source>Medium</source>
+        <translation>Middel</translation>
+    </message>
+    <message>
+        <source>Change the left menu width to large size.</source>
+        <translation>De breedte van het linkermenu op groot zetten.</translation>
+    </message>
+    <message>
+        <source>Large</source>
+        <translation>Groot</translation>
+    </message>
+    <message>
+        <source>Change the left menu width to medium size.</source>
+        <translation>De breedte van het linkermenu op middel zetten.</translation>
+    </message>
+</context>
+<context>
     <name>extension/eztags/datatypes</name>
     <message>
         <source>Tags</source>
@@ -33,59 +60,59 @@
     </message>
     <message>
         <source>Click to add this tag</source>
-        <translation type="unfinished"></translation>
+        <translation>Klik om dit label toe te voegen</translation>
     </message>
     <message>
         <source>Remove tag</source>
-        <translation type="unfinished"></translation>
+        <translation>Label verwijderen</translation>
     </message>
     <message>
         <source>At least one tag is required to be added.</source>
-        <translation type="unfinished"></translation>
+        <translation>Er moet ten minste één label worden toegevoegd.</translation>
     </message>
     <message>
         <source>Attribute contains invalid data.</source>
-        <translation type="unfinished"></translation>
+        <translation>Attribuut bevat ongeldige gegevens.</translation>
     </message>
     <message>
         <source>Up to %1 tags are allowed to be added.</source>
-        <translation type="unfinished"></translation>
+        <translation>Er mogen maximaal %1 labels worden toegevoegd.</translation>
     </message>
     <message>
         <source>Limit by tags subtree</source>
-        <translation type="unfinished"></translation>
+        <translation>Beperken tot substructuur van labels</translation>
     </message>
     <message>
         <source>Select subtree</source>
-        <translation type="unfinished"></translation>
+        <translation>Substructuur selecteren</translation>
     </message>
     <message>
         <source>Hide root subtree limit tag when editing object</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoofdlabel van de substructuurbeperking verbergen bij het bewerken van een object</translation>
     </message>
     <message>
         <source>Edit view</source>
-        <translation type="unfinished"></translation>
+        <translation>Bewerkweergave</translation>
     </message>
     <message>
         <source>Default view</source>
-        <translation type="unfinished"></translation>
+        <translation>Standaardweergave</translation>
     </message>
     <message>
         <source>Select view</source>
-        <translation type="unfinished"></translation>
+        <translation>Weergave selecteren</translation>
     </message>
     <message>
         <source>Maximum number of allowed tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Maximaal aantal toegestane labels</translation>
     </message>
     <message>
         <source>(0 = unlimited)</source>
-        <translation type="unfinished"></translation>
+        <translation>(0 = onbeperkt)</translation>
     </message>
     <message>
         <source>No limit</source>
-        <translation type="unfinished"></translation>
+        <translation>Geen limiet</translation>
     </message>
     <message>
         <source>No</source>
@@ -97,54 +124,62 @@
     </message>
     <message>
         <source>Unlimited</source>
-        <translation type="unfinished"></translation>
+        <translation>Onbeperkt</translation>
     </message>
     <message>
         <source>Translate tag</source>
-        <translation type="unfinished"></translation>
+        <translation>Label vertalen</translation>
     </message>
     <message>
         <source>Existing translations</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestaande vertalingen</translation>
     </message>
     <message>
         <source>No existing translations</source>
-        <translation type="unfinished"></translation>
+        <translation>Geen bestaande vertalingen</translation>
     </message>
     <message>
         <source>Add translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Vertaling toevoegen</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Annuleren</translation>
     </message>
     <message>
         <source>OK</source>
         <translation>OK</translation>
+    </message>
+    <message>
+        <source>Find a tag to add</source>
+        <translation>Zoek een tag om toe te voegen</translation>
+    </message>
+    <message>
+        <source>Choose a tag</source>
+        <translation>Kies een tag</translation>
     </message>
 </context>
 <context>
     <name>extension/eztags/errors</name>
     <message>
         <source>Tag cannot be modified because it is being used as subtree limitation in one or more class attributes.</source>
-        <translation type="unfinished"></translation>
+        <translation>Label kan niet worden gewijzigd omdat het als substructuurbeperking wordt gebruikt in een of meer klasse-attributen.</translation>
     </message>
     <message>
         <source>Selected target tag is invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Geselecteerd doellabel is ongeldig.</translation>
     </message>
     <message>
         <source>Name cannot be empty.</source>
-        <translation type="unfinished"></translation>
+        <translation>Naam mag niet leeg zijn.</translation>
     </message>
     <message>
         <source>Tag/synonym with that translation already exists in selected location.</source>
-        <translation type="unfinished"></translation>
+        <translation>Label/synoniem met die vertaling bestaat al op de geselecteerde locatie.</translation>
     </message>
     <message>
         <source>The following tags could not be moved because they contain translations that already exist in one of the tags in selected location.</source>
-        <translation type="unfinished"></translation>
+        <translation>De volgende labels konden niet worden verplaatst omdat ze vertalingen bevatten die al bestaan in een van de labels op de geselecteerde locatie.</translation>
     </message>
     <message>
         <source>Go back</source>
@@ -154,23 +189,27 @@
 <context>
     <name>extension/eztags/node/view</name>
     <message>
-        <source>eZ Tags</source>
-        <translation type="unfinished"></translation>
+        <source>Tags</source>
+        <translation>Labels</translation>
     </message>
     <message>
-        <source>Show eZ Tags attributes overview.</source>
-        <translation type="unfinished"></translation>
+        <source>Show Tags attributes overview.</source>
+        <translation>Overzicht van tagattributen tonen.</translation>
     </message>
     <message>
         <source>No tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Geen labels</translation>
+    </message>
+    <message>
+        <source>eZ Tags</source>
+        <translation>eZ Tags</translation>
     </message>
 </context>
 <context>
     <name>extension/eztags/tags/edit</name>
     <message>
         <source>no parent</source>
-        <translation type="unfinished"></translation>
+        <translation>geen bovenliggend label</translation>
     </message>
     <message>
         <source>New tag</source>
@@ -214,7 +253,7 @@
     </message>
     <message>
         <source>Move tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Labels verplaatsen</translation>
     </message>
     <message>
         <source>Edit synonym</source>
@@ -226,7 +265,7 @@
     </message>
     <message>
         <source>Delete tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Labels verwijderen</translation>
     </message>
     <message>
         <source>Merge tag</source>
@@ -257,39 +296,39 @@
         <translation>Hoofdlabel selecteren</translation>
     </message>
     <message>
-        <source>Are you sure you want to delete the &quot;%keyword&quot; tag? All children tags and synonyms will also be deleted and removed from existing objects.</source>
-        <translation>Weet u zeker dat u de tag &quot;%keyword&quot; wilt verwijderen? Alle onderliggende labels en synoniemen worden ook verwijderd uit bestaande objecten.</translation>
+        <source>Are you sure you want to delete the "%keyword" tag? All children tags and synonyms will also be deleted and removed from existing objects.</source>
+        <translation>Weet u zeker dat u de tag "%keyword" wilt verwijderen? Alle onderliggende labels en synoniemen worden ook verwijderd uit bestaande objecten.</translation>
     </message>
     <message>
         <source>Are you sure you want to delete selected tags? All children tags and synonyms will also be deleted and removed from existing objects.</source>
-        <translation type="unfinished"></translation>
+        <translation>Weet je zeker dat je de geselecteerde labels wilt verwijderen? Alle onderliggende labels en synoniemen worden ook verwijderd en van bestaande objecten gehaald.</translation>
     </message>
     <message>
         <source>Are you sure you want to move selected tags?</source>
-        <translation type="unfinished"></translation>
+        <translation>Weet je zeker dat je de geselecteerde labels wilt verplaatsen?</translation>
     </message>
     <message>
         <source>Tag</source>
-        <translation type="unfinished"></translation>
+        <translation>Label</translation>
     </message>
     <message>
         <source>Related objects count</source>
-        <translation type="unfinished"></translation>
+        <translation>Aantal gerelateerde objecten</translation>
     </message>
     <message>
         <source>Children count</source>
-        <translation type="unfinished"></translation>
+        <translation>Aantal onderliggende</translation>
     </message>
     <message>
-        <source>Are you sure you want to delete the &quot;%keyword&quot; synonym?</source>
-        <translation>Weet u zeker dat u het synoniem &quot;%keyword&quot; wilt verwijderen?</translation>
+        <source>Are you sure you want to delete the "%keyword" synonym?</source>
+        <translation>Weet u zeker dat u het synoniem "%keyword" wilt verwijderen?</translation>
     </message>
     <message>
         <source>Transfer all related objects to the main tag</source>
         <translation>Alle gerelateerde objecten naar het hoofdlabel verplaatsen</translation>
     </message>
     <message>
-        <source>Merging this tag with another tag will delete the tag and it&apos;s synonyms and transfer all related objects to the main tag. Also, all children tags will become main tag children.</source>
+        <source>Merging this tag with another tag will delete the tag and it's synonyms and transfer all related objects to the main tag. Also, all children tags will become main tag children.</source>
         <translation>Bij het samenvoegen van dit label met een andere tag worden het label en synoniemen verwijderd en  worden alle gerelateerde objecten aan het hoofdlabel gekoppeld. Ook worden onderliggende labels veranderd in onderliggende labels van het hoofdlabel.</translation>
     </message>
     <message>
@@ -301,11 +340,11 @@
         <translation>Nee</translation>
     </message>
     <message>
-        <source>The tag you&apos;re about to delete has</source>
+        <source>The tag you're about to delete has</source>
         <translation>Het label dat u wilt verwijderen heeft</translation>
     </message>
     <message>
-        <source>The tag you&apos;re about to merge has</source>
+        <source>The tag you're about to merge has</source>
         <translation>Het label dat u wilt samenvoegen heeft</translation>
     </message>
     <message>
@@ -326,39 +365,39 @@
     </message>
     <message>
         <source>Set as main translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Als hoofdvertaling instellen</translation>
     </message>
     <message>
         <source>Add translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Vertaling toevoegen</translation>
     </message>
     <message>
         <source>Select the translation you want to add</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecteer de vertaling die je wilt toevoegen</translation>
     </message>
     <message>
         <source>Edit translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Vertaling bewerken</translation>
     </message>
     <message>
         <source>Select the translation you want to edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecteer de vertaling die je wilt bewerken</translation>
     </message>
     <message>
         <source>Main translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoofdvertaling</translation>
     </message>
     <message>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Bewerken</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Annuleren</translation>
     </message>
     <message>
         <source>Use the main language if there is no prioritized translation.</source>
-        <translation type="unfinished"></translation>
+        <translation>De hoofdtaal gebruiken als er geen vertaling met voorrang is.</translation>
     </message>
 </context>
 <context>
@@ -380,12 +419,12 @@
         <translation>Zoekterm verplicht. Voer hierboven een zoekterm in.</translation>
     </message>
     <message>
-        <source>No tags were found while searching for &quot;%1&quot;.</source>
-        <translation>Geen labels gevonden bij het zoeken naar &quot;%1&quot;.</translation>
+        <source>No tags were found while searching for "%1".</source>
+        <translation>Geen labels gevonden bij het zoeken naar "%1".</translation>
     </message>
     <message>
-        <source>Search for &quot;%1&quot; returned %2 matches.</source>
-        <translation>Bij het zoeken naar &quot;%1&quot; zijn  %2 resultaten gevonden.</translation>
+        <source>Search for "%1" returned %2 matches.</source>
+        <translation>Bij het zoeken naar "%1" zijn  %2 resultaten gevonden.</translation>
     </message>
     <message>
         <source>Tag name</source>
@@ -456,7 +495,7 @@
     </message>
     <message>
         <source>New translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Nieuwe vertaling</translation>
     </message>
     <message>
         <source>Top level tags</source>
@@ -535,59 +574,59 @@
     </message>
     <message>
         <source>Invert selection.</source>
-        <translation type="unfinished"></translation>
+        <translation>Selectie omkeren.</translation>
     </message>
     <message>
         <source>Language</source>
-        <translation type="unfinished"></translation>
+        <translation>Taal</translation>
     </message>
     <message>
         <source>Translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Vertaling</translation>
     </message>
     <message>
         <source>Locale</source>
-        <translation type="unfinished"></translation>
+        <translation>Locale</translation>
     </message>
     <message>
         <source>Main</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoofdtaal</translation>
     </message>
     <message>
         <source>Edit in &lt;%language_name&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bewerken in &lt;%language_name&gt;.</translation>
     </message>
     <message>
         <source>Remove selected</source>
-        <translation type="unfinished"></translation>
+        <translation>Selectie verwijderen</translation>
     </message>
     <message>
         <source>Set main</source>
-        <translation type="unfinished"></translation>
+        <translation>Als hoofdtaal instellen</translation>
     </message>
     <message>
         <source>Update</source>
-        <translation type="unfinished"></translation>
+        <translation>Bijwerken</translation>
     </message>
     <message>
         <source>Tag translations</source>
-        <translation type="unfinished"></translation>
+        <translation>Labelvertalingen</translation>
     </message>
     <message>
         <source>Up one level.</source>
-        <translation type="unfinished"></translation>
+        <translation>Eén niveau omhoog.</translation>
     </message>
     <message>
         <source>Children tags (%children_count)</source>
-        <translation type="unfinished"></translation>
+        <translation>Onderliggende labels (%children_count)</translation>
     </message>
     <message>
         <source>Children tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Onderliggende labels</translation>
     </message>
     <message>
         <source>Show %1 tags per page.</source>
-        <translation type="unfinished"></translation>
+        <translation>Toon %1 labels per pagina.</translation>
     </message>
     <message>
         <source>Tag name</source>
@@ -595,19 +634,19 @@
     </message>
     <message>
         <source>The current tag does not contain any children.</source>
-        <translation type="unfinished"></translation>
+        <translation>Het huidige label heeft geen onderliggende labels.</translation>
     </message>
     <message>
         <source>Parent tag name</source>
-        <translation type="unfinished"></translation>
+        <translation>Naam bovenliggend label</translation>
     </message>
     <message>
         <source>No parent</source>
-        <translation type="unfinished"></translation>
+        <translation>Geen bovenliggend label</translation>
     </message>
     <message>
         <source>Latest tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Nieuwste labels</translation>
     </message>
     <message>
         <source>Edit synonym</source>
@@ -647,15 +686,15 @@
     </message>
     <message>
         <source>No tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Geen labels</translation>
     </message>
     <message>
         <source>Use the main language if there is no prioritized translation.</source>
-        <translation type="unfinished"></translation>
+        <translation>De hoofdtaal gebruiken als er geen vertaling met voorrang is.</translation>
     </message>
     <message>
         <source>Last modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Laatst gewijzigd</translation>
     </message>
     <message>
         <source>Tag ID</source>
@@ -663,93 +702,143 @@
     </message>
     <message>
         <source>first</source>
-        <translation type="unfinished"></translation>
+        <translation>eerste</translation>
     </message>
     <message>
         <source>last</source>
-        <translation type="unfinished"></translation>
+        <translation>laatste</translation>
     </message>
     <message>
         <source>next</source>
-        <translation type="unfinished"></translation>
+        <translation>volgende</translation>
     </message>
     <message>
         <source>prev</source>
-        <translation type="unfinished"></translation>
+        <translation>vorige</translation>
     </message>
     <message>
         <source>Select all visible</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle zichtbare selecteren</translation>
     </message>
     <message>
         <source>Select none</source>
-        <translation type="unfinished"></translation>
+        <translation>Niets selecteren</translation>
     </message>
     <message>
         <source>Invert selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Selectie omkeren</translation>
     </message>
     <message>
         <source>Select</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecteren</translation>
     </message>
     <message>
         <source>Remove selected tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Geselecteerde labels verwijderen</translation>
     </message>
     <message>
         <source>Move selected tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Geselecteerde labels verplaatsen</translation>
     </message>
     <message>
         <source>More actions</source>
-        <translation type="unfinished"></translation>
+        <translation>Meer acties</translation>
     </message>
     <message>
         <source>You do not have permissions for any of available actions</source>
-        <translation type="unfinished"></translation>
+        <translation>Je hebt geen rechten voor een van de beschikbare acties</translation>
     </message>
     <message>
         <source>Use the checkboxes to select one or more tags.</source>
-        <translation type="unfinished"></translation>
+        <translation>Gebruik de selectievakjes om een of meer labels te selecteren.</translation>
     </message>
     <message>
         <source>Table options</source>
-        <translation type="unfinished"></translation>
+        <translation>Tabelopties</translation>
     </message>
     <message>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Sluiten</translation>
     </message>
     <message>
         <source>Number of tags per page</source>
-        <translation type="unfinished"></translation>
+        <translation>Aantal labels per pagina</translation>
     </message>
     <message>
         <source>Loading...</source>
-        <translation type="unfinished"></translation>
+        <translation>Bezig met laden...</translation>
     </message>
     <message>
         <source>No tags found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Geen labels gevonden.</translation>
+    </message>
+    <message>
+        <source>Edit</source>
+        <translation>Bewerken</translation>
+    </message>
+    <message>
+        <source>Show all content related to tag</source>
+        <translation>Alle content tonen die bij de tag hoort</translation>
+    </message>
+    <message>
+        <source>List of content related to tag %tag (%count):</source>
+        <translation>Lijst met content die bij tag %tag hoort (%count):</translation>
+    </message>
+    <message>
+        <source>Visibility</source>
+        <translation>Zichtbaarheid</translation>
+    </message>
+    <message>
+        <source>Hidden</source>
+        <translation>Verborgen</translation>
+    </message>
+    <message>
+        <source>Hidden by superior</source>
+        <translation>Verborgen door bovenliggend item</translation>
+    </message>
+    <message>
+        <source>Visible</source>
+        <translation>Zichtbaar</translation>
     </message>
 </context>
 <context>
     <name>extension/eztags/warnings</name>
     <message>
         <source>TAKE CARE: Tag is inside class attribute subtree limit(s). If moved outside those limits, it could lead to inconsistency as objects could end up with tags that they are not supposed to have.</source>
-        <translation type="unfinished"></translation>
+        <translation>LET OP: Het label valt binnen de subboombeperking(en) van een klasse-attribuut. Als het buiten die beperkingen wordt verplaatst, kan dat tot inconsistentie leiden, omdat objecten labels kunnen krijgen die ze niet horen te hebben.</translation>
     </message>
     <message>
         <source>Manual search index regeneration is required for changes to be seen in search. Enable DelayedIndexing in site.ini to reindex automatically.</source>
-        <translation type="unfinished"></translation>
+        <translation>De zoekindex moet handmatig opnieuw worden opgebouwd voordat de wijzigingen in de zoekresultaten zichtbaar zijn. Schakel DelayedIndexing in site.ini in om automatisch opnieuw te indexeren.</translation>
     </message>
 </context>
 <context>
     <name>extension/eztags/tagcloud</name>
     <message>
         <source>objects tagged with '%keyword'</source>
-        <translation type="unfinished"></translation>
+        <translation>objecten getagd met '%keyword'</translation>
+    </message>
+    <message>
+        <source>%count objects tagged with '%keyword'</source>
+        <translation>%count objecten getagd met '%keyword'</translation>
+    </message>
+</context>
+<context>
+    <name>design/admin/pagelayout</name>
+    <message>
+        <source>Tags</source>
+        <translation>Labels</translation>
+    </message>
+    <message>
+        <source>Tags dashboard</source>
+        <translation>Labels Dashboard</translation>
+    </message>
+</context>
+<context>
+    <name>kernel/navigationpart</name>
+    <message>
+        <source>eZ Tags</source>
+        <translation>eZ Tags</translation>
     </message>
 </context>
 </TS>

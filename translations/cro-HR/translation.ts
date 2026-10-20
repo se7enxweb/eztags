@@ -2,6 +2,33 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="hr_HR">
 <context>
+    <name>design/admin/parts/user/menu</name>
+    <message>
+        <source>Change the left menu width to small size.</source>
+        <translation>Promijenite širinu lijevog izbornika na malu.</translation>
+    </message>
+    <message>
+        <source>Small</source>
+        <translation>Mali</translation>
+    </message>
+    <message>
+        <source>Medium</source>
+        <translation>Srednji</translation>
+    </message>
+    <message>
+        <source>Change the left menu width to large size.</source>
+        <translation>Promijenite širinu lijevog izbornika na veliku.</translation>
+    </message>
+    <message>
+        <source>Large</source>
+        <translation>Veliki</translation>
+    </message>
+    <message>
+        <source>Change the left menu width to medium size.</source>
+        <translation>Promijenite širinu lijevog izbornika na srednju.</translation>
+    </message>
+</context>
+<context>
     <name>extension/eztags/datatypes</name>
     <message>
         <source>Tags</source>
@@ -121,7 +148,15 @@
     </message>
     <message>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>U redu</translation>
+    </message>
+    <message>
+        <source>Find a tag to add</source>
+        <translation>Pronađite oznaku za dodavanje</translation>
+    </message>
+    <message>
+        <source>Choose a tag</source>
+        <translation>Odaberite oznaku</translation>
     </message>
 </context>
 <context>
@@ -154,16 +189,20 @@
 <context>
     <name>extension/eztags/node/view</name>
     <message>
-        <source>eZ Tags</source>
-        <translation>eZ Tags</translation>
+        <source>Tags</source>
+        <translation>Oznake</translation>
     </message>
     <message>
-        <source>Show eZ Tags attributes overview.</source>
-        <translation>Prikaži pregled eZ Tags atributa.</translation>
+        <source>Show Tags attributes overview.</source>
+        <translation>Prikaži pregled atributa oznaka.</translation>
     </message>
     <message>
         <source>No tags</source>
         <translation>Nema oznaka</translation>
+    </message>
+    <message>
+        <source>eZ Tags</source>
+        <translation>eZ Tags</translation>
     </message>
 </context>
 <context>
@@ -257,8 +296,8 @@
         <translation>Odaberi glavnu oznaku</translation>
     </message>
     <message>
-        <source>Are you sure you want to delete the &quot;%keyword&quot; tag? All children tags and synonyms will also be deleted and removed from existing objects.</source>
-        <translation>Jeste li sigurni da želite izbrisati oznaku &quot;%keyword&quot;? Sve podređene oznake i sinonimi će također biti izbrisani i uklonjeni iz postojećih objekata.</translation>
+        <source>Are you sure you want to delete the "%keyword" tag? All children tags and synonyms will also be deleted and removed from existing objects.</source>
+        <translation>Jeste li sigurni da želite izbrisati oznaku "%keyword"? Sve podređene oznake i sinonimi će također biti izbrisani i uklonjeni iz postojećih objekata.</translation>
     </message>
     <message>
         <source>Are you sure you want to delete selected tags? All children tags and synonyms will also be deleted and removed from existing objects.</source>
@@ -281,15 +320,15 @@
         <translation>Broj podređenih oznaka</translation>
     </message>
     <message>
-        <source>Are you sure you want to delete the &quot;%keyword&quot; synonym?</source>
-        <translation>Jeste li sigurni da želite izbrisati sinonim &quot;%keyword&quot;?</translation>
+        <source>Are you sure you want to delete the "%keyword" synonym?</source>
+        <translation>Jeste li sigurni da želite izbrisati sinonim "%keyword"?</translation>
     </message>
     <message>
         <source>Transfer all related objects to the main tag</source>
         <translation>Prebaci sve povezane objekte na glavnu oznaku</translation>
     </message>
     <message>
-        <source>Merging this tag with another tag will delete the tag and it&apos;s synonyms and transfer all related objects to the main tag. Also, all children tags will become main tag children.</source>
+        <source>Merging this tag with another tag will delete the tag and it's synonyms and transfer all related objects to the main tag. Also, all children tags will become main tag children.</source>
         <translation>Spajanje ove oznake s drugom oznakom će izbrisati oznaku i njene sinonime i prebaciti sve povezane objekte na glavnu oznaku. Također, sve podređene oznake će postati podređene glavnoj oznaci.</translation>
     </message>
     <message>
@@ -301,11 +340,11 @@
         <translation>Ne</translation>
     </message>
     <message>
-        <source>The tag you&apos;re about to delete has</source>
+        <source>The tag you're about to delete has</source>
         <translation>Oznaka koju brišete ima</translation>
     </message>
     <message>
-        <source>The tag you&apos;re about to merge has</source>
+        <source>The tag you're about to merge has</source>
         <translation>Oznaka koju spajate ima</translation>
     </message>
     <message>
@@ -380,12 +419,12 @@
         <translation>Prazna pretraga nije dozvoljena. Upišite vaš tekst pretrage u polje iznad.</translation>
     </message>
     <message>
-        <source>No tags were found while searching for &quot;%1&quot;.</source>
-        <translation>Za pretragu &quot;%1&quot; nije pronađena nijedna oznaka.</translation>
+        <source>No tags were found while searching for "%1".</source>
+        <translation>Za pretragu "%1" nije pronađena nijedna oznaka.</translation>
     </message>
     <message>
-        <source>Search for &quot;%1&quot; returned %2 matches.</source>
-        <translation>Za pretragu &quot;%1&quot; je pronađeno %2 oznaka.</translation>
+        <source>Search for "%1" returned %2 matches.</source>
+        <translation>Za pretragu "%1" je pronađeno %2 oznaka.</translation>
     </message>
     <message>
         <source>Tag name</source>
@@ -733,6 +772,34 @@
         <source>No tags found.</source>
         <translation>Nema oznaka.</translation>
     </message>
+    <message>
+        <source>Edit</source>
+        <translation>Uredi</translation>
+    </message>
+    <message>
+        <source>Show all content related to tag</source>
+        <translation>Prikaži sav sadržaj povezan s oznakom</translation>
+    </message>
+    <message>
+        <source>List of content related to tag %tag (%count):</source>
+        <translation>Popis sadržaja povezanog s oznakom %tag (%count):</translation>
+    </message>
+    <message>
+        <source>Visibility</source>
+        <translation>Vidljivost</translation>
+    </message>
+    <message>
+        <source>Hidden</source>
+        <translation>Skriveno</translation>
+    </message>
+    <message>
+        <source>Hidden by superior</source>
+        <translation>Skriveno zbog nadređenog</translation>
+    </message>
+    <message>
+        <source>Visible</source>
+        <translation>Vidljivo</translation>
+    </message>
 </context>
 <context>
     <name>extension/eztags/warnings</name>
@@ -749,7 +816,29 @@
     <name>extension/eztags/tagcloud</name>
     <message>
         <source>objects tagged with '%keyword'</source>
-        <translation type="unfinished"></translation>
+        <translation>objekti označeni s '%keyword'</translation>
+    </message>
+    <message>
+        <source>%count objects tagged with '%keyword'</source>
+        <translation>%count objekata označenih s '%keyword'</translation>
+    </message>
+</context>
+<context>
+    <name>design/admin/pagelayout</name>
+    <message>
+        <source>Tags</source>
+        <translation>Oznake</translation>
+    </message>
+    <message>
+        <source>Tags dashboard</source>
+        <translation>Kontrolna ploča oznaka</translation>
+    </message>
+</context>
+<context>
+    <name>kernel/navigationpart</name>
+    <message>
+        <source>eZ Tags</source>
+        <translation>eZ Tags</translation>
     </message>
 </context>
 </TS>
