@@ -5,7 +5,7 @@
     <name>design/admin/parts/user/menu</name>
     <message>
         <source>Change the left menu width to small size.</source>
-        <translation>Ustaw małą szerokość lewego menu.</translation>
+        <translation>Ustawić małą szerokość lewego menu.</translation>
     </message>
     <message>
         <source>Small</source>
@@ -17,7 +17,7 @@
     </message>
     <message>
         <source>Change the left menu width to large size.</source>
-        <translation>Ustaw dużą szerokość lewego menu.</translation>
+        <translation>Ustawić dużą szerokość lewego menu.</translation>
     </message>
     <message>
         <source>Large</source>
@@ -25,7 +25,7 @@
     </message>
     <message>
         <source>Change the left menu width to medium size.</source>
-        <translation>Ustaw średnią szerokość lewego menu.</translation>
+        <translation>Ustawić średnią szerokość lewego menu.</translation>
     </message>
 </context>
 <context>
@@ -56,15 +56,15 @@
     </message>
     <message>
         <source>Add new</source>
-        <translation>Dodaj nowy</translation>
+        <translation>Dodać nowy</translation>
     </message>
     <message>
         <source>Click to add this tag</source>
-        <translation>Kliknij, aby dodać ten tag</translation>
+        <translation>Kliknięcie dodaje ten tag</translation>
     </message>
     <message>
         <source>Remove tag</source>
-        <translation>Usuń tag</translation>
+        <translation>Usunąć tag</translation>
     </message>
     <message>
         <source>At least one tag is required to be added.</source>
@@ -76,19 +76,19 @@
     </message>
     <message>
         <source>Up to %1 tags are allowed to be added.</source>
-        <translation>Dozwolone jest dodanie do %1 tagów.</translation>
+        <translation>Można dodać maksymalnie %1 tagów.</translation>
     </message>
     <message>
         <source>Limit by tags subtree</source>
-        <translation>Ogranicz do poddrzewa tagów</translation>
+        <translation>Ograniczenie do poddrzewa tagów</translation>
     </message>
     <message>
         <source>Select subtree</source>
-        <translation>Wybierz poddrzewo</translation>
+        <translation>Wybrać poddrzewo</translation>
     </message>
     <message>
         <source>Hide root subtree limit tag when editing object</source>
-        <translation>Ukryj drzewo rodzica (dla ograniczenia do poddrzewa) w trakcie edycji obiektu</translation>
+        <translation>Ukrywać tag główny ograniczenia poddrzewa podczas edycji obiektu</translation>
     </message>
     <message>
         <source>Edit view</source>
@@ -100,15 +100,15 @@
     </message>
     <message>
         <source>Select view</source>
-        <translation>Wybierz widok</translation>
+        <translation>Wybrać widok</translation>
     </message>
     <message>
         <source>Maximum number of allowed tags</source>
-        <translation>Maksymalna liczba dopuszczonych tagów</translation>
+        <translation>Maksymalna dozwolona liczba tagów</translation>
     </message>
     <message>
         <source>(0 = unlimited)</source>
-        <translation>(0 = brak limitu)</translation>
+        <translation>(0 = bez ograniczeń)</translation>
     </message>
     <message>
         <source>No limit</source>
@@ -124,11 +124,11 @@
     </message>
     <message>
         <source>Unlimited</source>
-        <translation>Nielimitowana</translation>
+        <translation>Bez ograniczeń</translation>
     </message>
     <message>
         <source>Translate tag</source>
-        <translation>Przetłumacz tag</translation>
+        <translation>Przetłumaczyć tag</translation>
     </message>
     <message>
         <source>Existing translations</source>
@@ -140,11 +140,11 @@
     </message>
     <message>
         <source>Add translation</source>
-        <translation>Dodaj tłumaczenie</translation>
+        <translation>Dodać tłumaczenie</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Anulować</translation>
     </message>
     <message>
         <source>OK</source>
@@ -152,22 +152,22 @@
     </message>
     <message>
         <source>Find a tag to add</source>
-        <translation>Znajdź tag do dodania</translation>
+        <translation>Wyszukać tag do dodania</translation>
     </message>
     <message>
         <source>Choose a tag</source>
-        <translation>Wybierz tag</translation>
+        <translation>Wybrać tag</translation>
     </message>
 </context>
 <context>
     <name>extension/eztags/errors</name>
     <message>
         <source>Tag cannot be modified because it is being used as subtree limitation in one or more class attributes.</source>
-        <translation>Tag nie może zostać zmodyfikowany, ponieważ jest on używany jako poddrzewo ograniczeń w jednym lub większej ilości atrybutów klasy.</translation>
+        <translation>Nie można zmodyfikować tagu, ponieważ jest używany jako ograniczenie poddrzewa w co najmniej jednym atrybucie klasy.</translation>
     </message>
     <message>
         <source>Selected target tag is invalid.</source>
-        <translation>Wybrany docelowy tag jest niepoprawny.</translation>
+        <translation>Wybrany tag docelowy jest nieprawidłowy.</translation>
     </message>
     <message>
         <source>Name cannot be empty.</source>
@@ -175,7 +175,7 @@
     </message>
     <message>
         <source>Tag/synonym with that translation already exists in selected location.</source>
-        <translation>Tag/synonim z tym tłumaczeniem już istnieje w wybranym położeniu.</translation>
+        <translation>Tag/synonim z tym tłumaczeniem już istnieje w wybranej lokalizacji.</translation>
     </message>
     <message>
         <source>The following tags could not be moved because they contain translations that already exist in one of the tags in selected location.</source>
@@ -183,7 +183,7 @@
     </message>
     <message>
         <source>Go back</source>
-        <translation>Wstecz</translation>
+        <translation>Wrócić</translation>
     </message>
 </context>
 <context>
@@ -194,7 +194,7 @@
     </message>
     <message>
         <source>Show Tags attributes overview.</source>
-        <translation>Pokaż przegląd atrybutów tagów.</translation>
+        <translation>Pokazać przegląd atrybutów tagów.</translation>
     </message>
     <message>
         <source>No tags</source>
@@ -209,7 +209,7 @@
     <name>extension/eztags/tags/edit</name>
     <message>
         <source>no parent</source>
-        <translation>brak rodziców</translation>
+        <translation>brak elementu nadrzędnego</translation>
     </message>
     <message>
         <source>New tag</source>
@@ -221,11 +221,11 @@
     </message>
     <message>
         <source>Main tag ID</source>
-        <translation>ID głównego tagu</translation>
+        <translation>ID tagu głównego</translation>
     </message>
     <message>
         <source>Main tag name</source>
-        <translation>Nazwa głównego tagu</translation>
+        <translation>Nazwa tagu głównego</translation>
     </message>
     <message>
         <source>Tag name</source>
@@ -237,75 +237,75 @@
     </message>
     <message>
         <source>Parent tag</source>
-        <translation>Tag rodzica</translation>
+        <translation>Tag nadrzędny</translation>
     </message>
     <message>
         <source>Select parent</source>
-        <translation>Wybierz rodzica</translation>
+        <translation>Wybrać element nadrzędny</translation>
     </message>
     <message>
         <source>Convert to synonym</source>
-        <translation>Przekształć do synonimu</translation>
+        <translation>Przekształcić w synonim</translation>
     </message>
     <message>
         <source>Edit tag</source>
-        <translation>Edytuj tag</translation>
+        <translation>Edytować tag</translation>
     </message>
     <message>
         <source>Move tags</source>
-        <translation>Przenieś tagi</translation>
+        <translation>Przenieść tagi</translation>
     </message>
     <message>
         <source>Edit synonym</source>
-        <translation>Edytuj synonim</translation>
+        <translation>Edytować synonim</translation>
     </message>
     <message>
         <source>Delete tag</source>
-        <translation>Usuń tag</translation>
+        <translation>Usunąć tag</translation>
     </message>
     <message>
         <source>Delete tags</source>
-        <translation>Usuń tagi</translation>
+        <translation>Usunąć tagi</translation>
     </message>
     <message>
         <source>Merge tag</source>
-        <translation>Połącz tag</translation>
+        <translation>Scalić tag</translation>
     </message>
     <message>
         <source>Delete synonym</source>
-        <translation>Usuń synonim</translation>
+        <translation>Usunąć synonim</translation>
     </message>
     <message>
         <source>Save</source>
-        <translation>Zapisz</translation>
+        <translation>Zapisać</translation>
     </message>
     <message>
         <source>Discard</source>
-        <translation>Odrzuć</translation>
+        <translation>Odrzucić</translation>
     </message>
     <message>
         <source>Are you sure you want to discard changes?</source>
-        <translation>Czy na pewno chcesz odrzucić zmiany?</translation>
+        <translation>Czy na pewno odrzucić zmiany?</translation>
     </message>
     <message>
         <source>Main tag</source>
-        <translation>Główny tag</translation>
+        <translation>Tag główny</translation>
     </message>
     <message>
         <source>Select main tag</source>
-        <translation>Wybierz główny tag</translation>
+        <translation>Wybrać tag główny</translation>
     </message>
     <message>
         <source>Are you sure you want to delete the "%keyword" tag? All children tags and synonyms will also be deleted and removed from existing objects.</source>
-        <translation>Czy na pewno chcesz skasować tag "%keyword"? Wszystkie tagi podrzędne i synonimy zostaną również skasowane oraz usunięte z istniejących obiektów.</translation>
+        <translation>Czy na pewno usunąć tag "%keyword"? Wszystkie tagi podrzędne i synonimy również zostaną usunięte i usunięte z istniejących obiektów.</translation>
     </message>
     <message>
         <source>Are you sure you want to delete selected tags? All children tags and synonyms will also be deleted and removed from existing objects.</source>
-        <translation>Czy na pewno usunąć wybrane tagi? Wszystkie tagi podrzędne i synonimy również zostaną usunięte i odłączone od istniejących obiektów.</translation>
+        <translation>Czy na pewno usunąć zaznaczone tagi? Wszystkie tagi podrzędne i synonimy również zostaną usunięte i usunięte z istniejących obiektów.</translation>
     </message>
     <message>
         <source>Are you sure you want to move selected tags?</source>
-        <translation>Czy na pewno przenieść wybrane tagi?</translation>
+        <translation>Czy na pewno przenieść zaznaczone tagi?</translation>
     </message>
     <message>
         <source>Tag</source>
@@ -313,7 +313,7 @@
     </message>
     <message>
         <source>Related objects count</source>
-        <translation>Liczba powiązanych obiektów</translation>
+        <translation>Liczba obiektów powiązanych</translation>
     </message>
     <message>
         <source>Children count</source>
@@ -321,15 +321,15 @@
     </message>
     <message>
         <source>Are you sure you want to delete the "%keyword" synonym?</source>
-        <translation>Czy na pewno chcesz usunąć synonim "%keyword"?</translation>
+        <translation>Czy na pewno usunąć synonim "%keyword"?</translation>
     </message>
     <message>
         <source>Transfer all related objects to the main tag</source>
-        <translation>Przenieś wszystkie powiązane obiekty do tagu głównego</translation>
+        <translation>Przenieść wszystkie powiązane obiekty do tagu głównego</translation>
     </message>
     <message>
         <source>Merging this tag with another tag will delete the tag and it's synonyms and transfer all related objects to the main tag. Also, all children tags will become main tag children.</source>
-        <translation>Połączenie tego tagu z innym usunie go i jego snonimy oraz przeniesie wszystkie powiązane obiekty do tagu głównego. Ponadto wszystkie tagi podrzędne staną się potomkami głównego tagu.</translation>
+        <translation>Scalenie tego tagu z innym tagiem usunie ten tag i jego synonimy oraz przeniesie wszystkie powiązane obiekty do tagu głównego. Ponadto wszystkie tagi podrzędne staną się elementami podrzędnymi tagu głównego.</translation>
     </message>
     <message>
         <source>Yes</source>
@@ -341,11 +341,11 @@
     </message>
     <message>
         <source>The tag you're about to delete has</source>
-        <translation>Tag, który zamierzasz usunąć ma</translation>
+        <translation>Usuwany tag ma</translation>
     </message>
     <message>
         <source>The tag you're about to merge has</source>
-        <translation>Tag, który zamierzasz połączyć ma</translation>
+        <translation>Scalany tag ma</translation>
     </message>
     <message>
         <source>number of first level children tags</source>
@@ -353,7 +353,7 @@
     </message>
     <message>
         <source>number of objects related to first level children tags</source>
-        <translation>liczba obiektów powiązanych z pierwszym poziomem tagów potomnych</translation>
+        <translation>liczba obiektów powiązanych z tagami podrzędnymi pierwszego poziomu</translation>
     </message>
     <message>
         <source>number of synonyms</source>
@@ -365,39 +365,39 @@
     </message>
     <message>
         <source>Set as main translation</source>
-        <translation>Ustaw jako główne tłumaczenie</translation>
+        <translation>Ustawić jako tłumaczenie główne</translation>
     </message>
     <message>
         <source>Add translation</source>
-        <translation>Dodaj tłumaczenie</translation>
+        <translation>Dodać tłumaczenie</translation>
     </message>
     <message>
         <source>Select the translation you want to add</source>
-        <translation>Wybierz tłumaczenie, które chcesz dodać</translation>
+        <translation>Wybór tłumaczenia do dodania</translation>
     </message>
     <message>
         <source>Edit translation</source>
-        <translation>Edytuj tłumaczenie</translation>
+        <translation>Edytować tłumaczenie</translation>
     </message>
     <message>
         <source>Select the translation you want to edit</source>
-        <translation>Wybierz tłumaczenie, które chcesz edytować</translation>
+        <translation>Wybór tłumaczenia do edycji</translation>
     </message>
     <message>
         <source>Main translation</source>
-        <translation>Główne tłumaczenie</translation>
+        <translation>Tłumaczenie główne</translation>
     </message>
     <message>
         <source>Edit</source>
-        <translation>Edytuj</translation>
+        <translation>Edytować</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation>Anuluj</translation>
+        <translation>Anulować</translation>
     </message>
     <message>
         <source>Use the main language if there is no prioritized translation.</source>
-        <translation>Użyj głównego języka jeżeli nie ma ustalonych priorytetów tłumaczeń.</translation>
+        <translation>Używać języka głównego, jeśli brak tłumaczenia o wyższym priorytecie.</translation>
     </message>
 </context>
 <context>
@@ -408,23 +408,23 @@
     </message>
     <message>
         <source>Search tags</source>
-        <translation>Szukaj tagów</translation>
+        <translation>Wyszukać tagi</translation>
     </message>
     <message>
         <source>Include synonyms in search</source>
-        <translation>Uwzględniaj synonimy w trakcie przeszukiwania</translation>
+        <translation>Uwzględnić synonimy w wyszukiwaniu</translation>
     </message>
     <message>
         <source>Empty search not allowed. Please enter your search query above.</source>
-        <translation>Szukanie po pustej frazie niedozwolone. Proszę wprowadzić powyżej treść zapytania.</translation>
+        <translation>Puste wyszukiwanie jest niedozwolone. Proszę wprowadzić zapytanie powyżej.</translation>
     </message>
     <message>
         <source>No tags were found while searching for "%1".</source>
-        <translation>Nie znaleziono żadnych tagów w trakcie poszukiwania frazy "%1".</translation>
+        <translation>Nie znaleziono tagów podczas wyszukiwania „%1”.</translation>
     </message>
     <message>
         <source>Search for "%1" returned %2 matches.</source>
-        <translation>Przeszukiwanie frazy "%1" zwróciło %2 trafień.</translation>
+        <translation>Wyszukiwanie „%1” zwróciło trafienia: %2.</translation>
     </message>
     <message>
         <source>Tag name</source>
@@ -432,22 +432,22 @@
     </message>
     <message>
         <source>Parent tag</source>
-        <translation>Tag rodzica</translation>
+        <translation>Tag nadrzędny</translation>
     </message>
     <message>
         <source>Main tag name</source>
-        <translation>Nazwa głównego tagu</translation>
+        <translation>Nazwa tagu głównego</translation>
     </message>
 </context>
 <context>
     <name>extension/eztags/tags/treemenu</name>
     <message>
         <source>Select tag</source>
-        <translation>Wybierz tag</translation>
+        <translation>Wybrać tag</translation>
     </message>
     <message>
         <source>Parent tag ID</source>
-        <translation>ID tagu rodzica</translation>
+        <translation>ID tagu nadrzędnego</translation>
     </message>
     <message>
         <source>Tag ID</source>
@@ -455,7 +455,7 @@
     </message>
     <message>
         <source>Dynamic tree not allowed for this siteaccess</source>
-        <translation>Dynamiczne drzewo nie jest dozwolone dla tego dostępu do strony</translation>
+        <translation>Drzewo dynamiczne jest niedozwolone dla tego dostępu do witryny</translation>
     </message>
     <message>
         <source>Tag does not exist</source>
@@ -463,7 +463,7 @@
     </message>
     <message>
         <source>Internal error</source>
-        <translation>Wewnętrzny błąd</translation>
+        <translation>Błąd wewnętrzny</translation>
     </message>
     <message>
         <source>Tags structure</source>
@@ -471,27 +471,27 @@
     </message>
     <message>
         <source>Add child tag</source>
-        <translation>Dodaj tag podrzędny</translation>
+        <translation>Dodać tag podrzędny</translation>
     </message>
     <message>
         <source>Edit tag</source>
-        <translation>Edytuj tag</translation>
+        <translation>Edytować tag</translation>
     </message>
     <message>
         <source>Delete tag</source>
-        <translation>Usuń tag</translation>
+        <translation>Usunąć tag</translation>
     </message>
     <message>
         <source>Merge tag</source>
-        <translation>Połącz tag</translation>
+        <translation>Scalić tag</translation>
     </message>
     <message>
         <source>Add synonym</source>
-        <translation>Dodaj synonim</translation>
+        <translation>Dodać synonim</translation>
     </message>
     <message>
         <source>Convert to synonym</source>
-        <translation>Przekształć do synonimu</translation>
+        <translation>Przekształcić w synonim</translation>
     </message>
     <message>
         <source>New translation</source>
@@ -506,11 +506,11 @@
     <name>extension/eztags/tags/view</name>
     <message>
         <source>Tags dashboard</source>
-        <translation>Panel kontrolny tagów</translation>
+        <translation>Pulpit tagów</translation>
     </message>
     <message>
         <source>Latest content</source>
-        <translation>Ostatnia treść</translation>
+        <translation>Najnowsza treść</translation>
     </message>
     <message>
         <source>No content</source>
@@ -526,7 +526,7 @@
     </message>
     <message>
         <source>Modified</source>
-        <translation>Zmodyfikowany</translation>
+        <translation>Zmodyfikowano</translation>
     </message>
     <message>
         <source>Related tags</source>
@@ -550,11 +550,11 @@
     </message>
     <message>
         <source>Main tag</source>
-        <translation>Główny tag</translation>
+        <translation>Tag główny</translation>
     </message>
     <message>
         <source>Subtree limitations</source>
-        <translation>Ograniczenia do poddrzewa</translation>
+        <translation>Ograniczenia poddrzewa</translation>
     </message>
     <message>
         <source>Class ID</source>
@@ -570,11 +570,11 @@
     </message>
     <message>
         <source>No subtree limitations</source>
-        <translation>Brak ograniczeń dla poddrzewa</translation>
+        <translation>Brak ograniczeń poddrzewa</translation>
     </message>
     <message>
         <source>Invert selection.</source>
-        <translation>Odwróć zaznaczenie.</translation>
+        <translation>Odwrócić zaznaczenie.</translation>
     </message>
     <message>
         <source>Language</source>
@@ -586,7 +586,7 @@
     </message>
     <message>
         <source>Locale</source>
-        <translation>Kod lokalizacji</translation>
+        <translation>Ustawienia regionalne</translation>
     </message>
     <message>
         <source>Main</source>
@@ -594,19 +594,19 @@
     </message>
     <message>
         <source>Edit in &lt;%language_name&gt;.</source>
-        <translation>Edytuj w &lt;%language_name&gt;.</translation>
+        <translation>Edytować w języku &lt;%language_name&gt;.</translation>
     </message>
     <message>
         <source>Remove selected</source>
-        <translation>Usuń zaznaczone</translation>
+        <translation>Usunąć zaznaczone</translation>
     </message>
     <message>
         <source>Set main</source>
-        <translation>Ustaw główny</translation>
+        <translation>Ustawić jako główny</translation>
     </message>
     <message>
         <source>Update</source>
-        <translation>Aktualizuj</translation>
+        <translation>Zaktualizować</translation>
     </message>
     <message>
         <source>Tag translations</source>
@@ -614,7 +614,7 @@
     </message>
     <message>
         <source>Up one level.</source>
-        <translation>Poziom w górę.</translation>
+        <translation>O jeden poziom w górę.</translation>
     </message>
     <message>
         <source>Children tags (%children_count)</source>
@@ -626,7 +626,7 @@
     </message>
     <message>
         <source>Show %1 tags per page.</source>
-        <translation>Wyświetl %1 tagów na stronę.</translation>
+        <translation>Pokazać %1 tagów na stronie.</translation>
     </message>
     <message>
         <source>Tag name</source>
@@ -634,15 +634,15 @@
     </message>
     <message>
         <source>The current tag does not contain any children.</source>
-        <translation>Wybrany tag nie zawiera elementów podrzędnych.</translation>
+        <translation>Bieżący tag nie zawiera elementów podrzędnych.</translation>
     </message>
     <message>
         <source>Parent tag name</source>
-        <translation>Nazwa tagu rodzica</translation>
+        <translation>Nazwa tagu nadrzędnego</translation>
     </message>
     <message>
         <source>No parent</source>
-        <translation>Brak rodzica</translation>
+        <translation>Brak elementu nadrzędnego</translation>
     </message>
     <message>
         <source>Latest tags</source>
@@ -650,39 +650,39 @@
     </message>
     <message>
         <source>Edit synonym</source>
-        <translation>Edytuj synonim</translation>
+        <translation>Edytować synonim</translation>
     </message>
     <message>
         <source>Delete synonym</source>
-        <translation>Usuń synonim</translation>
+        <translation>Usunąć synonim</translation>
     </message>
     <message>
         <source>Add tag</source>
-        <translation>Dodaj tag podrzędny</translation>
+        <translation>Dodać tag</translation>
     </message>
     <message>
         <source>Add child tag</source>
-        <translation>Dodaj tag podrzędny</translation>
+        <translation>Dodać tag podrzędny</translation>
     </message>
     <message>
         <source>Edit tag</source>
-        <translation>Edytuj tag</translation>
+        <translation>Edytować tag</translation>
     </message>
     <message>
         <source>Delete tag</source>
-        <translation>Usuń tag</translation>
+        <translation>Usunąć tag</translation>
     </message>
     <message>
         <source>Merge tag</source>
-        <translation>Połącz tag</translation>
+        <translation>Scalić tag</translation>
     </message>
     <message>
         <source>Add synonym</source>
-        <translation>Dodaj synonim</translation>
+        <translation>Dodać synonim</translation>
     </message>
     <message>
         <source>Convert to synonym</source>
-        <translation>Przekształć do synonimu</translation>
+        <translation>Przekształcić w synonim</translation>
     </message>
     <message>
         <source>No tags</source>
@@ -690,7 +690,7 @@
     </message>
     <message>
         <source>Use the main language if there is no prioritized translation.</source>
-        <translation>Użyj głównego języka jeżeli nie ma ustalonych priorytetów tłumaczeń.</translation>
+        <translation>Używać języka głównego, jeśli brak tłumaczenia o wyższym priorytecie.</translation>
     </message>
     <message>
         <source>Last modified</source>
@@ -718,27 +718,27 @@
     </message>
     <message>
         <source>Select all visible</source>
-        <translation>Zaznacz wszystkie widoczne</translation>
+        <translation>Zaznaczyć wszystkie widoczne</translation>
     </message>
     <message>
         <source>Select none</source>
-        <translation>Odznacz wszystkie</translation>
+        <translation>Odznaczyć wszystkie</translation>
     </message>
     <message>
         <source>Invert selection</source>
-        <translation>Odwróć zaznaczenie</translation>
+        <translation>Odwrócić zaznaczenie</translation>
     </message>
     <message>
         <source>Select</source>
-        <translation>Wybierz</translation>
+        <translation>Wybrać</translation>
     </message>
     <message>
         <source>Remove selected tags</source>
-        <translation>Usuń wybrane tagi</translation>
+        <translation>Usunąć zaznaczone tagi</translation>
     </message>
     <message>
         <source>Move selected tags</source>
-        <translation>Przenieś wybrane tagi</translation>
+        <translation>Przenieść zaznaczone tagi</translation>
     </message>
     <message>
         <source>More actions</source>
@@ -750,7 +750,7 @@
     </message>
     <message>
         <source>Use the checkboxes to select one or more tags.</source>
-        <translation>Zaznacz pola wyboru, aby wybrać jeden lub więcej tagów.</translation>
+        <translation>Pola wyboru służą do zaznaczania jednego lub więcej tagów.</translation>
     </message>
     <message>
         <source>Table options</source>
@@ -758,11 +758,11 @@
     </message>
     <message>
         <source>Close</source>
-        <translation>Zamknij</translation>
+        <translation>Zamknąć</translation>
     </message>
     <message>
         <source>Number of tags per page</source>
-        <translation>Liczba tagów na stronę</translation>
+        <translation>Liczba tagów na stronie</translation>
     </message>
     <message>
         <source>Loading...</source>
@@ -774,11 +774,11 @@
     </message>
     <message>
         <source>Edit</source>
-        <translation>Edytuj</translation>
+        <translation>Edytować</translation>
     </message>
     <message>
         <source>Show all content related to tag</source>
-        <translation>Pokaż całą treść powiązaną z tagiem</translation>
+        <translation>Pokazać całą treść powiązaną z tagiem</translation>
     </message>
     <message>
         <source>List of content related to tag %tag (%count):</source>
@@ -805,11 +805,11 @@
     <name>extension/eztags/warnings</name>
     <message>
         <source>TAKE CARE: Tag is inside class attribute subtree limit(s). If moved outside those limits, it could lead to inconsistency as objects could end up with tags that they are not supposed to have.</source>
-        <translation>BĄDŹ OSTROŻNY: Tag znajduje się w poddrzewie, będącym ograniczeniem atrybutu klasy. Przeniesienie tagu poza to ograniczenie może doprowadzić do niespójności, jako że może pozostać z obiektami, z którymi być nie powinien.</translation>
+        <translation>UWAGA: tag znajduje się w ograniczeniu poddrzewa co najmniej jednego atrybutu klasy. Przeniesienie go poza te ograniczenia może prowadzić do niespójności, ponieważ obiekty mogą otrzymać tagi, których nie powinny mieć.</translation>
     </message>
     <message>
         <source>Manual search index regeneration is required for changes to be seen in search. Enable DelayedIndexing in site.ini to reindex automatically.</source>
-        <translation>Aby zobaczyć zmiany w wyszukiwaniu , wymagana jest ręczna regeneracja indeksu wyszukiwania. Ustaw opcję DelayedIndexing na enabled w pliku site.ini w celu uzyskania automatycznego indeksowania.</translation>
+        <translation>Aby zmiany były widoczne w wyszukiwaniu, wymagane jest ręczne ponowne indeksowanie. Włączenie DelayedIndexing w site.ini umożliwia automatyczne ponowne indeksowanie.</translation>
     </message>
 </context>
 <context>
@@ -820,7 +820,7 @@
     </message>
     <message>
         <source>%count objects tagged with '%keyword'</source>
-        <translation>%count obiektów oznaczonych tagiem '%keyword'</translation>
+        <translation>Obiekty oznaczone tagiem '%keyword': %count</translation>
     </message>
 </context>
 <context>
@@ -831,7 +831,7 @@
     </message>
     <message>
         <source>Tags dashboard</source>
-        <translation>Panel kontrolny tagów</translation>
+        <translation>Pulpit tagów</translation>
     </message>
 </context>
 <context>

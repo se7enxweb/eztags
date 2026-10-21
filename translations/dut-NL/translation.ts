@@ -32,7 +32,7 @@
     <name>extension/eztags/datatypes</name>
     <message>
         <source>Tags</source>
-        <translation>Labels</translation>
+        <translation>Tags</translation>
     </message>
     <message>
         <source>Loading</source>
@@ -40,19 +40,19 @@
     </message>
     <message>
         <source>Selected tags</source>
-        <translation>Labels selecteren</translation>
+        <translation>Geselecteerde tags</translation>
     </message>
     <message>
         <source>There are no selected tags</source>
-        <translation>Er zijn geen labels geselecteerd</translation>
+        <translation>Er zijn geen tags geselecteerd</translation>
     </message>
     <message>
         <source>Suggested tags</source>
-        <translation>Voorgestelde labels</translation>
+        <translation>Voorgestelde tags</translation>
     </message>
     <message>
         <source>There are no tags to suggest</source>
-        <translation>Er zijn geen labels ter suggestie</translation>
+        <translation>Er zijn geen tags om voor te stellen</translation>
     </message>
     <message>
         <source>Add new</source>
@@ -60,15 +60,15 @@
     </message>
     <message>
         <source>Click to add this tag</source>
-        <translation>Klik om dit label toe te voegen</translation>
+        <translation>Klik om deze tag toe te voegen</translation>
     </message>
     <message>
         <source>Remove tag</source>
-        <translation>Label verwijderen</translation>
+        <translation>Tag verwijderen</translation>
     </message>
     <message>
         <source>At least one tag is required to be added.</source>
-        <translation>Er moet ten minste één label worden toegevoegd.</translation>
+        <translation>Er moet minstens één tag worden toegevoegd.</translation>
     </message>
     <message>
         <source>Attribute contains invalid data.</source>
@@ -76,11 +76,11 @@
     </message>
     <message>
         <source>Up to %1 tags are allowed to be added.</source>
-        <translation>Er mogen maximaal %1 labels worden toegevoegd.</translation>
+        <translation>Er mogen maximaal %1 tags worden toegevoegd.</translation>
     </message>
     <message>
         <source>Limit by tags subtree</source>
-        <translation>Beperken tot substructuur van labels</translation>
+        <translation>Beperken tot substructuur van tags</translation>
     </message>
     <message>
         <source>Select subtree</source>
@@ -88,11 +88,11 @@
     </message>
     <message>
         <source>Hide root subtree limit tag when editing object</source>
-        <translation>Hoofdlabel van de substructuurbeperking verbergen bij het bewerken van een object</translation>
+        <translation>Hoofdtag van de substructuurbeperking verbergen bij het bewerken van een object</translation>
     </message>
     <message>
         <source>Edit view</source>
-        <translation>Bewerkweergave</translation>
+        <translation>Bewerkingsweergave</translation>
     </message>
     <message>
         <source>Default view</source>
@@ -104,7 +104,7 @@
     </message>
     <message>
         <source>Maximum number of allowed tags</source>
-        <translation>Maximaal aantal toegestane labels</translation>
+        <translation>Maximaal aantal toegestane tags</translation>
     </message>
     <message>
         <source>(0 = unlimited)</source>
@@ -128,7 +128,7 @@
     </message>
     <message>
         <source>Translate tag</source>
-        <translation>Label vertalen</translation>
+        <translation>Tag vertalen</translation>
     </message>
     <message>
         <source>Existing translations</source>
@@ -152,34 +152,34 @@
     </message>
     <message>
         <source>Find a tag to add</source>
-        <translation>Zoek een tag om toe te voegen</translation>
+        <translation>Een tag zoeken om toe te voegen</translation>
     </message>
     <message>
         <source>Choose a tag</source>
-        <translation>Kies een tag</translation>
+        <translation>Een tag kiezen</translation>
     </message>
 </context>
 <context>
     <name>extension/eztags/errors</name>
     <message>
         <source>Tag cannot be modified because it is being used as subtree limitation in one or more class attributes.</source>
-        <translation>Label kan niet worden gewijzigd omdat het als substructuurbeperking wordt gebruikt in een of meer klasse-attributen.</translation>
+        <translation>De tag kan niet worden gewijzigd, omdat hij als substructuurbeperking in een of meer klasse-attributen wordt gebruikt.</translation>
     </message>
     <message>
         <source>Selected target tag is invalid.</source>
-        <translation>Geselecteerd doellabel is ongeldig.</translation>
+        <translation>De geselecteerde doeltag is ongeldig.</translation>
     </message>
     <message>
         <source>Name cannot be empty.</source>
-        <translation>Naam mag niet leeg zijn.</translation>
+        <translation>De naam mag niet leeg zijn.</translation>
     </message>
     <message>
         <source>Tag/synonym with that translation already exists in selected location.</source>
-        <translation>Label/synoniem met die vertaling bestaat al op de geselecteerde locatie.</translation>
+        <translation>Er bestaat al een tag/synoniem met die vertaling op de geselecteerde locatie.</translation>
     </message>
     <message>
         <source>The following tags could not be moved because they contain translations that already exist in one of the tags in selected location.</source>
-        <translation>De volgende labels konden niet worden verplaatst omdat ze vertalingen bevatten die al bestaan in een van de labels op de geselecteerde locatie.</translation>
+        <translation>De volgende tags konden niet worden verplaatst, omdat ze vertalingen bevatten die al bestaan in een van de tags op de geselecteerde locatie.</translation>
     </message>
     <message>
         <source>Go back</source>
@@ -190,7 +190,7 @@
     <name>extension/eztags/node/view</name>
     <message>
         <source>Tags</source>
-        <translation>Labels</translation>
+        <translation>Tags</translation>
     </message>
     <message>
         <source>Show Tags attributes overview.</source>
@@ -198,7 +198,7 @@
     </message>
     <message>
         <source>No tags</source>
-        <translation>Geen labels</translation>
+        <translation>Geen tags</translation>
     </message>
     <message>
         <source>eZ Tags</source>
@@ -209,35 +209,35 @@
     <name>extension/eztags/tags/edit</name>
     <message>
         <source>no parent</source>
-        <translation>geen bovenliggend label</translation>
+        <translation>geen bovenliggende tag</translation>
     </message>
     <message>
         <source>New tag</source>
-        <translation>Nieuw label</translation>
+        <translation>Nieuwe tag</translation>
     </message>
     <message>
         <source>New synonym tag</source>
-        <translation>Nieuw synoniem label</translation>
+        <translation>Nieuw synoniem</translation>
     </message>
     <message>
         <source>Main tag ID</source>
-        <translation>Hoofdlabel ID</translation>
+        <translation>ID van hoofdtag</translation>
     </message>
     <message>
         <source>Main tag name</source>
-        <translation>Hoofdlabel naam</translation>
+        <translation>Naam van hoofdtag</translation>
     </message>
     <message>
         <source>Tag name</source>
-        <translation>Naam van het label</translation>
+        <translation>Tagnaam</translation>
     </message>
     <message>
         <source>Synonym name</source>
-        <translation>Naam van het synoniem</translation>
+        <translation>Naam van synoniem</translation>
     </message>
     <message>
         <source>Parent tag</source>
-        <translation>Bovenliggend label</translation>
+        <translation>Bovenliggende tag</translation>
     </message>
     <message>
         <source>Select parent</source>
@@ -245,15 +245,15 @@
     </message>
     <message>
         <source>Convert to synonym</source>
-        <translation>Veranderen in synoniem</translation>
+        <translation>Omzetten naar synoniem</translation>
     </message>
     <message>
         <source>Edit tag</source>
-        <translation>Label bewerken</translation>
+        <translation>Tag bewerken</translation>
     </message>
     <message>
         <source>Move tags</source>
-        <translation>Labels verplaatsen</translation>
+        <translation>Tags verplaatsen</translation>
     </message>
     <message>
         <source>Edit synonym</source>
@@ -261,15 +261,15 @@
     </message>
     <message>
         <source>Delete tag</source>
-        <translation>Label verwijderen</translation>
+        <translation>Tag verwijderen</translation>
     </message>
     <message>
         <source>Delete tags</source>
-        <translation>Labels verwijderen</translation>
+        <translation>Tags verwijderen</translation>
     </message>
     <message>
         <source>Merge tag</source>
-        <translation>Label samenvoegen</translation>
+        <translation>Tag samenvoegen</translation>
     </message>
     <message>
         <source>Delete synonym</source>
@@ -281,35 +281,35 @@
     </message>
     <message>
         <source>Discard</source>
-        <translation>Annuleren</translation>
+        <translation>Verwerpen</translation>
     </message>
     <message>
         <source>Are you sure you want to discard changes?</source>
-        <translation>Weet u zeker dat u de wijzigingen wilt annuleren?</translation>
+        <translation>Weet je zeker dat je de wijzigingen wilt verwerpen?</translation>
     </message>
     <message>
         <source>Main tag</source>
-        <translation>Hoofdlabel</translation>
+        <translation>Hoofdtag</translation>
     </message>
     <message>
         <source>Select main tag</source>
-        <translation>Hoofdlabel selecteren</translation>
+        <translation>Hoofdtag selecteren</translation>
     </message>
     <message>
         <source>Are you sure you want to delete the "%keyword" tag? All children tags and synonyms will also be deleted and removed from existing objects.</source>
-        <translation>Weet u zeker dat u de tag "%keyword" wilt verwijderen? Alle onderliggende labels en synoniemen worden ook verwijderd uit bestaande objecten.</translation>
+        <translation>Weet je zeker dat je de tag "%keyword" wilt verwijderen? Alle onderliggende tags en synoniemen worden ook verwijderd en uit bestaande objecten gehaald.</translation>
     </message>
     <message>
         <source>Are you sure you want to delete selected tags? All children tags and synonyms will also be deleted and removed from existing objects.</source>
-        <translation>Weet je zeker dat je de geselecteerde labels wilt verwijderen? Alle onderliggende labels en synoniemen worden ook verwijderd en van bestaande objecten gehaald.</translation>
+        <translation>Weet je zeker dat je de geselecteerde tags wilt verwijderen? Alle onderliggende tags en synoniemen worden ook verwijderd en uit bestaande objecten gehaald.</translation>
     </message>
     <message>
         <source>Are you sure you want to move selected tags?</source>
-        <translation>Weet je zeker dat je de geselecteerde labels wilt verplaatsen?</translation>
+        <translation>Weet je zeker dat je de geselecteerde tags wilt verplaatsen?</translation>
     </message>
     <message>
         <source>Tag</source>
-        <translation>Label</translation>
+        <translation>Tag</translation>
     </message>
     <message>
         <source>Related objects count</source>
@@ -317,19 +317,19 @@
     </message>
     <message>
         <source>Children count</source>
-        <translation>Aantal onderliggende</translation>
+        <translation>Aantal onderliggende tags</translation>
     </message>
     <message>
         <source>Are you sure you want to delete the "%keyword" synonym?</source>
-        <translation>Weet u zeker dat u het synoniem "%keyword" wilt verwijderen?</translation>
+        <translation>Weet je zeker dat je het synoniem "%keyword" wilt verwijderen?</translation>
     </message>
     <message>
         <source>Transfer all related objects to the main tag</source>
-        <translation>Alle gerelateerde objecten naar het hoofdlabel verplaatsen</translation>
+        <translation>Alle gerelateerde objecten overzetten naar de hoofdtag</translation>
     </message>
     <message>
         <source>Merging this tag with another tag will delete the tag and it's synonyms and transfer all related objects to the main tag. Also, all children tags will become main tag children.</source>
-        <translation>Bij het samenvoegen van dit label met een andere tag worden het label en synoniemen verwijderd en  worden alle gerelateerde objecten aan het hoofdlabel gekoppeld. Ook worden onderliggende labels veranderd in onderliggende labels van het hoofdlabel.</translation>
+        <translation>Als je deze tag samenvoegt met een andere tag, worden de tag en de synoniemen ervan verwijderd en worden alle gerelateerde objecten overgezet naar de hoofdtag. Ook worden alle onderliggende tags onderliggende tags van de hoofdtag.</translation>
     </message>
     <message>
         <source>Yes</source>
@@ -341,19 +341,19 @@
     </message>
     <message>
         <source>The tag you're about to delete has</source>
-        <translation>Het label dat u wilt verwijderen heeft</translation>
+        <translation>De tag die je gaat verwijderen, heeft</translation>
     </message>
     <message>
         <source>The tag you're about to merge has</source>
-        <translation>Het label dat u wilt samenvoegen heeft</translation>
+        <translation>De tag die je gaat samenvoegen, heeft</translation>
     </message>
     <message>
         <source>number of first level children tags</source>
-        <translation>aantal direct onderliggende labels</translation>
+        <translation>aantal direct onderliggende tags</translation>
     </message>
     <message>
         <source>number of objects related to first level children tags</source>
-        <translation>aantal objecten gerelateerd aan direct onderliggende labels</translation>
+        <translation>aantal objecten gerelateerd aan direct onderliggende tags</translation>
     </message>
     <message>
         <source>number of synonyms</source>
@@ -361,7 +361,7 @@
     </message>
     <message>
         <source>number of objects related to synonyms</source>
-        <translation>Aantal objecten gerelateerd aan synoniemen</translation>
+        <translation>aantal objecten gerelateerd aan synoniemen</translation>
     </message>
     <message>
         <source>Set as main translation</source>
@@ -404,86 +404,86 @@
     <name>extension/eztags/tags/search</name>
     <message>
         <source>Tags search</source>
-        <translation>Labels zoeken</translation>
+        <translation>Tags zoeken</translation>
     </message>
     <message>
         <source>Search tags</source>
-        <translation>Labels zoeken</translation>
+        <translation>Tags zoeken</translation>
     </message>
     <message>
         <source>Include synonyms in search</source>
-        <translation>Synoniemen ook doorzoeken</translation>
+        <translation>Synoniemen meenemen in de zoekopdracht</translation>
     </message>
     <message>
         <source>Empty search not allowed. Please enter your search query above.</source>
-        <translation>Zoekterm verplicht. Voer hierboven een zoekterm in.</translation>
+        <translation>Lege zoekopdracht niet toegestaan. Voer hierboven een zoekterm in.</translation>
     </message>
     <message>
         <source>No tags were found while searching for "%1".</source>
-        <translation>Geen labels gevonden bij het zoeken naar "%1".</translation>
+        <translation>Geen tags gevonden bij het zoeken naar "%1".</translation>
     </message>
     <message>
         <source>Search for "%1" returned %2 matches.</source>
-        <translation>Bij het zoeken naar "%1" zijn  %2 resultaten gevonden.</translation>
+        <translation>Zoeken naar "%1" gaf %2 resultaten.</translation>
     </message>
     <message>
         <source>Tag name</source>
-        <translation>Naam label</translation>
+        <translation>Tagnaam</translation>
     </message>
     <message>
         <source>Parent tag</source>
-        <translation>Bovenliggend label</translation>
+        <translation>Bovenliggende tag</translation>
     </message>
     <message>
         <source>Main tag name</source>
-        <translation>Naam hoofdlabel</translation>
+        <translation>Naam van hoofdtag</translation>
     </message>
 </context>
 <context>
     <name>extension/eztags/tags/treemenu</name>
     <message>
         <source>Select tag</source>
-        <translation>Label selecteren</translation>
+        <translation>Tag selecteren</translation>
     </message>
     <message>
         <source>Parent tag ID</source>
-        <translation>Bovenliggend label ID</translation>
+        <translation>ID van bovenliggende tag</translation>
     </message>
     <message>
         <source>Tag ID</source>
-        <translation>Label ID</translation>
+        <translation>Tag-ID</translation>
     </message>
     <message>
         <source>Dynamic tree not allowed for this siteaccess</source>
-        <translation>Dynamische boomstructuur niet toegestaan in deze siteaccess</translation>
+        <translation>Dynamische boomstructuur niet toegestaan voor deze siteaccess</translation>
     </message>
     <message>
         <source>Tag does not exist</source>
-        <translation>Label bestaat niet</translation>
+        <translation>Tag bestaat niet</translation>
     </message>
     <message>
         <source>Internal error</source>
-        <translation>interne foutmelding</translation>
+        <translation>Interne fout</translation>
     </message>
     <message>
         <source>Tags structure</source>
-        <translation>Labelstructuur</translation>
+        <translation>Tagstructuur</translation>
     </message>
     <message>
         <source>Add child tag</source>
-        <translation>Onderliggend label toevoegen</translation>
+        <translation>Onderliggende tag toevoegen</translation>
     </message>
     <message>
         <source>Edit tag</source>
-        <translation>Label bewerken</translation>
+        <translation>Tag bewerken</translation>
     </message>
     <message>
         <source>Delete tag</source>
-        <translation>Label verwijderen</translation>
+        <translation>Tag verwijderen</translation>
     </message>
     <message>
         <source>Merge tag</source>
-        <translation>Label samenvoegen</translation>
+        <translation>Tag samenvoegen</translation>
     </message>
     <message>
         <source>Add synonym</source>
@@ -491,7 +491,7 @@
     </message>
     <message>
         <source>Convert to synonym</source>
-        <translation>Veranderen in synoniem</translation>
+        <translation>Omzetten naar synoniem</translation>
     </message>
     <message>
         <source>New translation</source>
@@ -499,18 +499,18 @@
     </message>
     <message>
         <source>Top level tags</source>
-        <translation>Labels op hoogste niveau</translation>
+        <translation>Tags op het hoogste niveau</translation>
     </message>
 </context>
 <context>
     <name>extension/eztags/tags/view</name>
     <message>
         <source>Tags dashboard</source>
-        <translation>Labels Dashboard</translation>
+        <translation>Tagdashboard</translation>
     </message>
     <message>
         <source>Latest content</source>
-        <translation>Laatste inhoud</translation>
+        <translation>Nieuwste inhoud</translation>
     </message>
     <message>
         <source>No content</source>
@@ -526,15 +526,15 @@
     </message>
     <message>
         <source>Modified</source>
-        <translation>Aangepast</translation>
+        <translation>Gewijzigd</translation>
     </message>
     <message>
         <source>Related tags</source>
-        <translation>Gerelateerde labels</translation>
+        <translation>Gerelateerde tags</translation>
     </message>
     <message>
         <source>Tag</source>
-        <translation>Label</translation>
+        <translation>Tag</translation>
     </message>
     <message>
         <source>Synonym</source>
@@ -550,27 +550,27 @@
     </message>
     <message>
         <source>Main tag</source>
-        <translation>Hoofdlabel</translation>
+        <translation>Hoofdtag</translation>
     </message>
     <message>
         <source>Subtree limitations</source>
-        <translation>Beperkingen in boomstructuur</translation>
+        <translation>Substructuurbeperkingen</translation>
     </message>
     <message>
         <source>Class ID</source>
-        <translation>Type ID</translation>
+        <translation>Klasse-ID</translation>
     </message>
     <message>
         <source>Class name</source>
-        <translation>Type naam</translation>
+        <translation>Klassenaam</translation>
     </message>
     <message>
         <source>Attribute identifier</source>
-        <translation>Attribuut identifier</translation>
+        <translation>Identificatie van attribuut</translation>
     </message>
     <message>
         <source>No subtree limitations</source>
-        <translation>Geen beperkingen in boomstructuur</translation>
+        <translation>Geen substructuurbeperkingen</translation>
     </message>
     <message>
         <source>Invert selection.</source>
@@ -610,7 +610,7 @@
     </message>
     <message>
         <source>Tag translations</source>
-        <translation>Labelvertalingen</translation>
+        <translation>Tagvertalingen</translation>
     </message>
     <message>
         <source>Up one level.</source>
@@ -618,35 +618,35 @@
     </message>
     <message>
         <source>Children tags (%children_count)</source>
-        <translation>Onderliggende labels (%children_count)</translation>
+        <translation>Onderliggende tags (%children_count)</translation>
     </message>
     <message>
         <source>Children tags</source>
-        <translation>Onderliggende labels</translation>
+        <translation>Onderliggende tags</translation>
     </message>
     <message>
         <source>Show %1 tags per page.</source>
-        <translation>Toon %1 labels per pagina.</translation>
+        <translation>%1 tags per pagina tonen.</translation>
     </message>
     <message>
         <source>Tag name</source>
-        <translation>Naam van het label</translation>
+        <translation>Tagnaam</translation>
     </message>
     <message>
         <source>The current tag does not contain any children.</source>
-        <translation>Het huidige label heeft geen onderliggende labels.</translation>
+        <translation>De huidige tag heeft geen onderliggende tags.</translation>
     </message>
     <message>
         <source>Parent tag name</source>
-        <translation>Naam bovenliggend label</translation>
+        <translation>Naam van bovenliggende tag</translation>
     </message>
     <message>
         <source>No parent</source>
-        <translation>Geen bovenliggend label</translation>
+        <translation>Geen bovenliggende tag</translation>
     </message>
     <message>
         <source>Latest tags</source>
-        <translation>Nieuwste labels</translation>
+        <translation>Nieuwste tags</translation>
     </message>
     <message>
         <source>Edit synonym</source>
@@ -658,23 +658,23 @@
     </message>
     <message>
         <source>Add tag</source>
-        <translation>Onderliggend label toevoegen</translation>
+        <translation>Tag toevoegen</translation>
     </message>
     <message>
         <source>Add child tag</source>
-        <translation>Onderliggend label toevoegen</translation>
+        <translation>Onderliggende tag toevoegen</translation>
     </message>
     <message>
         <source>Edit tag</source>
-        <translation>Label bewerken</translation>
+        <translation>Tag bewerken</translation>
     </message>
     <message>
         <source>Delete tag</source>
-        <translation>Label verwijderen</translation>
+        <translation>Tag verwijderen</translation>
     </message>
     <message>
         <source>Merge tag</source>
-        <translation>Label samenvoegen</translation>
+        <translation>Tag samenvoegen</translation>
     </message>
     <message>
         <source>Add synonym</source>
@@ -682,11 +682,11 @@
     </message>
     <message>
         <source>Convert to synonym</source>
-        <translation>Veranderen in synoniem</translation>
+        <translation>Omzetten naar synoniem</translation>
     </message>
     <message>
         <source>No tags</source>
-        <translation>Geen labels</translation>
+        <translation>Geen tags</translation>
     </message>
     <message>
         <source>Use the main language if there is no prioritized translation.</source>
@@ -698,7 +698,7 @@
     </message>
     <message>
         <source>Tag ID</source>
-        <translation>Label ID</translation>
+        <translation>Tag-ID</translation>
     </message>
     <message>
         <source>first</source>
@@ -734,11 +734,11 @@
     </message>
     <message>
         <source>Remove selected tags</source>
-        <translation>Geselecteerde labels verwijderen</translation>
+        <translation>Geselecteerde tags verwijderen</translation>
     </message>
     <message>
         <source>Move selected tags</source>
-        <translation>Geselecteerde labels verplaatsen</translation>
+        <translation>Geselecteerde tags verplaatsen</translation>
     </message>
     <message>
         <source>More actions</source>
@@ -750,7 +750,7 @@
     </message>
     <message>
         <source>Use the checkboxes to select one or more tags.</source>
-        <translation>Gebruik de selectievakjes om een of meer labels te selecteren.</translation>
+        <translation>Gebruik de selectievakjes om een of meer tags te selecteren.</translation>
     </message>
     <message>
         <source>Table options</source>
@@ -762,7 +762,7 @@
     </message>
     <message>
         <source>Number of tags per page</source>
-        <translation>Aantal labels per pagina</translation>
+        <translation>Aantal tags per pagina</translation>
     </message>
     <message>
         <source>Loading...</source>
@@ -770,7 +770,7 @@
     </message>
     <message>
         <source>No tags found.</source>
-        <translation>Geen labels gevonden.</translation>
+        <translation>Geen tags gevonden.</translation>
     </message>
     <message>
         <source>Edit</source>
@@ -778,11 +778,11 @@
     </message>
     <message>
         <source>Show all content related to tag</source>
-        <translation>Alle content tonen die bij de tag hoort</translation>
+        <translation>Alle inhoud tonen die aan de tag is gerelateerd</translation>
     </message>
     <message>
         <source>List of content related to tag %tag (%count):</source>
-        <translation>Lijst met content die bij tag %tag hoort (%count):</translation>
+        <translation>Lijst van inhoud gerelateerd aan tag %tag (%count):</translation>
     </message>
     <message>
         <source>Visibility</source>
@@ -805,11 +805,11 @@
     <name>extension/eztags/warnings</name>
     <message>
         <source>TAKE CARE: Tag is inside class attribute subtree limit(s). If moved outside those limits, it could lead to inconsistency as objects could end up with tags that they are not supposed to have.</source>
-        <translation>LET OP: Het label valt binnen de subboombeperking(en) van een klasse-attribuut. Als het buiten die beperkingen wordt verplaatst, kan dat tot inconsistentie leiden, omdat objecten labels kunnen krijgen die ze niet horen te hebben.</translation>
+        <translation>LET OP: de tag valt binnen de substructuurbeperking(en) van klasse-attributen. Als hij buiten die grenzen wordt verplaatst, kan dat tot inconsistentie leiden, omdat objecten tags kunnen krijgen die ze niet horen te hebben.</translation>
     </message>
     <message>
         <source>Manual search index regeneration is required for changes to be seen in search. Enable DelayedIndexing in site.ini to reindex automatically.</source>
-        <translation>De zoekindex moet handmatig opnieuw worden opgebouwd voordat de wijzigingen in de zoekresultaten zichtbaar zijn. Schakel DelayedIndexing in site.ini in om automatisch opnieuw te indexeren.</translation>
+        <translation>De zoekindex moet handmatig opnieuw worden opgebouwd om wijzigingen in de zoekresultaten te zien. Schakel DelayedIndexing in site.ini in om automatisch opnieuw te indexeren.</translation>
     </message>
 </context>
 <context>
@@ -827,11 +827,11 @@
     <name>design/admin/pagelayout</name>
     <message>
         <source>Tags</source>
-        <translation>Labels</translation>
+        <translation>Tags</translation>
     </message>
     <message>
         <source>Tags dashboard</source>
-        <translation>Labels Dashboard</translation>
+        <translation>Tagdashboard</translation>
     </message>
 </context>
 <context>

@@ -76,19 +76,19 @@
     </message>
     <message>
         <source>Up to %1 tags are allowed to be added.</source>
-        <translation>È possibile aggiungere al massimo %1 tag.</translation>
+        <translation>Puoi aggiungere fino a %1 tag.</translation>
     </message>
     <message>
         <source>Limit by tags subtree</source>
-        <translation>Limite tags per il sotto-albero</translation>
+        <translation>Limite tags per il sottoalbero</translation>
     </message>
     <message>
         <source>Select subtree</source>
-        <translation>Seleziona il sotto-albero</translation>
+        <translation>Seleziona il sottoalbero</translation>
     </message>
     <message>
         <source>Hide root subtree limit tag when editing object</source>
-        <translation>Nascondi il limite tags per il sotto-albero principale mentre modifichi un oggetto</translation>
+        <translation>Nascondi il limite tags per il sottoalbero principale mentre modifichi un oggetto</translation>
     </message>
     <message>
         <source>Edit view</source>
@@ -100,7 +100,7 @@
     </message>
     <message>
         <source>Select view</source>
-        <translation>Seleziona vista</translation>
+        <translation>Vista di selezione</translation>
     </message>
     <message>
         <source>Maximum number of allowed tags</source>
@@ -163,7 +163,7 @@
     <name>extension/eztags/errors</name>
     <message>
         <source>Tag cannot be modified because it is being used as subtree limitation in one or more class attributes.</source>
-        <translation>La tag non può essere modificata perchè viene usata come limite del sotto-albero in una o più attributi di classe.</translation>
+        <translation>La tag non può essere modificata perché viene usata come limite del sottoalbero in una o più attributi di classe.</translation>
     </message>
     <message>
         <source>Selected target tag is invalid.</source>
@@ -175,11 +175,11 @@
     </message>
     <message>
         <source>Tag/synonym with that translation already exists in selected location.</source>
-        <translation>Esiste già un tag/sinonimo con questa traduzione nella posizione selezionata.</translation>
+        <translation>Nella collocazione selezionata esiste già un tag o sinonimo con questa traduzione.</translation>
     </message>
     <message>
         <source>The following tags could not be moved because they contain translations that already exist in one of the tags in selected location.</source>
-        <translation>I seguenti tag non possono essere spostati perché contengono traduzioni già presenti in uno dei tag nella posizione selezionata.</translation>
+        <translation>I seguenti tag non possono essere spostati perché contengono traduzioni già presenti in uno dei tag della collocazione selezionata.</translation>
     </message>
     <message>
         <source>Go back</source>
@@ -194,7 +194,7 @@
     </message>
     <message>
         <source>Show Tags attributes overview.</source>
-        <translation>Mostra la panoramica degli attributi dei tag.</translation>
+        <translation>Mostra la panoramica degli attributi Tags.</translation>
     </message>
     <message>
         <source>No tags</source>
@@ -277,7 +277,7 @@
     </message>
     <message>
         <source>Save</source>
-        <translation>Registra</translation>
+        <translation>Salva</translation>
     </message>
     <message>
         <source>Discard</source>
@@ -301,11 +301,11 @@
     </message>
     <message>
         <source>Are you sure you want to delete selected tags? All children tags and synonyms will also be deleted and removed from existing objects.</source>
-        <translation>Vuoi davvero eliminare i tag selezionati? Anche tutti i tag figli e i sinonimi verranno eliminati e rimossi dagli oggetti esistenti.</translation>
+        <translation>Sei sicuro di voler eliminare i tag selezionati? Verranno eliminati anche tutti i tag figli e i sinonimi, che saranno rimossi dagli oggetti esistenti.</translation>
     </message>
     <message>
         <source>Are you sure you want to move selected tags?</source>
-        <translation>Vuoi davvero spostare i tag selezionati?</translation>
+        <translation>Sei sicuro di voler spostare i tag selezionati?</translation>
     </message>
     <message>
         <source>Tag</source>
@@ -554,7 +554,7 @@
     </message>
     <message>
         <source>Subtree limitations</source>
-        <translation>Limitazioni sotto-albero</translation>
+        <translation>Limitazioni sottoalbero</translation>
     </message>
     <message>
         <source>Class ID</source>
@@ -570,7 +570,7 @@
     </message>
     <message>
         <source>No subtree limitations</source>
-        <translation>Nessuna limitazione del sotto-albero</translation>
+        <translation>Nessuna limitazione del sottoalbero</translation>
     </message>
     <message>
         <source>Invert selection.</source>
@@ -805,7 +805,7 @@
     <name>extension/eztags/warnings</name>
     <message>
         <source>TAKE CARE: Tag is inside class attribute subtree limit(s). If moved outside those limits, it could lead to inconsistency as objects could end up with tags that they are not supposed to have.</source>
-        <translation>ATTENZIONE: La tag è dentro i limiti del sotto-albero. Se viene spostata fuori da questi limiti, può generare un'inconsistenza perchè gli oggetti possono terminare con delle tags che non dovrebbero avere.</translation>
+        <translation>ATTENZIONE: La tag è dentro i limiti del sottoalbero. Se viene spostata fuori da questi limiti, può generare un'inconsistenza perché gli oggetti possono terminare con delle tags che non dovrebbero avere.</translation>
     </message>
     <message>
         <source>Manual search index regeneration is required for changes to be seen in search. Enable DelayedIndexing in site.ini to reindex automatically.</source>
