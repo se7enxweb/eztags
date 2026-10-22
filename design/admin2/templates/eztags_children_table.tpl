@@ -19,7 +19,7 @@
             <div id="action-filter"></div>
             <div id="tpg"></div>
         </div>
-        {* The table's settings, read by eztags_admin.js, which starts the table (jquery.eztagschildren.js): no inline
+        {* The table's settings, read by eztags_admin.js, which starts the table (eztags_children.js): no inline
            script (Content Security Policy) *}
         {def $languages = fetch( content, prioritized_languages )
              $children_languages = hash()}

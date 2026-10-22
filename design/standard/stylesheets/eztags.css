@@ -27,3 +27,32 @@ a.eztags-cloud-size-7 { font-size: 170%; }
 a.eztags-cloud-size-8 { font-size: 180%; }
 a.eztags-cloud-size-9 { font-size: 190%; }
 a.eztags-cloud-size-10 { font-size: 200%; }
+
+/* The tag picker of admin4 (ezjsctemplate/modal_dialog.tpl, a <dialog> opened by eztags.js) */
+dialog.eztags-dialog { width: min(400px, calc(100vw - 32px)); max-height: calc(100vh - 32px); padding: 0; border: 1px solid var(--a4-line, #b5a69c); border-radius: var(--a4-radius-s, 4px); background: var(--a4-card, #fff); color: var(--a4-ink, #000); }
+dialog.eztags-dialog::backdrop { background: rgba(255, 255, 255, 0.6); }
+.eztags-dialog-header { display: flex; align-items: center; justify-content: space-between; gap: var(--a4-space-2, 10px); padding: var(--a4-space-2, 10px) var(--a4-space-3, 14px); border-bottom: 1px solid var(--a4-line, #b5a69c); }
+.eztags-dialog-title { margin: 0; font-size: 1em; font-weight: bold; }
+.eztags-dialog-close { min-width: 28px; min-height: 28px; padding: 0 6px; border: 1px solid transparent; border-radius: var(--a4-radius-s, 4px); background: transparent; color: inherit; font-size: 20px; line-height: 1; cursor: pointer; }
+.eztags-dialog-close:hover { border-color: var(--a4-line, #b5a69c); }
+.eztags-dialog-close:focus-visible { outline: 2px solid var(--a4-ring, #1a73e8); outline-offset: 1px; }
+.eztags-dialog-body { max-height: 350px; overflow: auto; padding: var(--a4-space-3, 14px); }
+.eztags-dialog div.contentstructure ul.content_tree_menu { margin: 0; }
+
+/* The tree of the tree builder in admin4 (eztags.js, EzTags.TreeView), in place of jsTree's */
+ul.eztags-tree, ul.eztags-tree-group { margin: 0; padding: 0; list-style: none; }
+ul.eztags-tree-group { padding-left: 20px; }
+li.eztags-tree-node { margin: 0; padding: 0; white-space: nowrap; }
+.eztags-tree-toggle { display: inline-block; width: 16px; text-align: center; cursor: pointer; }
+li.is-closed > .eztags-tree-toggle::before { content: "\25B8"; }
+li.is-open > .eztags-tree-toggle::before { content: "\25BE"; }
+a.eztags-tree-anchor { display: inline-block; padding: 2px 4px; color: inherit; text-decoration: none; line-height: 20px; }
+a.eztags-tree-anchor:hover { background: var(--a4-accent-soft, #e7f4f9); }
+a.eztags-tree-anchor:focus-visible { outline: 2px solid var(--a4-ring, #1a73e8); outline-offset: 1px; }
+a.eztags-tree-anchor[data-selected=true] { color: var(--a4-muted, #888); }
+a.eztags-tree-anchor[aria-disabled=true] { cursor: default; }
+a.eztags-tree-anchor img.eztags-tree-icon { margin-right: 4px; vertical-align: middle; }
+a.eztags-tree-anchor[aria-busy=true] { opacity: 0.6; }
+
+/* A selected tag being moved (eztags.js sorts them with the mouse) */
+.tagssuggest ul.with_sortable li.is-sorting { opacity: 0.6; }

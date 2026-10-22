@@ -23,7 +23,7 @@ BackendJavaScriptList[]=jquery.eztags.js
 BackendJavaScriptList[]=jquery.eztags.select.js
 BackendJavaScriptList[]=jquery.eztags.tree.js
 BackendJavaScriptList[]=tagsstructuremenu.js
-BackendJavaScriptList[]=jquery.eztagschildren.js
+BackendJavaScriptList[]=eztags_children.js
 
 [StylesheetSettings]
 BackendCSSFileList[]=jqmodal.css
