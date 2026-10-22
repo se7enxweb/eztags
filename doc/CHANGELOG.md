@@ -1,5 +1,22 @@
 # eZ Tags extension changelog
 
+## 2.4.24 (2026-10-21)
+
+* The Tags tab of the administration shows an icon: `[Topmenu_eztags]` in `settings/menu.ini.append.php` sets
+  `Icon=tags`, which the admin4 design draws before the tab's name (a name of design.ini `[AdminDesignSettings]
+  IconList[]`). Designs that draw no icons ignore it.
+* `README.md` is a complete guide: what the extension does, requirements, installation with Composer and by hand,
+  every setting of `eztags.ini`, the admin tab, the datatype's class options, the fetch functions, attribute
+  filters (including `TagsAttributeAndMultipleFilter` and `TagsTreeAttributeFilter`), template operators and the
+  `taglink` custom tag with examples, the policy functions, the ezkeyword converter, upgrading, known limits and
+  troubleshooting.
+* `composer.json` has keywords, the homepage, issue and source links, requires PHP 8.0 or later, suggests
+  se7enxweb/ezfind, names 7x as maintainer, sets `installer-name` and aliases dev-master to 2.4.x-dev.
+  `ezinfo.php` has a `public static info()`, and `ezinfo.php` and `extension.xml` state version 2.4.24.
+
+The changes between 2.2.2 and 2.4.23 are in the commit history and in the release notes on
+https://github.com/se7enxweb/eztags/releases.
+
 ## 2.2.2 (11.01.2018)
 
 * Fix error in the logs for tag suggestions (Thanks Gaetano Giunta)
