@@ -1,14 +1,24 @@
 {
     "name": "se7enxweb/eztags",
-    "description": "eZ Tags is an extension for Exponential, providing more functionality for tagging content objects than ezkeyword datatype included in Exponential kernel.",
+    "description": "eZ Tags LS: taxonomy management for Exponential. A tag tree with synonyms and translations, a tags datatype with autocomplete, select and tree editing, a tags admin tab, fetch functions, attribute filters and a tag cloud.",
     "type": "ezpublish-legacy-extension",
+    "keywords": [
+        "exponential",
+        "ezpublish-legacy",
+        "extension",
+        "tags",
+        "taxonomy",
+        "keywords",
+        "tag-cloud"
+    ],
+    "homepage": "https://github.com/se7enxweb/eztags",
     "license": "GPL-2.0-or-later",
     "authors": [
         {
-            "name" : "7x",
+            "name": "7x",
             "homepage": "https://se7enx.com",
             "email": "info@se7enx.com",
-            "role": "Developer"
+            "role": "Maintainer"
         },
         {
             "name": "Netgen",
@@ -20,14 +30,23 @@
             "homepage": "https://github.com/se7enxweb/eztags/contributors"
         }
     ],
+    "support": {
+        "issues": "https://github.com/se7enxweb/eztags/issues",
+        "source": "https://github.com/se7enxweb/eztags"
+    },
     "require": {
+        "php": ">=8.0",
         "se7enxweb/ezpublish-legacy-installer": "*",
         "se7enxweb/expui": "^1.0.0.1"
     },
+    "suggest": {
+        "se7enxweb/ezfind": "Tag suggestions, related tags and the tag cloud over Solr"
+    },
     "extra": {
         "ezpublish-legacy-extension-name": "eztags",
+        "installer-name": "eztags",
         "branch-alias": {
-            "dev-master": "2.3.x-dev"
+            "dev-master": "2.4.x-dev"
         }
     }
 }

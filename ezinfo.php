@@ -10,7 +10,7 @@
 
 class eztagsInfo
 {
-    static function info()
+    public static function info()
     {
         return array( 'Name' => "eZ Tags LS",
                       'Version' => "2.4.23",
