@@ -1142,6 +1142,9 @@
 
   //Auto initialize
   $(function(){
+    // eztags.js, the plain JavaScript version admin4 loads (eztags/edit_scripts.tpl), sets the fields up itself; on a
+    // page that loads both, the plain version runs them
+    if (window.EzTags && window.EzTags.plain) { return; }
     $('[data-eztags]').EzTags();
     EzTags.AdminClassInterface();
   });
