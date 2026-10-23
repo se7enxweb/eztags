@@ -34,5 +34,8 @@
         'icon', ezini( 'Icons', 'Default', 'eztags.ini' )|tag_icon,
         'modified', false() ),
     'load_root', false() ) )|wash}"></ul>
+{* tagsstructuremenu.js (plain JavaScript) is not on every admin page; this menu is drawn by the page layout, after
+   the head, and the request prints what the head has not loaded yet *}
+{ezscript_require( array( 'tagsstructuremenu.js' ) )}
 {ezscript( array( 'eztags_tree.js' ) )}
 {undef $tree_path}
