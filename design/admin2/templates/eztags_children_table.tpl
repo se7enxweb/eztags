@@ -19,7 +19,7 @@
             <div id="action-filter"></div>
             <div id="tpg"></div>
         </div>
-        {* The table's settings, read by eztags_admin.js, which starts the table (jquery.eztagschildren.js): no inline
+        {* The table's settings, read by eztags_admin.js, which starts the table (eztags_children.js): no inline
            script (Content Security Policy) *}
         {def $languages = fetch( content, prioritized_languages )
              $children_languages = hash()}
@@ -71,6 +71,9 @@
 
         <div id="to-dialog-container"></div>
 
+        {* the table runs on Exponential UI's exp::datatable (plain JavaScript, no jQuery), which admin4 does not load on
+           every page *}
+        {ezscript_require( array( 'exp::core::shared', 'exp::io', 'exp::datatable', 'eztags_children.js' ) )}
         {ezscript( array( 'eztags_admin.js' ) )}
         {if ezini( 'ExtensionSettings', 'ActiveExtensions' )|contains( 'expui' )}
             {* the texts Exponential UI's table shows itself (page links, sorting, the filter), translated *}

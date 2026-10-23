@@ -1,14 +1,14 @@
 /*
   eztags in the administration without inline code: what inline scripts and on...= attributes of the tags pages did
   before, so the pages run under a Content Security Policy without 'unsafe-inline'. Printed with ezscript where the
-  scripts stood; it may be printed more than once on a page and sets itself up once. Plain JavaScript (jQuery only
-  for the children table, which needs it), for every administration design and kernel version.
+  scripts stood; it may be printed more than once on a page and sets itself up once. Plain JavaScript, for every
+  administration design and kernel version.
 
   Read on every print (and when the page is parsed):
     [data-eztags-menus='{"TagMenu":{"depth":0,"headerID":"tag-header","elements":{...}}, ...}']
         the context menus' entries, added to menuArray (never assigned anew) for ezpopupmenu.js
-    #eztags-tag-children-table[data-eztags-children='{settings}']   the children table (jquery.eztagschildren.js),
-        started when the page is parsed, as before
+    #eztags-tag-children-table[data-eztags-children='{settings}']   the children table (eztags_children.js, on
+        Exponential UI's exp::datatable), started one turn after the page is parsed, as before
   One listener per event on the document:
     a[data-eztags-menu-item="TagMenu"]   pointing at a menu item: ezpopmenu_mouseOver( menu ), or with
         data-eztags-submenu="TagEditSubmenu" ezpopmenu_showSubLevel( event, submenu, item id )
@@ -66,16 +66,16 @@
 
     function startChildrenTable()
     {
-        var $ = window.jQuery, el = document.getElementById( 'eztags-tag-children-table' );
-        if ( !$ || !el || el.getAttribute( 'data-eztags-children-started' ) )
+        var el = document.getElementById( 'eztags-tag-children-table' );
+        if ( !el || el.getAttribute( 'data-eztags-children-started' ) )
             return;
         var settings = parse( el, 'data-eztags-children' );
         if ( !settings )
             return;
         el.setAttribute( 'data-eztags-children-started', '1' );
         // The table: Exponential UI's exp::datatable
-        if ( window.Exp && Exp.$ && Exp.$.fn.expDataTable && $.fn.eZTagsChildrenExp )
-            $( el ).eZTagsChildrenExp( settings );
+        if ( window.Exp && window.Exp.datatable && typeof window.eZTagsChildren === 'function' )
+            window.eZTagsChildren( el, settings );
     }
 
     function scan()
@@ -91,15 +91,18 @@
         return;
     window.eZTagsAdminListening = true;
 
+    // as before (on jQuery's ready): one turn after the page is parsed, after the scripts of the page
+    function startLater()
+    {
+        setTimeout( startChildrenTable, 0 );
+    }
     document.addEventListener( 'DOMContentLoaded', function()
     {
         scan();
-        // as before: on jQuery's ready, after the scripts of the page
-        if ( window.jQuery )
-            window.jQuery( startChildrenTable );
+        startLater();
     } );
-    if ( document.readyState !== 'loading' && window.jQuery )
-        window.jQuery( startChildrenTable );
+    if ( document.readyState !== 'loading' )
+        startLater();
 
     document.addEventListener( 'mouseover', function( e )
     {

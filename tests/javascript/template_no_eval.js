@@ -1,6 +1,7 @@
 /*
  * Renders the templates of jquery.eztags.js and jquery.eztags.select.js with the CSP-safe renderer (no eval(), no
- * new Function()) and compares the result with the expected markup. Runs in Node without a browser:
+ * new Function()) and compares the result with the expected markup; eztags.js (admin4, no jQuery) has to render the
+ * same templates alike. Runs in Node without a browser:
  *   node tests/javascript/template_no_eval.js
  * Prints one PASS or FAIL line per check and exits non-zero on a failure.
  */
@@ -79,5 +80,27 @@ check(!/\beval\s*\(|new\s+Function\s*\(/.test((source + selectSource).replace(/^
 
 var treeSource = fs.readFileSync(path.join(root, 'design/standard/javascript/jquery.eztags.tree.js'), 'utf8');
 check(/'core'\s*:\s*\{[^}]*'worker'\s*:\s*false/.test(treeSource), 'T-12 the tag tree turns the jsTree blob: worker off (no worker-src blob: needed)');
+
+// eztags.js, the plain JavaScript version admin4 loads: the same templates, rendered the same way, also with code
+// generation from strings disabled
+var plainSource = fs.readFileSync(path.join(root, 'design/standard/javascript/eztags.js'), 'utf8');
+var plainContext = vm.createContext({}, { codeGeneration: { strings: false, wasm: false } });
+plainContext.window = plainContext;
+plainContext.console = { warn: function(m){ warnings.push(m); } };
+plainContext.document = { readyState: 'complete', getElementById: function(){ return null; }, querySelectorAll: function(){ return []; },
+                          addEventListener: function(){} };
+plainContext.setTimeout = function(){};
+vm.runInContext(plainSource, plainContext, { filename: 'eztags.js' });
+var Plain = plainContext.EzTags;
+check(Plain && typeof Plain.Base.prototype.tpl === 'function', 'T-13 eztags.js loads with code generation from strings disabled');
+var plainTpl = function(str, data){ return Plain.Base.prototype.tpl.call({ tplCache: {} }, str, data); };
+var same = true;
+['skeleton', 'suggestedItem', 'selectedItem', 'autocompleteItem'].forEach(function(name){
+  var t1 = defaults[name].join(''), t2 = Plain.Base.defaults.templates[name].join('');
+  var data = { tag: { cid: 'c9', main_tag_id: '4', flagSrc: '/f.gif', name: 'N', parent_name: 'P' }, tr: { addNew: 'Add', findTag: 'Find', removeTag: 'R', clickAddThisTag: 'C' } };
+  if (t1 !== t2 || tpl(t1, data) !== plainTpl(t2, data)) { same = false; }
+});
+check(same, 'T-14 eztags.js has the templates of jquery.eztags.js and renders them alike');
+check(!/\beval\s*\(|new\s+Function\s*\(/.test(plainSource.replace(/^\s*\/\/.*$/mg, '')), 'T-15 eztags.js uses neither eval() nor new Function()');
 
 process.exit(failures ? 1 : 0);

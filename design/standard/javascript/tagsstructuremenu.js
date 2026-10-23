@@ -1,3 +1,7 @@
+/*
+  The tag trees of eztags (the left tree of the tags pages and the trees of the tag selection dialogs), on plain
+  JavaScript: it needs no jQuery, so it runs in every design, also on a page that loads none.
+*/
 function TagsStructureMenu( params, attribute_id )
 {
     this.cookieName     = "tagsStructureMenu";
@@ -10,7 +14,7 @@ function TagsStructureMenu( params, attribute_id )
     this.perm           = params.perm;
     this.expiry         = params.expiry;
     this.modal          = params.modal;
-    this.hideTagIDVal   = jQuery( '#hide_tag_id_' + this.attribute_id ).val();
+    this.hideTagIDVal   = _value( document.getElementById( 'hide_tag_id_' + this.attribute_id ) );
     this.hideTagID      = typeof this.hideTagIDVal == 'string' ? this.hideTagIDVal.split(';') : [];
     this.context        = params.context;
     this.showTips       = params.showTips;
@@ -25,6 +29,49 @@ function TagsStructureMenu( params, attribute_id )
         expireDate.setTime( expireDate.getTime() + this.cookieValidity * 86400000 );
         _setCookie( this.cookieName, this.cookie, expireDate );
     };
+
+    // The value of a form field, as jQuery's val() gave it: undefined without the field
+    function _value( el )
+    {
+        return el ? String( el.value ).replace( /\r/g, '' ) : undefined;
+    }
+
+    // The position of value in list, as jQuery.inArray() gave it (-1: not there)
+    function _inArray( value, list )
+    {
+        return list ? Array.prototype.indexOf.call( list, value ) : -1;
+    }
+
+    // A GET request for JSON, sent as jQuery.ajax( { url: url, dataType: 'json' } ) sent it: the same headers,
+    // success( data ) for an answer in 200-299 or 304 that is JSON, error( xhr ) otherwise
+    function _getJSON( url, success, error )
+    {
+        var xhr = new XMLHttpRequest(), done = false;
+        function fail()
+        {
+            if ( done )
+                return;
+            done = true;
+            error( xhr );
+        }
+        xhr.open( 'GET', url, true );
+        xhr.setRequestHeader( 'Accept', 'application/json, text/javascript, */*; q=0.01' );
+        xhr.setRequestHeader( 'X-Requested-With', 'XMLHttpRequest' );
+        xhr.onload = function()
+        {
+            if ( done )
+                return;
+            var data;
+            if ( ( xhr.status < 200 || xhr.status >= 300 ) && xhr.status !== 304 )
+                return fail();
+            try { data = JSON.parse( xhr.responseText ); } catch ( e ) { return fail(); }
+            done = true;
+            success( data );
+        };
+        xhr.onerror = xhr.onabort = xhr.ontimeout = fail;
+        xhr.send( null );
+        return xhr;
+    }
 
     // cookie functions
     function _setCookie( name, value, expires, path )
@@ -49,7 +96,7 @@ function TagsStructureMenu( params, attribute_id )
 
     this.setOpen = function( tagID )
     {
-        if ( jQuery.inArray( '' + tagID, this.open ) !== -1 )
+        if ( _inArray( '' + tagID, this.open ) !== -1 )
         {
             return;
         }
@@ -59,7 +106,7 @@ function TagsStructureMenu( params, attribute_id )
 
     this.setClosed = function( tagID )
     {
-        var openIndex = jQuery.inArray( '' + tagID, this.open );
+        var openIndex = _inArray( '' + tagID, this.open );
         if ( openIndex !== -1 )
         {
             this.open.splice( openIndex, 1 );
@@ -76,11 +123,11 @@ function TagsStructureMenu( params, attribute_id )
         {
             liclass += ' lastli';
         }
-        if ( params.path && ( params.path[params.path.length-1] == item.id || ( !item.has_children && jQuery.inArray( item.id, params.path ) !== -1 ) ) )
+        if ( params.path && ( params.path[params.path.length-1] == item.id || ( !item.has_children && _inArray( item.id, params.path ) !== -1 ) ) )
         {
             liclass += ' currentnode';
         }
-        if ( jQuery.inArray( item.id.toString(), this.hideTagID ) >= 0 )
+        if ( _inArray( item.id.toString(), this.hideTagID ) >= 0 )
         {
             liclass += ' disabled';
         }
@@ -217,10 +264,7 @@ function TagsStructureMenu( params, attribute_id )
 
         var thisThis = this;
 
-        var request = jQuery.ajax({
-            'url': url,
-            'dataType': 'json',
-            'success': function( data, textStatus )
+        _getJSON( url, function( data )
             {
                 var html = '<ul>';
                 // Generate html content
@@ -242,7 +286,7 @@ function TagsStructureMenu( params, attribute_id )
 
                 return;
             },
-            'error': function( xhr, textStatus, errorThrown )
+            function( xhr )
             {
                 if ( aElement )
                 {
@@ -270,8 +314,7 @@ function TagsStructureMenu( params, attribute_id )
                         return false;
                     }
                 }
-            }
-        });
+            } );
 
         return false;
     };
@@ -296,13 +339,13 @@ function TagsStructureMenu( params, attribute_id )
             var liCandidate = children[i];
             if ( liCandidate.nodeType == 1 && liCandidate.id )
             {
-                var tagID = liCandidate.id.substr( 3 + this.attribute_id.length ), openIndex = jQuery.inArray( tagID, this.autoOpenPath );
+                var tagID = liCandidate.id.substr( 3 + this.attribute_id.length ), openIndex = _inArray( tagID, this.autoOpenPath );
                 if ( this.autoOpen && openIndex !== -1 )
                 {
                     this.autoOpenPath.splice( openIndex, 1 );
                     this.setOpen( tagID );
                 }
-                if ( jQuery.inArray( tagID, this.open ) !== -1 )
+                if ( _inArray( tagID, this.open ) !== -1 )
                 {
                     var aElement = document.getElementById( 'a-' + this.attribute_id + '-' + tagID );
                     if ( aElement )

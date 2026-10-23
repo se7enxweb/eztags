@@ -9,6 +9,7 @@
  *
  *  IA-01 - no <img in design/standard/javascript/*.js (minified files left out) without an alt or a title
  *  IA-02 - the suggested, selected and autocomplete items of jquery.eztags.js carry alt="" on their flag
+ *  IA-03 - the same for eztags.js, the plain JavaScript version of admin4
  */
 
 $failures = 0;
@@ -39,6 +40,8 @@ iaCheck( !$bad, 'IA-01 every image of the scripts has an alt or a title' . ( $ba
 // IA-02
 $source = (string)@file_get_contents( $root . '/design/standard/javascript/jquery.eztags.js' );
 iaCheck( preg_match_all( '/<img src="<%=tag\.flagSrc %>" alt="" \/>/', $source ) === 3, 'IA-02 the three tag item templates give the flag alt=""' );
+$source = (string)@file_get_contents( $root . '/design/standard/javascript/eztags.js' );
+iaCheck( preg_match_all( '/<img src="<%=tag\.flagSrc %>" alt="" \/>/', $source ) === 3, 'IA-03 the same in eztags.js (admin4)' );
 
 echo $failures ? "FAIL: $failures\n" : "PASS: all\n";
 exit( $failures ? 1 : 0 );
