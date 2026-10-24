@@ -40,6 +40,7 @@
         "se7enxweb/expui": "^1.0.0.1"
     },
     "replace": {
+        "se7enxweb/eztags-ls": "self.version",
         "ezsystems/eztags-ls": "self.version"
     },
     "suggest": {
