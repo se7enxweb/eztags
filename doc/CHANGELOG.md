@@ -1,5 +1,12 @@
 # eZ Tags extension changelog
 
+## 2.4.26 (2026-10-24)
+
+* `composer.json` also replaces `se7enxweb/eztags-ls`, this extension's old package name, which is abandoned on
+  Packagist with `se7enxweb/eztags` as its replacement. A project that still requires the old name resolves to this
+  package alone, and the abandoned name stays out of `composer.lock`, so `composer audit` has nothing to report.
+* `ezinfo.php` and `extension.xml` state version 2.4.26. No code, setting or database change.
+
 ## 2.4.25 (2026-10-24)
 
 * `composer.json` replaces `ezsystems/eztags-ls`. Both packages install into `extension/eztags`; a project that
