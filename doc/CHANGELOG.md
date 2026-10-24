@@ -1,5 +1,14 @@
 # eZ Tags extension changelog
 
+## 2.4.25 (2026-10-24)
+
+* `composer.json` replaces `ezsystems/eztags-ls`. Both packages install into `extension/eztags`; a project that
+  required this package (Exponential 6.0.15 does) and also pulled `ezsystems/eztags-ls` (site-legacy-bundle 2.0.0
+  and 2.1.0 do) got both, the second unpacked over the first. The mix of 2.3 and 2.4 files broke the tags tree
+  menu of the admin (500) and sent `MOD()` to the database, which SQLite does not know, so editing content with
+  a tags field failed there. Composer now takes this package for every `ezsystems/eztags-ls` constraint up to
+  its own version and installs one copy.
+
 ## 2.4.24 (2026-10-21)
 
 * The Tags tab of the administration shows an icon: `[Topmenu_eztags]` in `settings/menu.ini.append.php` sets
