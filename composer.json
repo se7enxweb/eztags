@@ -39,6 +39,9 @@
         "se7enxweb/ezpublish-legacy-installer": "*",
         "se7enxweb/expui": "^1.0.0.1"
     },
+    "replace": {
+        "ezsystems/eztags-ls": "self.version"
+    },
     "suggest": {
         "se7enxweb/ezfind": "Tag suggestions, related tags and the tag cloud over Solr"
     },
