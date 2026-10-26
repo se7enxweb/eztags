@@ -242,11 +242,11 @@
     </message>
     <message>
         <source>Discard</source>
-        <translation>Annuler</translation>
+        <translation>Abandonner</translation>
     </message>
     <message>
         <source>Are you sure you want to discard changes?</source>
-        <translation>Etes vous sûr de vouloir annuler les changements ?</translation>
+        <translation>Êtes-vous sûr de vouloir abandonner les modifications ?</translation>
     </message>
     <message>
         <source>Main tag</source>
@@ -258,7 +258,7 @@
     </message>
     <message>
         <source>Are you sure you want to delete the &quot;%keyword&quot; tag? All children tags and synonyms will also be deleted and removed from existing objects.</source>
-        <translation>Etes vous sûr de vouloir supprimer le mot clé &quot;%keyword&quot; ? Tous les mots clés et synonymes enfant seront aussi supprimés et enlevés des objets existants.</translation>
+        <translation>Êtes-vous sûr de vouloir supprimer le mot clé &quot;%keyword&quot; ? Tous les mots clés et synonymes enfant seront aussi supprimés et enlevés des objets existants.</translation>
     </message>
     <message>
         <source>Are you sure you want to delete selected tags? All children tags and synonyms will also be deleted and removed from existing objects.</source>
@@ -282,7 +282,7 @@
     </message>
     <message>
         <source>Are you sure you want to delete the &quot;%keyword&quot; synonym?</source>
-        <translation>Etes vous sûr de vouloir supprimer le synonyme &quot;%keyword&quot; ?</translation>
+        <translation>Êtes-vous sûr de vouloir supprimer le synonyme &quot;%keyword&quot; ?</translation>
     </message>
     <message>
         <source>Transfer all related objects to the main tag</source>
@@ -338,7 +338,7 @@
     </message>
     <message>
         <source>Edit translation</source>
-        <translation>Editer la traduction</translation>
+        <translation>Modifier la traduction</translation>
     </message>
     <message>
         <source>Select the translation you want to edit</source>
@@ -350,7 +350,7 @@
     </message>
     <message>
         <source>Edit</source>
-        <translation>Editer</translation>
+        <translation>Modifier</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -555,7 +555,7 @@
     </message>
     <message>
         <source>Edit in &lt;%language_name&gt;.</source>
-        <translation>Editer en &lt;%language_name&gt;.</translation>
+        <translation>Modifier en &lt;%language_name&gt;.</translation>
     </message>
     <message>
         <source>Remove selected</source>
@@ -738,7 +738,7 @@
     <name>extension/eztags/warnings</name>
     <message>
         <source>TAKE CARE: Tag is inside class attribute subtree limit(s). If moved outside those limits, it could lead to inconsistency as objects could end up with tags that they are not supposed to have.</source>
-        <translation>ATTENTION: Le mot clé est dans les limites de l&apos;arborescence des attributs de classe. Si il est déplacé en dehors de ces limites, cela peut conduire à des incohérences telles que les objets pourraient avoir des mots clés qu&apos;ils ne sont pas supposés avoir. </translation>
+        <translation>ATTENTION : Le mot clé est dans les limites de l&apos;arborescence des attributs de classe. Si il est déplacé en dehors de ces limites, cela peut conduire à des incohérences telles que les objets pourraient avoir des mots clés qu&apos;ils ne sont pas supposés avoir.</translation>
     </message>
     <message>
         <source>Manual search index regeneration is required for changes to be seen in search. Enable DelayedIndexing in site.ini to reindex automatically.</source>

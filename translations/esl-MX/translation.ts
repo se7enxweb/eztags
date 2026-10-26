@@ -120,7 +120,7 @@
     </message>
     <message>
         <source>Yes</source>
-        <translation>Si</translation>
+        <translation>Sí</translation>
     </message>
     <message>
         <source>Unlimited</source>
@@ -329,7 +329,7 @@
     </message>
     <message>
         <source>Yes</source>
-        <translation>Si</translation>
+        <translation>Sí</translation>
     </message>
     <message>
         <source>No</source>
@@ -369,7 +369,7 @@
     </message>
     <message>
         <source>Select the translation you want to add</source>
-        <translation>Seleccione la traducción que desee agregar</translation>
+        <translation>Selecciona la traducción que quieras agregar</translation>
     </message>
     <message>
         <source>Edit translation</source>
@@ -377,7 +377,7 @@
     </message>
     <message>
         <source>Select the translation you want to edit</source>
-        <translation>Seleccione la traducción que desea editar</translation>
+        <translation>Selecciona la traducción que quieres editar</translation>
     </message>
     <message>
         <source>Main translation</source>

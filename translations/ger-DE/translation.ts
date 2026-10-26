@@ -309,7 +309,7 @@
     </message>
     <message>
         <source>Are you sure you want to move selected tags?</source>
-        <translation>Sind Sie sicher, dass sie die ausgewählten Schlagwörter verschieben wollen?</translation>
+        <translation>Sind Sie sicher, dass Sie die ausgewählten Schlagwörter verschieben wollen?</translation>
     </message>
     <message>
         <source>Tag</source>
