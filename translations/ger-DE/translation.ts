@@ -96,11 +96,11 @@
     </message>
     <message>
         <source>Default view</source>
-        <translation type="unfinished"></translation>
+        <translation>Standardansicht</translation>
     </message>
     <message>
         <source>Select view</source>
-        <translation type="unfinished"></translation>
+        <translation>Ansicht auswählen</translation>
     </message>
     <message>
         <source>Maximum number of allowed tags</source>

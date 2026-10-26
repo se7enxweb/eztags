@@ -381,6 +381,14 @@
         <source>Choose a tag</source>
         <translation>Choose a tag</translation>
     </message>
+    <message>
+        <source>Default view</source>
+        <translation>Default view</translation>
+    </message>
+    <message>
+        <source>Select view</source>
+        <translation>Select view</translation>
+    </message>
 </context>
 <context>
     <name>extension/eztags/tags/view</name>
@@ -664,6 +672,22 @@
         <source>Related tags</source>
         <translation>Related tags</translation>
     </message>
+    <message>
+        <source>first</source>
+        <translation>first</translation>
+    </message>
+    <message>
+        <source>last</source>
+        <translation>last</translation>
+    </message>
+    <message>
+        <source>next</source>
+        <translation>next</translation>
+    </message>
+    <message>
+        <source>prev</source>
+        <translation>prev</translation>
+    </message>
 </context>
 <context>
     <name>design/admin/parts/user/menu</name>
@@ -789,6 +813,10 @@
     <message>
         <source>%count objects tagged with &apos;%keyword&apos;</source>
         <translation>%count objects tagged with &apos;%keyword&apos;</translation>
+    </message>
+    <message>
+        <source>objects tagged with &apos;%keyword&apos;</source>
+        <translation>objects tagged with &apos;%keyword&apos;</translation>
     </message>
 </context>
 <context>

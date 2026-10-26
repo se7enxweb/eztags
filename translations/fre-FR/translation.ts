@@ -2,6 +2,33 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="fr_FR">
 <context>
+    <name>design/admin/parts/user/menu</name>
+    <message>
+        <source>Change the left menu width to small size.</source>
+        <translation>Afficher le menu de gauche en petite taille.</translation>
+    </message>
+    <message>
+        <source>Small</source>
+        <translation>Petit</translation>
+    </message>
+    <message>
+        <source>Medium</source>
+        <translation>Moyen</translation>
+    </message>
+    <message>
+        <source>Change the left menu width to large size.</source>
+        <translation>Afficher le menu de gauche en grande taille.</translation>
+    </message>
+    <message>
+        <source>Large</source>
+        <translation>Grand</translation>
+    </message>
+    <message>
+        <source>Change the left menu width to medium size.</source>
+        <translation>Afficher le menu de gauche en moyenne taille.</translation>
+    </message>
+</context>
+<context>
     <name>extension/eztags/datatypes</name>
     <message>
         <source>Tags</source>
@@ -33,11 +60,11 @@
     </message>
     <message>
         <source>Click to add this tag</source>
-        <translation type="unfinished"></translation>
+        <translation>Cliquer pour ajouter ce mot-clé</translation>
     </message>
     <message>
         <source>Remove tag</source>
-        <translation type="unfinished"></translation>
+        <translation>Retirer le mot-clé</translation>
     </message>
     <message>
         <source>At least one tag is required to be added.</source>
@@ -65,15 +92,15 @@
     </message>
     <message>
         <source>Edit view</source>
-        <translation type="unfinished"></translation>
+        <translation>Vue d&apos;édition</translation>
     </message>
     <message>
         <source>Default view</source>
-        <translation type="unfinished"></translation>
+        <translation>Vue par défaut</translation>
     </message>
     <message>
         <source>Select view</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionner la vue</translation>
     </message>
     <message>
         <source>Maximum number of allowed tags</source>
@@ -101,15 +128,15 @@
     </message>
     <message>
         <source>Translate tag</source>
-        <translation type="unfinished"></translation>
+        <translation>Traduire le mot-clé</translation>
     </message>
     <message>
         <source>Existing translations</source>
-        <translation type="unfinished"></translation>
+        <translation>Traductions existantes</translation>
     </message>
     <message>
         <source>No existing translations</source>
-        <translation type="unfinished"></translation>
+        <translation>Aucune traduction existante</translation>
     </message>
     <message>
         <source>Add translation</source>
@@ -122,6 +149,14 @@
     <message>
         <source>OK</source>
         <translation>OK</translation>
+    </message>
+    <message>
+        <source>Find a tag to add</source>
+        <translation>Rechercher un mot-clé à ajouter</translation>
+    </message>
+    <message>
+        <source>Choose a tag</source>
+        <translation>Choisir un mot-clé</translation>
     </message>
 </context>
 <context>
@@ -144,7 +179,7 @@
     </message>
     <message>
         <source>The following tags could not be moved because they contain translations that already exist in one of the tags in selected location.</source>
-        <translation type="unfinished"></translation>
+        <translation>Les mots-clés suivants n&apos;ont pas pu être déplacés car ils contiennent des traductions qui existent déjà dans l&apos;un des mots-clés de l&apos;emplacement sélectionné.</translation>
     </message>
     <message>
         <source>Go back</source>
@@ -164,6 +199,14 @@
     <message>
         <source>No tags</source>
         <translation>Aucun mot clé</translation>
+    </message>
+    <message>
+        <source>Tags</source>
+        <translation>Tags</translation>
+    </message>
+    <message>
+        <source>Show Tags attributes overview.</source>
+        <translation>Afficher l&apos;aperçu des attributs Mots-clés.</translation>
     </message>
 </context>
 <context>
@@ -214,7 +257,7 @@
     </message>
     <message>
         <source>Move tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Déplacer les mots-clés</translation>
     </message>
     <message>
         <source>Edit synonym</source>
@@ -226,7 +269,7 @@
     </message>
     <message>
         <source>Delete tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Supprimer les mots-clés</translation>
     </message>
     <message>
         <source>Merge tag</source>
@@ -262,23 +305,23 @@
     </message>
     <message>
         <source>Are you sure you want to delete selected tags? All children tags and synonyms will also be deleted and removed from existing objects.</source>
-        <translation type="unfinished"></translation>
+        <translation>Voulez-vous vraiment supprimer les mots-clés sélectionnés ? Tous les mots-clés enfants et les synonymes seront également supprimés et retirés des objets existants.</translation>
     </message>
     <message>
         <source>Are you sure you want to move selected tags?</source>
-        <translation type="unfinished"></translation>
+        <translation>Voulez-vous vraiment déplacer les mots-clés sélectionnés ?</translation>
     </message>
     <message>
         <source>Tag</source>
-        <translation type="unfinished"></translation>
+        <translation>Mot clé</translation>
     </message>
     <message>
         <source>Related objects count</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombre d&apos;objets associés</translation>
     </message>
     <message>
         <source>Children count</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombre d&apos;enfants</translation>
     </message>
     <message>
         <source>Are you sure you want to delete the &quot;%keyword&quot; synonym?</source>
@@ -663,75 +706,103 @@
     </message>
     <message>
         <source>first</source>
-        <translation type="unfinished"></translation>
+        <translation>premier</translation>
     </message>
     <message>
         <source>last</source>
-        <translation type="unfinished"></translation>
+        <translation>dernier</translation>
     </message>
     <message>
         <source>next</source>
-        <translation type="unfinished"></translation>
+        <translation>suivant</translation>
     </message>
     <message>
         <source>prev</source>
-        <translation type="unfinished"></translation>
+        <translation>précédent</translation>
     </message>
     <message>
         <source>Select all visible</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionner tous les éléments visibles</translation>
     </message>
     <message>
         <source>Select none</source>
-        <translation type="unfinished"></translation>
+        <translation>Tout désélectionner</translation>
     </message>
     <message>
         <source>Invert selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Inverser la sélection</translation>
     </message>
     <message>
         <source>Select</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionner</translation>
     </message>
     <message>
         <source>Remove selected tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Supprimer les mots-clés sélectionnés</translation>
     </message>
     <message>
         <source>Move selected tags</source>
-        <translation type="unfinished"></translation>
+        <translation>Déplacer les mots-clés sélectionnés</translation>
     </message>
     <message>
         <source>More actions</source>
-        <translation type="unfinished"></translation>
+        <translation>Plus d&apos;actions</translation>
     </message>
     <message>
         <source>You do not have permissions for any of available actions</source>
-        <translation type="unfinished"></translation>
+        <translation>Vous n&apos;avez les permissions pour aucune des actions disponibles</translation>
     </message>
     <message>
         <source>Use the checkboxes to select one or more tags.</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilisez les cases à cocher pour sélectionner un ou plusieurs mots-clés.</translation>
     </message>
     <message>
         <source>Table options</source>
-        <translation type="unfinished"></translation>
+        <translation>Options du tableau</translation>
     </message>
     <message>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Fermer</translation>
     </message>
     <message>
         <source>Number of tags per page</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombre de mots-clés par page</translation>
     </message>
     <message>
         <source>Loading...</source>
-        <translation type="unfinished"></translation>
+        <translation>Chargement ...</translation>
     </message>
     <message>
         <source>No tags found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Aucun mot-clé trouvé.</translation>
+    </message>
+    <message>
+        <source>Edit</source>
+        <translation>Modifier</translation>
+    </message>
+    <message>
+        <source>Show all content related to tag</source>
+        <translation>Afficher tout le contenu associé au mot-clé</translation>
+    </message>
+    <message>
+        <source>List of content related to tag %tag (%count):</source>
+        <translation>Liste du contenu associé au mot-clé %tag (%count) :</translation>
+    </message>
+    <message>
+        <source>Visibility</source>
+        <translation>Visibilité</translation>
+    </message>
+    <message>
+        <source>Hidden</source>
+        <translation>Caché</translation>
+    </message>
+    <message>
+        <source>Hidden by superior</source>
+        <translation>Caché par un élément supérieur</translation>
+    </message>
+    <message>
+        <source>Visible</source>
+        <translation>Visible</translation>
     </message>
 </context>
 <context>
@@ -749,7 +820,29 @@
     <name>extension/eztags/tagcloud</name>
     <message>
         <source>objects tagged with '%keyword'</source>
-        <translation type="unfinished"></translation>
+        <translation>objets associés au mot-clé &apos;%keyword&apos;</translation>
+    </message>
+    <message>
+        <source>%count objects tagged with &apos;%keyword&apos;</source>
+        <translation>%count objets associés au mot-clé &apos;%keyword&apos;</translation>
+    </message>
+</context>
+<context>
+    <name>kernel/navigationpart</name>
+    <message>
+        <source>eZ Tags</source>
+        <translation>eZ Tags</translation>
+    </message>
+</context>
+<context>
+    <name>design/admin/pagelayout</name>
+    <message>
+        <source>Tags</source>
+        <translation>Tags</translation>
+    </message>
+    <message>
+        <source>Tags dashboard</source>
+        <translation>Tableau de bord</translation>
     </message>
 </context>
 </TS>
