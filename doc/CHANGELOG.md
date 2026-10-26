@@ -1,5 +1,15 @@
 # eZ Tags extension changelog
 
+## 2.4.27 (2026-10-26)
+
+* Updated: The admin scripts move to ClassicBackendJavaScriptList, admin4 loads no jQuery for eztags, from ekked's
+  pull request #5.
+* Updated: The tag field, the tag picker, the tag trees and the children table run in admin4 without jQuery, from
+  ekked's pull request #3.
+* Fixed: Translations that contradicted their language guide: wrong meanings, glossary breaches, forms of address,
+  typos and English left in the text, from ekked's pull request #4.
+* Fixed: The backdrop of admin4's tag picker darkens the page in the dark mode too.
+
 ## 2.4.26 (2026-10-24)
 
 * `composer.json` also replaces `se7enxweb/eztags-ls`, this extension's old package name, which is abandoned on
