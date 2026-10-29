@@ -1,5 +1,9 @@
 # eZ Tags extension changelog
 
+## 2.4.29 (2026-10-29)
+
+* Updated: The admin stylesheets use the shared admin tokens for weights, durations, radii, table headers and muted text, with the old values as fallbacks where a design has no tokens.
+
 ## 2.4.28 (2026-10-28)
 
 * Added: Translations into 110 more languages: afr-ZA, aka-GH, amh-ET, ara-SA, arc-IQ, asm-IN, aze-AZ, bel-BY, ben-BD,
