@@ -35,7 +35,7 @@
         "source": "https://github.com/se7enxweb/eztags"
     },
     "require": {
-        "php": ">=8.0",
+        "php": ">=7.4",
         "se7enxweb/ezpublish-legacy-installer": "*",
         "se7enxweb/expui": "^1.0.0.1"
     },
