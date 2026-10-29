@@ -32,7 +32,7 @@ a.eztags-cloud-size-10 { font-size: 200%; }
 dialog.eztags-dialog { width: min(400px, calc(100vw - 32px)); max-height: calc(100vh - 32px); padding: 0; border: 1px solid var(--a4-line, #b5a69c); border-radius: var(--a4-radius-s, 4px); background: var(--a4-card, #fff); color: var(--a4-ink, #000); }
 dialog.eztags-dialog::backdrop { background: var(--a4-overlay, rgba(16, 24, 40, 0.45)); }
 .eztags-dialog-header { display: flex; align-items: center; justify-content: space-between; gap: var(--a4-space-2, 10px); padding: var(--a4-space-2, 10px) var(--a4-space-3, 14px); border-bottom: 1px solid var(--a4-line, #b5a69c); }
-.eztags-dialog-title { margin: 0; font-size: 1em; font-weight: bold; }
+.eztags-dialog-title { margin: 0; font-size: 1em; font-weight: var(--a4-weight-bold, bold); }
 .eztags-dialog-close { min-width: 28px; min-height: 28px; padding: 0 6px; border: 1px solid transparent; border-radius: var(--a4-radius-s, 4px); background: transparent; color: inherit; font-size: 20px; line-height: 1; cursor: pointer; }
 .eztags-dialog-close:hover { border-color: var(--a4-line, #b5a69c); }
 .eztags-dialog-close:focus-visible { outline: 2px solid var(--a4-ring, #1a73e8); outline-offset: 1px; }
