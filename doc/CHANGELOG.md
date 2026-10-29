@@ -1,5 +1,18 @@
 # eZ Tags extension changelog
 
+## 2.4.28 (2026-10-28)
+
+* Added: Translations into 110 more languages: afr-ZA, aka-GH, amh-ET, ara-SA, arc-IQ, asm-IN, aze-AZ, bel-BY, ben-BD,
+  bho-IN, bod-CN, bos-BA, bul-BG, cat-ES, ceb-PH, che-RU, chi-CN, chi-TW, ckb-IQ, cym-GB, dsb-DE, ell-GR, eng-AU,
+  est-EE, eus-ES, fas-IR, fil-PH, fin-FI, ful-SN, gla-GB, gle-IE, glg-ES, guj-IN, hau-NG, haw-US, hin-IN, hun-HU,
+  huy-IL, hye-AM, ibo-NG, ind-ID, isl-IS, jav-ID, jpn-JP, kal-GL, kan-IN, kat-GE, kaz-KZ, khm-KH, kik-KE, kin-RW,
+  kir-KG, kor-KR, kur-TR, lao-LA, lav-LV, lin-CD, lit-LT, ltz-LU, lug-UG, mai-IN, mal-IN, mar-IN, mkd-MK, mlg-MG,
+  mlt-MT, mon-MN, mri-NZ, msa-MY, mya-MM, nep-NP, ori-IN, orm-ET, pan-IN, pcm-NG, pnb-PK, por-PT, pus-AF, ron-RO,
+  run-BI, rus-RU, ser-SR, sin-LK, slk-SK, slv-SI, sna-ZW, snd-PK, som-SO, sqi-AL, srp-RS, sun-ID, swa-KE, syr-IQ,
+  tam-IN, tat-RU, tel-IN, tgk-TJ, tha-TH, tir-ET, tuk-TM, uig-CN, ukr-UA, urd-PK, uzb-UZ, vie-VN, wol-SN, xho-ZA,
+  yid-US, yor-NG and zul-ZA.
+* Updated: The eng-US, fre-FR and ger-DE translations are complete.
+
 ## 2.4.27 (2026-10-26)
 
 * Updated: The admin scripts move to ClassicBackendJavaScriptList, admin4 loads no jQuery for eztags, from ekked's
