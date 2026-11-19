@@ -772,10 +772,14 @@ class eZTagsObject extends eZPersistentObject
             return strcmp( (string)$a, (string)$b ) * $direction;
         } );
 
-        if ( is_array( $limits ) && isset( $limits['length'] ) )
+        // eZPersistentObject takes the count as 'limit' or as 'length' (the latest tags ask with 'limit'); the
+        // count was read from 'length' only, so the dashboard listed every tag on MongoDB instead of ten
+        $length = is_array( $limits ) ? ( isset( $limits['limit'] ) ? (int)$limits['limit']
+                                          : ( isset( $limits['length'] ) ? (int)$limits['length'] : 0 ) ) : 0;
+        if ( $length > 0 )
         {
             $offset = isset( $limits['offset'] ) ? (int)$limits['offset'] : 0;
-            $objects = array_slice( $objects, $offset, (int)$limits['length'] );
+            $objects = array_slice( $objects, $offset, $length );
         }
 
         return $objects;
