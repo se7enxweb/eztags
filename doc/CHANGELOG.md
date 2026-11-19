@@ -1,5 +1,13 @@
 # eZ Tags extension changelog
 
+## 2.4.32 (2026-11-19)
+
+* Fixed: The latest tags of the dashboard are the ten newest on MongoDB, instead of every tag: fetchList() on MongoDB read the count of a limit given as "length" only, and the dashboard asks with "limit".
+
+## 2.4.31 (2026-10-29)
+
+* Updated: Installs on PHP 7.4 (composer.json requires PHP 7.4 or later).
+
 ## 2.4.30 (2026-10-29)
 
 * Updated: One copyright notice, Exponential Foundation and 7x.
